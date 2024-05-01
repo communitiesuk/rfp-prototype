@@ -1,2 +1,2 @@
-# rfp-prototype
-Reporting funding progress
+# Report Funding Progress
+Prototype
