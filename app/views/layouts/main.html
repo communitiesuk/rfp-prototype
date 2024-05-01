@@ -4,3 +4,25 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% import "macros/page-title.njk" as macroPageTitle %}
+{% import "macros/page-header.njk" as macroPageHeader %}
+
+
+{% block beforeContent %}
+
+{% if showPhaseBanner != false %}
+{{ govukPhaseBanner({
+    tag: { text: "Prototype" },
+    html: "This is a prototype. It is not a real service."
+}) }}
+{% endif %}
+
+{% if showBackLink != false %}
+            {{ govukBackLink({
+                text: "Back",
+                href: "javascript:history.go(-1)"
+            }) }}
+        {% endif %}
+
+{% endblock %}

@@ -1,19 +1,23 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set showBackLink = false %}
+
+{% set pageHeading = "Reporting funding progress" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+      <ul class="govuk-list govuk-body-s">
+        <li>Last updated: <span class="govuk-!-font-weight-bold">1 May 2024</span></li>
+        <li>Prototype version: {{releaseVersion}}</li>
+      </ul>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
 
