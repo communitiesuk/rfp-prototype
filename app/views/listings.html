@@ -1,0 +1,48 @@
+{% extends "/layouts/main.html" %}
+{% set showBackLink = false %}
+
+{% set pageHeading = "Page listings" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">    
+
+        {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
+
+        <p class="govuk-body-s">Last updated 3 May 2024</p>
+        <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
+
+    </div>
+    <div class="govuk-grid-column-full">
+
+            <!-- Register for an account -->
+            {% set toFollowHtml %}                            
+
+            <h3 class="govuk-heading-m">Footer</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/terms-and-conditions" >Terms and conditions</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/cookies">Cookies</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/accessibility">Accessibility</a></li>
+            </ul>  
+            
+            {% endset -%}                               
+
+            <!-- Tabs -->
+            {{ govukTabs({
+                items: [           
+                    { label: "Title to follow", id: "tofollow", panel: { html: toFollowHtml } }                    
+                ]
+            }) }}
+
+            <p><a class="govuk-link govuk-link--no-visited-state" href="/data">Data been stored as part of current session</a></p>
+
+
+    </div>
+</div>
+
+{% endblock %}
