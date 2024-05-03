@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
 {% set pageHeading = "RAG rating" %}
 {% set pageSection = "Project overview" %}
@@ -9,9 +9,63 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+      	<p>You can add your RAG ratings, risks and issues within this section.</p>
+
+		{{ govukDetails({
+			summaryText: "Understanding RAG ratings",
+			text: "To follow"
+		}) }}
+		
+	</div>
+	<div class="govuk-grid-column-full">
+		
+		<form method="post" action="" >	  
+
+			{% set tabOneHtml %}   
+			
+			{% endset -%} 
+	
+			{% set tabTwoHtml %}   
+			
+			{% endset -%} 
+	
+			{% set tabThreeHtml %}   
+			
+			{% endset -%} 
+
+			{% set tabFourHtml %}   
+			
+			{% endset -%} 
+  
+			{{ govukTabs({
+				items: [           
+					{ label: "Overall RAG Rating", id: "tabOne", panel: { html: tabOneHtml } },
+					{ label: "Schedule RAG Rating", id: "tabTwo", panel: { html: tabTwoHtml } },
+					{ label: "Budget RAG Rating", id: "tabThree", panel: { html: tabThreeHtml } },
+					{ label: "Resourcing RAG Rating", id: "tabFour", panel: { html: tabFourHtml } }
+				]
+			}) }}
+				
+			<div class="govuk-button-group">
+				
+				{{ govukButton({
+				text: "Save"
+				}) }}
+
+				{{ govukButton({
+				text: "Save as draft",
+				classes: "govuk-button--secondary"
+				}) }}
+			
+			</div>
+
+		</form>
+
+
 
   </div>
 </div>

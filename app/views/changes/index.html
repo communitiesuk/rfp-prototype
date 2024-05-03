@@ -1,9 +1,9 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
 {% set pageHeading = "Project changes" %}
-{% set pageSection = Changes" %}
+{% set pageSection = "Changes" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -12,6 +12,45 @@
   <div class="govuk-grid-column-two-thirds">
 
       {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+
+      <p>Add any changes you need to make for your project Growing Community Green Spaces. For example, this could include changes to finances or project scope.</p>
+
+		
+
+
+		<form method="post" action="" >
+		
+			{{ govukRadios({
+				classes: "govuk-radios--inline",
+				name: "projectChange",
+				id: "projectChange",				
+				fieldset: {
+				  legend: {
+					text: "Do you need to make a change to this project?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},				
+				items: [
+				  { value: "yes", text: "Yes" },
+				  { value: "no", text: "No" }
+				]
+			  }) }}
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Save"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		</form>
 
   </div>
 </div>

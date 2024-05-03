@@ -1,19 +1,60 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
-{% set pageHeading = "Issues and risks" %}
-{% set pageSection = "Project risks" %}
+{% set pageHeading = "Project risks" %}
+{% set pageSection = "Issues and risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-  </div>
+		<p>Add any risks you have faced for your project Growing Community Green Spaces. We use this information to:</p>
+
+		
+		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+			<li>see how risks are been managed</li>
+			<li>offer you support</li>
+			<li>learn from previous issues</li>
+		</ul>
+
+		<form method="post" action="" >
+		
+			{{ govukRadios({				
+				name: "projecRisks",
+				id: "projecRisks",				
+				fieldset: {
+				  legend: {
+					text: "Do you need to add any project risks?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},				
+				items: [
+				  { value: "yes", text: "Yes" },
+				  { value: "no", text: "No" }
+				]
+			  }) }}
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Save"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		</form>
+
+  	</div>
 </div>
 
 {% endblock %}

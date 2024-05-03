@@ -1,19 +1,57 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
-{% set pageHeading = "Project challenges" %}
+{% set pageHeading = "Progress summary" %}
 {% set pageSection = "Project overview" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-  </div>
+      	<p>Use this section to summarise the progress of the project. You might want to include information about:</p>
+      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li>any significant challenges the project is facing</li>
+        	<li>important milestones</li>
+        	<li>how the project is starting to have an impact</li>
+      	</ul>
+
+      	<form method="post" action="" >
+      	
+			{{ govukCharacterCount({
+        		name: "projectProgress",
+        		id: "projectProgress",
+        		value: data['projectProgress'],				
+        		maxlength: 500,
+        		label: {
+          			text: "Describe how your project is progressing?",
+          			classes: "govuk-label--m",
+          			isPageHeading: false
+        		},
+        		hint: {
+          			text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+        		}
+      		}) }}
+
+
+      		<div class="govuk-button-group">
+      			{{ govukButton({
+        			text: "Save"
+      			}) }}
+
+      			{{ govukButton({
+        			text: "Save as draft",
+        			classes: "govuk-button--secondary"
+      			}) }}
+    		</div>
+
+  		</form>
+
+  	</div>
 </div>
 
 {% endblock %}

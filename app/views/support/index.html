@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
 {% set pageHeading = "Project support" %}
 {% set pageSection = "Support" %}
@@ -12,6 +12,43 @@
   <div class="govuk-grid-column-two-thirds">
 
       {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+	  <p>Add any support you need for the project Growing Community Green Spaces. For example, there may be issues that you are struggling to resolve and need help to unblock.</p>
+
+		
+
+
+		<form method="post" action="" >
+		
+			{{ govukRadios({				
+				name: "projectSupport",
+				id: "projectSupport",				
+				fieldset: {
+				  legend: {
+					text: "Do you need any support with this project?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--m"
+					}
+				},				
+				items: [
+				  { value: "yes", text: "Yes" },
+				  { value: "no", text: "No" }
+				]
+			  }) }}
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Save"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		</form>
 
   </div>
 </div>

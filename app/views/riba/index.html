@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set showBackLink = false %}
+{% set showBackLink = true %}
 
 {% set pageHeading = "RIBA reporting" %}
 {% set pageSection = "Project overview" %}
@@ -9,11 +9,59 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-  </div>
+
+		<p>The Royal Institute of British Architects (RIBA) requires you to report on what stage it is at.</p>
+
+		{{ govukDetails({
+			summaryText: "Understanding RIBA",
+			text: "To follow"
+		  }) }}
+		
+
+		<form method="post" action="" >
+			
+
+			{{ govukSelect({
+				id: "location",
+				name: "location",
+				label: {
+				  text: "Select an option to update your RIBA reporting stage",
+				  classes: "govuk-fieldset__legend--m"
+				},		
+				classes: "govuk-!-width-two-thirds",
+				items: [
+				  {
+					value: "choose",
+					text: "Select an option",
+					selected: true
+				  }
+				
+				]
+			  }) }}
+
+
+			
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Save"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		  </form>
+
+
+  	</div>
 </div>
 
 {% endblock %}
