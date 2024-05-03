@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "{Project Name}" %}
+{% set pageSection = "Project overview" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		{{ govukDetails({
+			summaryText: "How to submit your report",
+			text: "To follow"
+		}) }}		
+
+		{% include "includes/task-overview.html" %}
+		{% include "includes/task-delivery.html" %}
+		{% include "includes/task-issues-and-risks.html" %}
+		{% include "includes/task-expenditure.html" %}
+		{% include "includes/task-outputs.html" %}
+		{% include "includes/task-outcomes.html" %}
+		{% include "includes/task-changes.html" %}
+		{% include "includes/task-sign-off.html" %}
+
+  </div>
+</div>
+
+{% endblock %}

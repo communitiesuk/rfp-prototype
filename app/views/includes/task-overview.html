@@ -1,0 +1,11 @@
+<h2 class="govuk-heading-m">Project overview</h2>
+{{ govukTaskList({
+	idPrefix: "company-details",
+	items: [
+		{ title: { text: "Progress summary" }, href: "/project/overview/progress-summary", status: { text: "Completed" } },
+		{ title: { text: "Upcoming communications" }, href: "/project/overview/communications", status: { text: "Completed" } },
+		{ title: { text: "RAG Status" }, href: "/project/overview/rag-status", status: { text: "Completed" } },
+		{ title: { text: "Challenges" }, href: "/project/overview/challenges", status: { text: "Completed" } },
+		{ title: { text: "RIBA" }, href: "/project/overview/riba", status: { text: "Incomplete", tag: { text: "Incomplete", classes: "govuk-tag--blue" } } }
+	]
+}) }}

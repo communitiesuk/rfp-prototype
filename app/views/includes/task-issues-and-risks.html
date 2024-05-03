@@ -1,0 +1,8 @@
+<h2 class="govuk-heading-m">Issues and risks</h2>
+{{ govukTaskList({
+	idPrefix: "company-details",
+	items: [
+		{ title: { text: "Issues" }, href: "/project/issues-risks/issues", status: { text: "Completed" } },
+		{ title: { text: "Risks" }, href: "/project/issues-risks/risks", status: { text: "Completed" } }
+	]
+}) }}

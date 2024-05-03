@@ -1,0 +1,7 @@
+<h2 class="govuk-heading-m">Expenditure</h2>
+{{ govukTaskList({
+	idPrefix: "company-details",
+	items: [
+		{ title: { text: "Project expenditure" }, href: "/project/expenditure/", status: { text: "Completed" } }
+	]
+}) }}

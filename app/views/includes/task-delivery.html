@@ -1,0 +1,7 @@
+<h2 class="govuk-heading-m">Delivery plan</h2>
+{{ govukTaskList({
+	idPrefix: "company-details",
+	items: [
+		{ title: { text: "Project milestones" }, href: "/project/delivery-plan/milestones", status: { text: "Completed" } }		
+	]
+}) }}
