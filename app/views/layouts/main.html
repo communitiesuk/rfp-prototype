@@ -18,11 +18,38 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 }) }}
 {% endif %}
 
-{% if showBackLink != false %}
+        {% if showBackLink != false %}
             {{ govukBackLink({
                 text: "Back",
                 href: "javascript:history.go(-1)"
             }) }}
         {% endif %}
+
+
+        {% if showBread == true %}
+        {{ govukBreadcrumbs({
+          items: [
+            { text: "Programmes", href: "/programmes" },
+            { text: "Regenerating Manchester Green Spaces", href: "/project/" }
+            
+          ]
+        }) }}
+        {% endif %}
+
+
+        {% if showNav == true %}
+        {{ xGovukSecondaryNavigation({
+            visuallyHiddenTitle: "Secondary menu",
+            items: [{
+              text: "Programme details",
+              href: "/project/",
+              current: true
+            }, {
+              text: "Users",
+              href: "/users/"
+            }]
+          }) }}
+          {% endif %}
+        
 
 {% endblock %}
