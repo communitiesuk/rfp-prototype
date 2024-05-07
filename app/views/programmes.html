@@ -13,7 +13,65 @@
 
       {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
-      <p>To follow</p>
+  </div>
+  <div class="govuk-grid-column-full">
+      
+      <h2 class="govuk-heading-m">Regenerating Manchester’s Green Spaces</h2>
+
+      <h3 class="govuk-heading-s">Programme reports due</h3>
+      <p><a href="#">Regenerating Manchester’s Green Spaces</a></p>
+      <hr class="govuk-section-break--m">
+
+      <h3 class="govuk-heading-s">Project reports due</h3>
+      <p><a href="/project/">Growing Community Green Spaces</a></p>
+      <p><a href="#">Wildlife Corridor</a></p>
+
+
+<!-- 
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              text: "Project reports completed"              
+            },
+            content: {
+              html: '<p class="govuk-body">To follow.</p>'
+            }
+          }
+        ]
+      }) }} -->
+
+
+
+      <h3 class="govuk-heading-s">Project reports completed</h3>
+      {{ govukDetails({
+        summaryText: "Show completed reports",
+        text: "To follow"
+      }) }}
+      <hr class="govuk-section-break--m">
+
+
+      <h2 class="govuk-heading-m">Warrington Digital Enterprise Hub</h2>
+
+      <h3 class="govuk-heading-s">Programme reports due</h3>
+      <p><a href="#">Warrington Digital Enterprise Hub</a></p>
+      <hr class="govuk-section-break--m">
+
+      <h3 class="govuk-heading-s">Project reports due</h3>
+      <p><a href="#">Locating and Preparing the Digital Hub</a></p>
+      <p><a href="#">Resourcing Technologies</a></p>
+      <p><a href="#">Another project</a></p>
+
+      <h3 class="govuk-heading-s">Project reports completed</h3>
+      {{ govukDetails({
+        summaryText: "Show completed reports",
+        text: "To follow"
+      }) }}
+      <hr class="govuk-section-break--m">
+
+
+      <p><a href="#">View previous programme reports</a></p>
 
   </div>
 </div>
