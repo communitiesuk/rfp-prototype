@@ -36,8 +36,8 @@
 					}
 				},				
 				items: [
-				  { value: "yes", text: "Yes" },
-				  { value: "no", text: "No" }
+				  { value: "Yes", text: "Yes", checked: checked("projectChallenges", "Yes")  },
+				  { value: "No~/project/?report-4-status=Completed", text: "No", checked: checked("projectChallenges", "No")  }
 				]
 			  }) }}
 
@@ -49,7 +49,8 @@
 
 				{{ govukButton({
 				  text: "Save as draft",
-				  classes: "govuk-button--secondary"
+				  classes: "govuk-button--secondary",
+				  href: "/project/?report-4-status=inProgress" 
 				}) }}
 		  </div>
 

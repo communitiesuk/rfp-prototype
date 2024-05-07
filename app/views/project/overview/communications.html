@@ -22,12 +22,11 @@
 			<li>And lastly, you should include this</li>
 		</ul>
 
-		<form method="post" action="" >
+		<form method="post" action="/project/?report-2-status=Completed" >
 		
 			{{ govukRadios({
 				classes: "govuk-radios--inline",
-				name: "projectCommunication",
-				id: "projectCommunication",				
+				name: "projectCommunication",							
 				fieldset: {
 				  legend: {
 					text: "Do you have any upcoming communications opportunities?",
@@ -36,8 +35,8 @@
 					}
 				},				
 				items: [
-				  { value: "yes", text: "Yes" },
-				  { value: "no", text: "No" }
+				  { value: "Yes", text: "Yes", checked: checked("projectCommunication", "Yes")  },
+				  { value: "No~/project/?report-2-status=Completed", text: "No", checked: checked("projectCommunication", "No")  }
 				]
 			  }) }}
 

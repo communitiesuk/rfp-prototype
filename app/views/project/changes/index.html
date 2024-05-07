@@ -19,7 +19,7 @@
 		
 
 
-		<form method="post" action="" >
+	  	<form method="post" action="/project/?report-12-status=Completed" >	  
 		
 			{{ govukRadios({
 				classes: "govuk-radios--inline",
@@ -46,7 +46,8 @@
 
 				{{ govukButton({
 				  text: "Save as draft",
-				  classes: "govuk-button--secondary"
+				  classes: "govuk-button--secondary",
+				  href: "/project/?report-12-status=inProgress"
 				}) }}
 		  </div>
 

@@ -20,7 +20,7 @@
         	<li>how the project is starting to have an impact</li>
       	</ul>
 
-      	<form method="post" action="" >
+      	<form method="post" action="/project/?report-1-status=Completed" >
       	
 			{{ govukCharacterCount({
         		name: "projectProgress",
@@ -45,7 +45,8 @@
 
       			{{ govukButton({
         			text: "Save as draft",
-        			classes: "govuk-button--secondary"
+        			classes: "govuk-button--secondary",
+					href: "/project/?report-1-status=inProgress"
       			}) }}
     		</div>
 
