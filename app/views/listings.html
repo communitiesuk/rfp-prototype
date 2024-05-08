@@ -12,27 +12,23 @@
 
         {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
 
-        <p class="govuk-body-s">Last updated 7 May 2024</p>
+        <p class="govuk-body-s">Last updated 8 May 2024</p>
         <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
 
     </div>
     <div class="govuk-grid-column-full">
-
-            <!-- Register for an account -->
-            {% set toFollowHtml %}                            
+            
+           
+            
+            {% set projectHtml %}                            
 
             
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                                            
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                                            
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/programmes" >Programmes</a></li>                                            
-            </ul>  
-
+            
 
             <h3 class="govuk-heading-m">Project</h3>
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Overview</a></li>                            
-                <ul class="govuk-list govuk-list--bullet">                                
+                <ul class="govuk-list govuk-list--bullet">                        
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >Progress summary</a></li>                            
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications" >Upcoming communications</a></li>                            
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/rag" >RAG rating</a></li>                            
@@ -46,26 +42,28 @@
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                                                
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>                            
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li>                            
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
-                    </ul>
-                </ul>                
+                </ul>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>                            
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
+                </ul>            
             </ul>  
 
 
-            <h3 class="govuk-heading-m">Footer</h3>
+            
+            
+            {% endset -%}  
+
+            {% set toFollowHtml %}                            
+
+            
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                                            
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                                            
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/programmes" >Programmes</a></li>                                            
+            </ul>  
+                
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
@@ -74,12 +72,14 @@
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/accessibility">Accessibility</a></li>
             </ul>  
             
-            {% endset -%}                               
+            {% endset -%}  
 
             <!-- Tabs -->
             {{ govukTabs({
                 items: [           
-                    { label: "Title to follow", id: "tofollow", panel: { html: toFollowHtml } }                    
+                { label: "Project", id: "IDproject", panel: { html: projectHtml } },                        
+                { label: "Service main pages", id: "tofollow", panel: { html: toFollowHtml } }
+                    
                 ]
             }) }}
 
