@@ -2,7 +2,7 @@
 
 {% set showBackLink = false %}
 
-{% set pageHeading = "Sign in" %}
+{% set pageHeading = "You’ve signed out" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,7 +13,8 @@
 
       {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
-      <p>To follow</p>
+      <p>Content to follow.</p>
+      <p class="govuk-body"><a href="/sign-in" class="govuk-link govuk-link--no-visited-state">Sign in again</a></p>
 
   </div>
 </div>

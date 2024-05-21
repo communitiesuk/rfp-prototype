@@ -9,13 +9,29 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
-      <p>To follow</p>
+      	<p>Actual page content to follow.</p>
+		<p class="govuk-body">Vivamus efficitur turpis arcu, id hendrerit turpis convallis et. Sed massa sapien, scelerisque id nunc vitae, porta consequat lorem.</p>
+		<p class="govuk-body">Vivamus efficitur turpis arcu, id hendrerit turpis convallis et. Sed massa sapien, scelerisque id nunc vitae, porta consequat lorem.</p>
 
-  </div>
+      	{{ govukButton({
+        	text: "Start now",
+        	href: "/gov-gateway/sign-in",
+        	isStartButton: true,
+			classes: "govuk-!-margin-top-5"
+      	}) }}
+
+
+      	<h2 class="govuk-heading-m">Before you start</h2>
+    	<p class="govuk-body">Vivamus efficitur turpis arcu, id hendrerit turpis convallis et. Sed massa sapien, scelerisque id nunc vitae, porta consequat lorem.</p>
+		
+		<h3 class="govuk-heading-s">If you need help using the service</h3>
+		<p class="govuk-body">Vestibulum a orci ac <a href="#">nunc ultricies fringilla</a> sit amet eget massa.</p>
+    
+  	</div>
 </div>
 
 {% endblock %}

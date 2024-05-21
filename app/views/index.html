@@ -14,15 +14,46 @@
       {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
       <ul class="govuk-list govuk-body-s">
-        <li>Last updated: <span class="govuk-!-font-weight-bold">20 May 2024</span></li>
+        <li>Last updated: <span class="govuk-!-font-weight-bold">21 May 2024</span></li>
         <li>Prototype version: {{releaseVersion}}</li>
       </ul>
 
-      <h2 class="govuk-heading-m">Temporary links</h2>
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/listings">Page listings ( in flux as they are built )</a></li>
-        <li><a href="/data">Session data</a></li>
-      </ul>
+      
+
+
+      <span class="govuk-caption-m">Current baseline</span>
+            <h2 class="govuk-heading-m">Main flow and listings</h2>      
+            <p>These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
+            
+            <div class="govuk-button-group">
+                <form action="/programmes" method="post" >                    
+                    {{ govukButton({
+                        text: "Start at programme level"
+                    }) }}
+                </form> 
+                                
+                <form action="/service-start" method="post" >                    
+                    {{ govukButton({
+                        text: "Service start page"
+                    }) }}
+                </form> 
+                
+            </div>
+
+            <!-- <h2 class="govuk-heading-m">Page listings</h2>  -->
+            <p>Breakdown of pages within the service listed individually.</p>     
+            <form action="/listings" method="post" >                    
+              {{ govukButton({
+                  text: "Page listings",
+                  classes: "govuk-button--secondary"
+              }) }}
+          </form>            
+
+            
+        
+        
+        </div>
+
 
   </div>
 </div>

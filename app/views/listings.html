@@ -20,39 +20,31 @@
             
            
             
-            {% set projectHtml %}                            
-
-            
-            
-
-            <h3 class="govuk-heading-m">Project</h3>
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Overview</a></li>                            
-                <ul class="govuk-list govuk-list--bullet">                        
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >Progress summary</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications" >Upcoming communications</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/rag" >RAG rating</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges" >Project challenges</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/riba" >RIBA reporting</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/delivery-plan/milestones/" >Project milestones</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues" >Project issues</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks" >Issues and risks</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/expenditure/" >Project expenditure</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                                                
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>                            
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li>                            
-                </ul>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>                            
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
+            {% set reportHtml %}                            
+                <h3 class="govuk-heading-m">Report</h3>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
-                </ul>            
-            </ul>  
-
-
-            
-            
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Project Overview</a></li>                                                
+                    <ul class="govuk-list govuk-list--bullet">                        
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >Progress summary</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications" >Upcoming communications</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/rag" >RAG rating</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges" >Project challenges</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/riba" >RIBA reporting</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/delivery-plan/milestones/" >Project milestones</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues" >Project issues</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks" >Issues and risks</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/expenditure/" >Project expenditure</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                                                
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>                            
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li>                            
+                    </ul>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>                            
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
+                    </ul>            
+                </ul>              
             {% endset -%}  
 
             {% set toFollowHtml %}                            
@@ -60,8 +52,9 @@
             
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                                            
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                                            
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/programmes" >Programmes</a></li>                                            
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/gov-gateway/sign-in" >Sign in using Government Gateway</a></li>                                            
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/programmes" >Programmes</a></li>    
+                                                          
             </ul>  
                 
             <ul class="govuk-list govuk-list--bullet">
@@ -77,9 +70,8 @@
             <!-- Tabs -->
             {{ govukTabs({
                 items: [           
-                { label: "Project", id: "IDproject", panel: { html: projectHtml } },                        
-                { label: "Service main pages", id: "tofollow", panel: { html: toFollowHtml } }
-                    
+                { label: "Report", id: "report", panel: { html: reportHtml } },                        
+                { label: "Service main pages", id: "tofollow", panel: { html: toFollowHtml } }                    
                 ]
             }) }}
 
