@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "Upcoming communications" %}
+{% set pageSection = "Project overview" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+	
+
+		<form method="post" action="/project/?report-2-status=Completed" >
+            
+
+            {{ govukInput({
+                label: {
+                  text: "Title of the communication opportunity",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },                
+                id: "projectCommunicationTitle",
+                name: "projectCommunicationTitle"
+              }) }}
+
+
+
+              {{ govukCharacterCount({
+                name: "projectCommunicationDetails",
+                id: "projectCommunicationDetails",
+                maxlength: 500,
+                label: {
+                text: "Tell us in more detail about your upcoming communications",
+                  classes: "govuk-label--m",
+                  isPageHeading: true
+                },
+                hint: {
+                  text: "This is a hint."
+                }
+              }) }}
+
+
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Add"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		</form>
+
+  	</div>
+	  <div class="govuk-grid-column-one-third">
+
+		{% include "includes/reportPeriod.html "%}
+	
+	  </div>
+</div>
+
+{% endblock %}

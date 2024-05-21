@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "Project issues" %}
+{% set pageSection = "Project overview" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+	
+
+		<form method="post" action="/project/?report-4-status=Completed" >
+            
+
+            {{ govukInput({
+                label: {
+                  text: "Title of issue",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },                
+                id: "projectChallengeTitle",
+                name: "projectChallengeTitle"
+              }) }}
+
+
+              {{ govukInput({
+                label: {
+                  text: "Rate the impact of the issue",
+                  classes: "govuk-label--m",
+                  isPageHeading: false
+                },                
+                id: "projectChallengeTitle",
+                name: "projectChallengeTitle"
+              }) }}
+
+
+
+              {{ govukCharacterCount({
+                name: "projectChallengeDetails",
+                id: "projectChallengeDetails",
+                maxlength: 500,
+                label: {
+                text: "Tell us in more detail about the issue",
+                  classes: "govuk-label--m",
+                  isPageHeading: true
+                },
+                hint: {
+                  text: "This is a hint."
+                }
+              }) }}
+
+              {{ govukCharacterCount({
+                name: "projectChallengeDetails",
+                id: "projectChallengeDetails",
+                maxlength: 500,
+                label: {
+                text: "What are you doing to address the issue",
+                  classes: "govuk-label--m",
+                  isPageHeading: true
+                },
+                hint: {
+                  text: "This is a hint."
+                }
+              }) }}
+
+
+              {{ govukCharacterCount({
+                name: "projectChallengeDetails",
+                id: "projectChallengeDetails",
+                maxlength: 500,
+                label: {
+                text: "What support do you need from us?",
+                  classes: "govuk-label--m",
+                  isPageHeading: true
+                },
+                hint: {
+                  text: "This is a hint."
+                }
+              }) }}
+
+
+
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Add"
+				}) }}
+
+				{{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }}
+		  </div>
+
+		</form>
+
+  	</div>
+	  <div class="govuk-grid-column-one-third">
+
+		{% include "includes/reportPeriod.html "%}
+	
+	  </div>
+</div>
+
+{% endblock %}
