@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Project risks" %}
-{% set pageSection = "Issues and risks" %}
+{% set pageHeading = "Do you need to add any project risks?" %}
+{% set pageSection = "Project risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,9 +13,7 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-		<p>Add any risks you have faced for your project Growing Community Green Spaces. We use this information to:</p>
-
-		
+		<p>Add any risks you have faced for your project Growing Community Green Spaces. We use this information to:</p>		
 		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
 			<li>see how risks are been managed</li>
 			<li>offer you support</li>
@@ -24,43 +22,41 @@
 
 		<form method="post" action="/project/?report-8-status=Completed" >	  
 		
-			{{ govukRadios({				
+			{{ govukRadios({		
+				classes: "govuk-radios--inline",		
 				name: "projecRisks",
 				id: "projecRisks",				
 				fieldset: {
 				  legend: {
 					text: "Do you need to add any project risks?",
 					isPageHeading: false,
-					classes: "govuk-fieldset__legend--m"
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
 					}
 				},				
 				items: [
-				  { value: "yes", text: "Yes" },
-				  { value: "no", text: "No" }
+				  { value: "Yes~/project/issues-risks/risks/add/", text: "Yes" },
+				  { value: "No", text: "No" }
 				]
-			  }) }}
-
+			}) }}
 
 			<div class="govuk-button-group">
 				{{ govukButton({
-				  text: "Save"
+				  text: "Save and continue"
 				}) }}
 
-				{{ govukButton({
+				<!-- {{ govukButton({
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary",
 				  href: "/project/?report-8-status=inProgress"
-				}) }}
+				}) }} -->
 		  </div>
 
 		</form>
 
   	</div>
-	  <div class="govuk-grid-column-one-third">
-
-		{% include "includes/reportPeriod.html "%}
-	
-	  </div>
+	<div class="govuk-grid-column-one-third">
+		{% include "includes/reportPeriod.html "%}	
+	</div>
 </div>
 
 {% endblock %}

@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Upcoming communications" %}
-{% set pageSection = "Project overview" %}
+{% set pageHeading = "Title of the communication opportunity" %}
+{% set pageSection = "Upcoming communications" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -14,47 +14,28 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
 
-		<form method="post" action="/project/?report-2-status=Completed" >
+		<form method="post" action="/project/overview/communications/add/details" >
             
 
             {{ govukInput({
                 label: {
                   text: "Title of the communication opportunity",
-                  classes: "govuk-label--m",
+                  classes: "govuk-label govuk-visually-hidden",
                   isPageHeading: false
                 },                
+				classes: "govuk-!-width-two-thirds",
                 id: "projectCommunicationTitle",
                 name: "projectCommunicationTitle"
-              }) }}
-
-
-
-              {{ govukCharacterCount({
-                name: "projectCommunicationDetails",
-                id: "projectCommunicationDetails",
-                maxlength: 500,
-                label: {
-                text: "Tell us in more detail about your upcoming communications",
-                  classes: "govuk-label--m",
-                  isPageHeading: true
-                },
-                hint: {
-                  text: "This is a hint."
-                }
-              }) }}
-
-
-
+            }) }}            
 
 			<div class="govuk-button-group">
 				{{ govukButton({
-				  text: "Add"
+				  text: "Save and continue"
 				}) }}
-
-				{{ govukButton({
+				<!-- {{ govukButton({
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary"
-				}) }}
+				}) }} -->
 		  </div>
 
 		</form>

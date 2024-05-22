@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Title of issue" %}
+{% set pageHeading = "What are you doing to address the issue?" %}
 {% set pageSection = "Project issues" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,21 +13,20 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
-		<form method="post" action="/project/issues-risks/issues/add/impact" >
+		<form method="post" action="/project/issues-risks/issues/add/support" >
             
-            {{ govukInput({
-                label: {
-                  text: "Title of issue",
-                  classes: "govuk-label govuk-visually-hidden",
-                  isPageHeading: false
-                },     
-				hint: {
-					text: "For example, Limited recruitment opportunities."
+            {{ govukTextarea({
+				name: "projectIssueMeasures",
+				id: "projectIssueMeasures",
+				label: {
+				  text: "Can you provide more detail?",
+				  classes: "govuk-label govuk-visually-hidden",
+				  isPageHeading: true
 				},
-                classes: "govuk-!-width-two-thirds",           
-                id: "projectIssueTitle",
-                name: "projectIssueTitle"
-            }) }}
+				hint: {
+				  text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+				}
+			}) }} 
 
 			<div class="govuk-button-group">
 				{{ govukButton({

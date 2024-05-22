@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Title of issue" %}
-{% set pageSection = "Project issues" %}
+{% set pageHeading = "Tell us more about this project challenge" %}
+{% set pageSection = "Project challenges" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,37 +13,38 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
-		<form method="post" action="/project/issues-risks/issues/add/impact" >
-            
-            {{ govukInput({
+		<form method="post" action="/project/overview/challenges/add/more" >
+
+            {{ govukCharacterCount({
+                name: "projectChallengeDetails",
+                id: "projectChallengeDetails",
+                maxlength: 500,
+                rows: 8,
+                classes: "govuk-!-width-two-thirds",
                 label: {
-                  text: "Title of issue",
+                text: "Tell us more about this project challenge",
                   classes: "govuk-label govuk-visually-hidden",
-                  isPageHeading: false
-                },     
-				hint: {
-					text: "For example, Limited recruitment opportunities."
-				},
-                classes: "govuk-!-width-two-thirds",           
-                id: "projectIssueTitle",
-                name: "projectIssueTitle"
+                  isPageHeading: true
+                }
+                
             }) }}
 
 			<div class="govuk-button-group">
 				{{ govukButton({
 				  text: "Save and continue"
 				}) }}
+
 				<!-- {{ govukButton({
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary"
 				}) }} -->
-		  	</div>
+		    </div>
 
 		</form>
 
   	</div>
 	<div class="govuk-grid-column-one-third">
-		{% include "includes/reportPeriod.html "%}	
+		{% include "includes/reportPeriod.html "%}
 	</div>
 </div>
 

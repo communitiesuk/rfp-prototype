@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Progress summary" %}
-{% set pageSection = "Project overview" %}
+{% set pageHeading = "How is your project progressing?" %}
+{% set pageSection = "Progress summary" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      	<p>Use this section to summarise the progress of the project. You might want to include information about:</p>
+      	<p>You might want to include information about:</p>
       	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
         	<li>any significant challenges the project is facing</li>
         	<li>important milestones</li>
@@ -29,7 +29,7 @@
         		maxlength: 500,
         		label: {
           			text: "Describe how your project is progressing?",
-          			classes: "govuk-label--m",
+          			classes: "govuk-label govuk-visually-hidden",
           			isPageHeading: false
         		},
         		hint: {
@@ -40,7 +40,7 @@
 
       		<div class="govuk-button-group">
       			{{ govukButton({
-        			text: "Save"
+        			text: "Save and continue"
       			}) }}
 
       			{{ govukButton({

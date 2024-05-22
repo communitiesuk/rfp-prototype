@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Title of issue" %}
-{% set pageSection = "Project issues" %}
+{% set pageHeading = "Tell us in more detail about your upcoming communications" %}
+{% set pageSection = "Upcoming communications" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,20 +13,20 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
-		<form method="post" action="/project/issues-risks/issues/add/impact" >
-            
-            {{ govukInput({
+
+		<form method="post" action="/project/overview/communications/add/more" >
+
+            {{ govukCharacterCount({
+                name: "projectCommunicationDetails",
+                id: "projectCommunicationDetails",
+				classes: "govuk-!-width-two-thirds",
+                maxlength: 500,
+				rows: 8,
                 label: {
-                  text: "Title of issue",
+                text: "Tell us in more detail about your upcoming communications",
                   classes: "govuk-label govuk-visually-hidden",
                   isPageHeading: false
-                },     
-				hint: {
-					text: "For example, Limited recruitment opportunities."
-				},
-                classes: "govuk-!-width-two-thirds",           
-                id: "projectIssueTitle",
-                name: "projectIssueTitle"
+                }
             }) }}
 
 			<div class="govuk-button-group">
@@ -37,14 +37,16 @@
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary"
 				}) }} -->
-		  	</div>
+		  </div>
 
 		</form>
 
   	</div>
-	<div class="govuk-grid-column-one-third">
-		{% include "includes/reportPeriod.html "%}	
-	</div>
+	  <div class="govuk-grid-column-one-third">
+
+		{% include "includes/reportPeriod.html "%}
+	
+	  </div>
 </div>
 
 {% endblock %}
