@@ -38,18 +38,24 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 
         {% if showNav == true %}
+
+        {{ xGovukPrimaryNavigation({
+        	visuallyHiddenTitle: "Navigation",
+          	items: [		  		
+				{ text: "Programmes", href: "/programmes", current: true }, 
+				{ text: "Support", href: "#" }
+			]
+        }) }}
+
         {{ xGovukSecondaryNavigation({
             visuallyHiddenTitle: "Secondary menu",
-            items: [{
-              text: "Programme details",
-              href: "/project/",
-              current: true
-            }, {
-              text: "Users",
-              href: "/users/"
-            }]
-          }) }}
-          {% endif %}
+            items: [
+            	{ text: "Programme details", href: "/project/" }, 
+				{ text: "Project reports", href: "/project/", current: true }, 
+              	{ text: "Users", href: "/users/" }
+            ]
+        }) }}
+    {% endif %}
         
 
 {% endblock %}
