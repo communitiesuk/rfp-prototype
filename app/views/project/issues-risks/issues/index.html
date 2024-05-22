@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Project issues" %}
-{% set pageSection = "Issues and risks" %}
+{% set pageHeading = "Do you need to add any project issues?" %}
+{% set pageSection = "Project issues" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -24,18 +24,19 @@
 
 		<form method="post" action="/project/?report-7-status=Completed" >	  
 		
-			{{ govukRadios({				
+			{{ govukRadios({		
+				classes: "govuk-radios--inline",		
 				name: "projecIssues",
 				id: "projecIssues",				
 				fieldset: {
 				  legend: {
 					text: "Do you need to add any project issues?",
 					isPageHeading: false,
-					classes: "govuk-fieldset__legend--m"
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
 					}
 				},				
 				items: [
-				  { value: "yes", text: "Yes" },
+				  { value: "yes~/project/issues-risks/issues/add/", text: "Yes" },
 				  { value: "no", text: "No" }
 				]
 			  }) }}
@@ -43,14 +44,14 @@
 
 			<div class="govuk-button-group">
 				{{ govukButton({
-				  text: "Save"
+				  text: "Save and continue"
 				}) }}
 
-				{{ govukButton({
+				<!-- {{ govukButton({
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary",
 				  href: "/project/?report-7-status=inProgress"
-				}) }}
+				}) }} -->
 		  </div>
 
 		</form>

@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Upcoming communications" %}
-{% set pageSection = "Project overview" %}
+{% set pageHeading = "Do you have any upcoming communications opportunities?" %}
+{% set pageSection = "Upcoming communications" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
 			<li>And lastly, you should include this</li>
 		</ul>
 
-		<form method="post" action="/project/?report-2-status=Completed" >
+		<form method="post" action="/project/overview/communications/add/" >
 		
 			{{ govukRadios({
 				classes: "govuk-radios--inline",
@@ -31,7 +31,7 @@
 				  legend: {
 					text: "Do you have any upcoming communications opportunities?",
 					isPageHeading: false,
-					classes: "govuk-fieldset__legend--m"
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
 					}
 				},				
 				items: [
@@ -41,15 +41,16 @@
 			  }) }}
 
 
+
 			<div class="govuk-button-group">
 				{{ govukButton({
-				  text: "Save"
+				  text: "Continue"
 				}) }}
 
-				{{ govukButton({
+				<!-- {{ govukButton({
 				  text: "Save as draft",
 				  classes: "govuk-button--secondary"
-				}) }}
+				}) }} -->
 		  </div>
 
 		</form>

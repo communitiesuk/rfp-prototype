@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
 {% set showBackLink = false %}
-{% set showBread = true %}
+{% set showBread = false %}
 {% set showNav = true %}
 
-{% set pageHeading = ' ' + data.projectName + ' ' %}
-{% set pageSection = "Project overview" %}
+{% set pageHeading = "Reporting period July 2023 to September 2023" %}
+{% set pageSection = ' ' + data.projectName + ' ' %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -15,24 +15,47 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-		{{ govukDetails({
-			summaryText: "How to submit your report",
-			text: "To follow"
-		}) }}		
+
+		<!-- {% set html %}
+  			<p class="govuk-notification-banner__heading">This report is due by 16th June 2024.</p>
+		{% endset %}
+
+		{{ govukNotificationBanner({
+  			html: html
+		}) }} -->
+
+		
+			<p>Due by 16th February 2024
+			<br><span class="govuk-body-s">Last updated: 16th February 2024 by Alex Smith</span></p>
+		
+		
 
 		{% include "includes/task-overview.html" %}
-		{% include "includes/task-delivery.html" %}
 		{% include "includes/task-issues-and-risks.html" %}
+		{% include "includes/task-delivery.html" %}
+		
 		{% include "includes/task-expenditure.html" %}
 		{% include "includes/task-outputs.html" %}
 		{% include "includes/task-outcomes.html" %}
 		{% include "includes/task-changes.html" %}
-		{% include "includes/task-sign-off.html" %}
+		<!-- {% include "includes/task-sign-off.html" %} -->
+
+
+		
+
+		<form method="post" action="/project/report/check-your-answers" >
+		
+			{{ govukButton({
+            	text: "Continue"
+          	}) }}
+		
+		</form>
+
 
   </div>
   <div class="govuk-grid-column-one-third">
 
-	{% include "includes/reportBox.html "%}
+	<!-- {% include "includes/reportBox.html "%} -->
 
   </div>
 </div>
