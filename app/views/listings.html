@@ -12,14 +12,19 @@
 
         {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
 
-        <p class="govuk-body-s">Last updated 13 May 2024</p>
+        <p class="govuk-body-s">Last updated 23 May 2024</p>
         <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
-
+        <div class="govuk-inset-text">
+            <p>All pages are currently under flow and content review.</p>
+        </div>
     </div>
     <div class="govuk-grid-column-full">
 
         {% set programmeHtml %}
             <h3 class="govuk-heading-m">Programme</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/programmes" >Programme overview</a></li>                    
+            </ul>
 
         {% endset -%}  
         
