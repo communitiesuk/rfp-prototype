@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "What’s the name of the organisation?" %}
+{% set pageSection = "Administration" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+		
+		<p>This is the date Pathfinder grant elements of project will be physically complete.</p>
+
+		<form method="post" action="/admin/contact-name" >
+            
+
+            {{ govukInput({
+                label: {
+                  text: "Title of the communication opportunity",
+                  classes: "govuk-label govuk-visually-hidden",
+                  isPageHeading: false
+                },                
+				classes: "govuk-!-width-two-thirds",
+                id: "adminPracticalCompletionDate",
+                name: "adminPracticalCompletionDate"
+            }) }}            
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Continue"
+				}) }}
+				<!-- {{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }} -->
+		  </div>
+
+		</form>
+
+  	</div>	  
+</div>
+
+{% endblock %}
