@@ -37,9 +37,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         {% endif %}
 
 
-        {% if showNav == true %}
-
-        {{ xGovukPrimaryNavigation({
+		{{ xGovukPrimaryNavigation({
         	visuallyHiddenTitle: "Navigation",
           	items: [		  		
 				{ text: "Programmes", href: "/programmes", current: true }, 
@@ -47,6 +45,8 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 			]
         }) }}
 
+
+        {% if showNav == true %}
         {{ xGovukSecondaryNavigation({
             visuallyHiddenTitle: "Secondary menu",
             items: [
