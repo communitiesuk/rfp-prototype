@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What their telephone number?" %}
+{% set pageHeading = 'What’s ' + data.adminContactName + ' telephone number?' %}
 {% set pageSection = "Administration" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -20,7 +20,7 @@
 
             {{ govukInput({
                 label: {
-                  text: "Title of the communication opportunity",
+                  text: "",
                   classes: "govuk-label govuk-visually-hidden",
                   isPageHeading: false
                 },                
