@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = 'What’s ' + data.adminContactName + ' telephone number?' %}
+{% set pageSection = "Administration" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+		
+		
+
+		<form method="post" action="/admin/details" >
+            
+
+            {{ govukInput({
+                label: {
+                  text: "",
+                  classes: "govuk-label govuk-visually-hidden",
+                  isPageHeading: false
+                },                
+				classes: "govuk-!-width-two-thirds",
+                id: "adminContactNumber",
+                name: "adminContactNumber"
+            }) }}            
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Continue"
+				}) }}
+				<!-- {{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }} -->
+		  </div>
+
+		</form>
+
+  	</div>	  
+</div>
+
+{% endblock %}
