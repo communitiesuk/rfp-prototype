@@ -2,7 +2,11 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = 'What’s ' + data.adminContactName + '’s email address?' %}
+{% if data['adminContactName'] %}
+	{% set pageHeading = 'What’s ' + data.adminContactName + '’s email address?' %}
+{% else %}
+	{% set pageHeading = 'What’s their email address?' %}
+{% endif %}
 {% set pageSection = "Administration" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 

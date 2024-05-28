@@ -2,7 +2,13 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = 'What’s ' + data.adminContactName + ' telephone number?' %}
+
+{% if data['adminContactName'] %}
+	{% set pageHeading = 'What’s ' + data.adminContactName + ' telephone number?' %}
+{% else %}
+	{% set pageHeading = 'What’s their telephone number?' %}
+{% endif %}
+
 {% set pageSection = "Administration" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -15,7 +21,7 @@
 		
 		
 
-		<form method="post" action="/admin/details" >
+		<form method="post" action="/admin/check-your-answers" >
             
 
             {{ govukInput({
