@@ -95,6 +95,21 @@
         {% endset -%}  
 
         {% set adminHtml %}            
+        <h3 class="govuk-heading-m">Admin pages</h3>
+        <p>To follow</p>
+            <!-- <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
+            </ul>                  
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/terms-and-conditions" >Terms and conditions</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/cookies">Cookies</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/accessibility">Accessibility</a></li>
+            </ul>               -->
+        {% endset -%} 
+
+        {% set serviceHtml %}            
         <h3 class="govuk-heading-m">Service root pages</h3>
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
@@ -116,7 +131,8 @@
             
             { label: "Programmes", id: "programme", panel: { html: programmeHtml } },
             { label: "Report", id: "report", panel: { html: reportHtml } },                        
-            { label: "Service pages", id: "admin", panel: { html: adminHtml } }                    
+            { label: "Admin", id: "admin", panel: { html: adminHtml } }, 
+            { label: "Service pages", id: "service", panel: { html: serviceHtml } }                    
             ]
         }) }}
 
