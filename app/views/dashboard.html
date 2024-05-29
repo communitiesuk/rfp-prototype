@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set showNav = false %}
+
+
+{% set pageHeading = "Programmes" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+
+  <!-- </div>
+  <div class="govuk-grid-column-full">
+       -->
+
+
+	   
+
+	   <!-- <h3 class="govuk-heading-s">Programme reports due</h3>
+	   <p><a href="#">Regenerating Manchester’s Green Spaces</a></p>
+	   <hr class="govuk-section-break--m">
+ 
+	   <h3 class="govuk-heading-s">Project reports due</h3>
+	   <p><a href="/project/">Growing Community Green Spaces</a></p>
+	   <p><a href="#">Wildlife Corridor</a></p>
+ 
+	   <h3 class="govuk-heading-s">Project reports completed</h3>
+	   {{ govukDetails({
+		 summaryText: "Show completed reports",
+		 text: "To follow"
+	   }) }} -->
+
+ <!-- 
+	   {{ govukAccordion({
+		 id: "accordion-default",
+		 items: [
+		   {
+			 heading: {
+			   text: "Project reports completed"              
+			 },
+			 content: {
+			   html: '<p class="govuk-body">To follow.</p>'
+			 }
+		   }
+		 ]
+	   }) }} -->
+ 
+		<h2 class="govuk-heading-l">Regenerating Manchester’s Green Spaces</h2>
+
+    	{{ govukSummaryList({
+      		card: { title: { text: "Programme reports"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+      		rows: [
+			  { key: { text: "Due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "#", text: "Complete", visuallyHiddenText: "age" } ] } },
+			  { key: { text: "Completed" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }
+      		]
+    	}) }}
+
+		{{ govukSummaryList({
+			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			rows: [
+			  { key: { text: "Reports due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "/project/", text: "Complete", visuallyHiddenText: "age" } ] } },
+			  { key: { text: "Completed reports" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }
+			  
+			]
+	  	}) }}
+
+	  	{{ govukSummaryList({
+			card: { title: { text: "Wildlife Corridor project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			rows: [
+		  		{ key: { text: "Due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "#", text: "Complete", visuallyHiddenText: "age" } ] } },
+		  		{ key: { text: "Completed" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }		  
+			]
+  		}) }}
+		
+<!--       
+
+
+      <h2 class="govuk-heading-m">Warrington Digital Enterprise Hub</h2>
+
+      <h3 class="govuk-heading-s">Programme reports due</h3>
+      <p><a href="#">Warrington Digital Enterprise Hub</a></p>
+      <hr class="govuk-section-break--m">
+
+      <h3 class="govuk-heading-s">Project reports due</h3>
+      <p><a href="#">Locating and Preparing the Digital Hub</a></p>
+      <p><a href="#">Resourcing Technologies</a></p>
+      <p><a href="#">Another project</a></p>
+
+      <h3 class="govuk-heading-s">Project reports completed</h3>
+      {{ govukDetails({
+        summaryText: "Show completed reports",
+        text: "To follow"
+      }) }}
+      <hr class="govuk-section-break--m">
+
+
+      <p><a href="#">View previous programme reports</a></p> -->
+
+  </div>
+</div>
+
+{% endblock %}
