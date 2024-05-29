@@ -29,7 +29,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         {% if showBread == true %}
         {{ govukBreadcrumbs({
           items: [
-            { text: "Programmes", href: "/programmes" },
+            { text: "Programmes", href: "/dashboard" },
             { text: "Regenerating Manchester Green Spaces", href: "/project/" }
             
           ]
@@ -40,10 +40,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 		<!-- {{ xGovukPrimaryNavigation({
         	visuallyHiddenTitle: "Navigation",
           	items: [		  		
-				{ text: "Programmes", href: "/programmes", current: true }, 
+				{ text: "Programmes", href: "/dashboard", current: true }, 
 				{ text: "Support", href: "#" }
 			]
-        }) }}
+        }) }}sign-in
+
 
 
         {% if showNav == true %}

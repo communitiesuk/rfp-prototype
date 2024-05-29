@@ -11,11 +11,36 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      	
 
-      	<p class="gocuk-body">Sign in using the Microsoft account for your work email address.</p>
+      	<form method="post" action="/dashboard" >
 
-      	<form method="post" action="/programmes" >
+			{{ govukInput({
+				label: {
+					text: "Email address",
+				  	classes: "govuk-label",
+				  	isPageHeading: false
+				},
+				hint: {
+					text: "This is your work email address"
+				},
+				classes: "govuk-!-width-two-thirds",
+				id: "signInEmail",
+				name: "signInEmail",
+				type: "email"
+			}) }}
+
+			{{ govukInput({
+				label: {
+					text: "Password",
+				  	classes: "govuk-label",
+				  	isPageHeading: false
+				},
+				classes: "govuk-!-width-two-thirds",
+				id: "signInPassword",
+				name: "signInPassword",
+				type: "password"
+			}) }}
         	
 			{{ govukButton({
         		text: "Sign in",        	        	
@@ -23,10 +48,10 @@
       		}) }}
       	
 		</form>
-      
-      	<ul class="govuk-list">
+
+		<ul class="govuk-list">
             <li><a href="#" class="govuk-link govuk-link--no-visited-state">I have forgotten my password</a></li>            			
-        </ul>
+        </ul>		
 
   	</div>
 </div>
