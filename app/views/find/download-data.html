@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Download monitoring and evaluation data" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<p>Use the following filters to select the projects you need.</p>
+		<p>The filters you select will be applied at project level.  You will be able to download this as a file to your desktop.</p>
+		<div class="govuk-inset-text">
+			<p>If you don’t select any filters you will get all the data from all of the projects that are in the system.</p>
+		</div>
+
+		<form method="post" action="/find/confirmation" >
+
+
+			{{ govukButton({
+				text: "Continue"
+			}) }}
+
+		</form>
+
+		<p class="govuk-!-font-size-19"><a class="govuk-link govuk-link--no-visited-state" href="">Access the funding glossary</a></p>
+		
+		
+
+  	</div>	  
+</div>
+
+{% endblock %}
