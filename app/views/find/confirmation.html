@@ -1,0 +1,27 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Email sent" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+		
+		<p>We’ve emailed a link to <span class="govuk-!-font-weight-bold">user@levellingup.gov.uk</span> to download the requested data extract.</p>
+
+		<p>The link will stop working [after-x-time-period].</p>
+        <h2 class="govuk-heading-m">Not recieved the email</h2>
+        <p>The email may take a few minutes to arrive.</p>
+        <p>Check your junk or spam folder, if it has still not arrived you can <a href="#">request a new download link.</a></p>
+
+  	</div>	  
+</div>
+
+{% endblock %}
