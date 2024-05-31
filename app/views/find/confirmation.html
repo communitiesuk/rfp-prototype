@@ -3,7 +3,7 @@
 {% set showBackLink = false %}
 {% set serviceName = "Find monitoring data" %}
 
-{% set pageHeading = "Email sent" %}
+{% set pageHeading = "Request received" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -12,16 +12,39 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-		
-		<p>We’ve emailed a link to <span class="govuk-!-font-weight-bold">user@levellingup.gov.uk</span> to download the requested data extract.</p>
+    	<!-- {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}       -->
 
-		<p>The link will stop working [after-x-time-period].</p>
-        <h2 class="govuk-heading-m">Not recieved the email</h2>
-        <p>The email may take a few minutes to arrive.</p>
-        <p>Check your junk or spam folder, if it has still not arrived you can <a href="#">request a new download link.</a></p>
+        {{ govukPanel({
+            titleText: pageHeading            
+          }) }}
+		
+        
+        <h2 class="govuk-heading-m govuk-!-margin-top-7">What happens next</h2>
+        <p class="govuk-body">We will email a link to <span class="govuk-!-font-weight-bold">user@levellingup.gov.uk</span>.</p>
+        <p>This may take anything up to [whatever we think the maximum amount of time is] minutes to come through to your inbox.</p>
+
+
+        
+        <h2 class="govuk-heading-m">If you’ve not recieved the email</h2>
+        <p>If you cannot see the email in your inbox, check your junk or spam folder. If you’re still having problems, <a href="#">request a new link to download your data</a> or email us at <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+
+
+        
+        <!-- <p>Check your junk or spam folder.</p><p>If you’re still having problems, you can <a href="#">request a new download link</a> or email us at <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p> -->
+
+
+
+        <!-- <p class="govuk-body">
+            <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+          </p> -->
+
 
   	</div>	  
 </div>
 
 {% endblock %}
+
+
+
+
+
