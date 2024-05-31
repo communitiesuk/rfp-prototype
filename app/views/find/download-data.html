@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Get monitoring and evaluation data" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<p>Use the filters to select the data you need.</p>
+		<!-- <p>Use the following filters to select the projects you need.</p> -->
+		<!-- <p>The filters you select will be applied at project level.  You will be able to download this as a file to your desktop.</p> -->
+		<p>You will get all of the data from all projects and programmes if you do not select any filters.</p>
+		
+		<!-- <p>If you do not select any filters you will get all the data from all of the projects that are in the system.</p> -->
+		
+
+		<!-- <h2 class="govuk-heading-m">Your data download link will be emailed to you</h2> -->
+		<div class="govuk-inset-text">
+			<p>We will:</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>send you an email to the address you’ve signed in with</li>
+				<li>include a link in the email for you to download your data</li>
+			</ul>
+		</div>
+
+
+		{{ govukRadios({
+			
+			name: "changedName",
+			fieldset: {
+			  legend: {
+				text: "Which format do you need?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--s"
+			  }
+			},			
+			items: [
+			  {
+				value: "excel",
+				text: "XLSX (Microsoft Excel)"
+			  },
+			  {
+				value: "no",
+				text: "JSON"
+			  }
+			]
+		  }) }}
+		
+		<!-- {{ govukSelect({
+			id: "sort",
+			name: "sort",
+			label: {
+			  text: "Data format"
+			},
+			items: [
+			  {
+				value: "excel",
+				text: "XLSX (Excel)",
+				selected: true
+			  },
+			  {
+				value: "JSON",
+				text: "JSON"
+				
+			  }
+			  
+			]
+		  }) }} -->
+
+		
+		<form method="post" action="/find/confirmation" >
+
+
+			
+
+
+			{{ govukButton({
+				text: "Confirm and request data "
+			}) }}
+
+
+
+		</form>
+
+		<p class="govuk-!-font-size-19"><a class="govuk-link govuk-link--no-visited-state" href="">Access the funding glossary</a></p>
+		
+		
+
+  	</div>	  
+</div>
+
+{% endblock %}
