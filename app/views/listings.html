@@ -131,6 +131,18 @@
             </ul>              
         {% endset -%}  
 
+
+        {% set findHtml %}            
+        <h3 class="govuk-heading-m">Find monitoring data</h3>            
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/find/download-data" >Get monitoring and evaluation data</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/find/confirmation" >Request received</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/get-data" >Email: Monitoring and evaluation data</a></li>                
+            </ul>              
+        {% endset -%}  
+
+
+
             <!-- Tabs -->
         {{ govukTabs({
             items: [           
@@ -138,7 +150,8 @@
             { label: "Programmes", id: "programme", panel: { html: programmeHtml } },
             { label: "Report", id: "report", panel: { html: reportHtml } },                        
             { label: "Admin", id: "admin", panel: { html: adminHtml } }, 
-            { label: "Service pages", id: "service", panel: { html: serviceHtml } }                    
+            { label: "Service pages", id: "service", panel: { html: serviceHtml } },
+            { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }                    
             ]
         }) }}
 
