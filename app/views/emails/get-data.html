@@ -1,0 +1,42 @@
+{% extends "layouts/email.html" %}
+
+{% set serviceName = "{Service Name}" %}
+
+{% set title = "Monitoring and evaluation data" %}
+
+{% block pageTitle %}
+  {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">{{ title }}</h1>        
+    
+    <p>Your monitoring and evaluation data file is now ready to be downloaded: <a href="#">https://rb.gy/service/data-extract/VqXCNdhE</a> (.xlsx).</p>
+    <p>This link will stop working after [x-time-period].</p>
+    <p>If your link has expired, you can make a new download request by going to: <a href="#">https://rb.gy/service/download-data</a>.</p>
+    
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
+    <p>This is an automated message. Do not reply to this email. If you need help, contact us: <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+
+
+
+
+
+  
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
