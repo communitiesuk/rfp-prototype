@@ -12,19 +12,33 @@
 
         {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
 
-        <p class="govuk-body-s">Last updated 3 June 2024</p>
+        <p class="govuk-body-s">Last updated 4 June 2024</p>
         <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
 
     </div>
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full">       
+        
+        {% set serviceHtml %}            
+        <h3 class="govuk-heading-m">Main pages</h3>
+                        
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/dashboard" >Dashboard (Name TBC)</a></li>
+                
+            </ul>                  
 
-        {% set programmeHtml %}
-            <h3 class="govuk-heading-m">Programme</h3>
-            <ul class="govuk-list govuk-list--bullet">                        
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/dashboard" >Programmes</a></li>      
-            </ul>
-
+            <h2 class="govuk-heading-s">Footer pages</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/terms-and-conditions" >Terms and conditions</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/cookies">Cookies</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/accessibility">Accessibility</a></li>
+            </ul>              
         {% endset -%}  
+
+
         
         {% set reportHtml %}
             <h3 class="govuk-heading-m">Report</h3>
@@ -115,21 +129,7 @@
             </ul>               -->
         {% endset -%} 
 
-        {% set serviceHtml %}            
-        <h3 class="govuk-heading-m">Service root pages</h3>
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
-                <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="/gov-gateway/sign-in" >Sign in using Government Gateway</a></li>                 -->
-                
-            </ul>                  
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/terms-and-conditions" >Terms and conditions</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/cookies">Cookies</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/accessibility">Accessibility</a></li>
-            </ul>              
-        {% endset -%}  
+        
 
 
         {% set findHtml %}            
@@ -145,12 +145,10 @@
 
             <!-- Tabs -->
         {{ govukTabs({
-            items: [           
-            
-            { label: "Programmes", id: "programme", panel: { html: programmeHtml } },
-            { label: "Report", id: "report", panel: { html: reportHtml } },                        
-            { label: "Admin", id: "admin", panel: { html: adminHtml } }, 
+            items: [                               
             { label: "Service pages", id: "service", panel: { html: serviceHtml } },
+            { label: "Report", id: "report", panel: { html: reportHtml } },                        
+            { label: "Admin", id: "admin", panel: { html: adminHtml } },             
             { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }                    
             ]
         }) }}
