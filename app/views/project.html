@@ -34,7 +34,7 @@
 				
 				{ key: { text: "Reporter" }, value: { html: "Gemma Currie" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
 				{ key: { text: "Deadline" }, value: { html: "26 July 2024" } },
-				{ key: { text: "Date submitted" }, value: { html: "Not started" }, actions: { items: [ { href: "/project/", classes: "govuk-link--no-visited-state", text: "Create report", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--blue">Not started</strong>' }, actions: { items: [ { href: "/project/", classes: "govuk-link--no-visited-state", text: "Create report", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 		  <!-- { key: { text: "Reporting period" }, value: { html: "February 2024 to April 2024" } },	 -->
@@ -46,7 +46,7 @@
 				
 				{ key: { text: "Reporter" }, value: { html: "Gemma Currie" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
 				{ key: { text: "Deadline" }, value: { html: "28 April 2024" } },
-				{ key: { text: "Date submitted" }, value: { html: "30 May 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--green">30 May 2024</strong>' }, actions: { items: [ { href: "/project/view", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 
@@ -56,7 +56,7 @@
 				
 				{ key: { text: "Reporter" }, value: { html: "Sam Williams" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
 				{ key: { text: "Deadline" }, value: { html: "29 January 2024" } },
-				{ key: { text: "Date submitted" }, value: { html: "28 February 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--green">28 February 2024</strong>' }, actions: { items: [ { href: "/project/view", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 
@@ -91,8 +91,8 @@
 			],
 			rows: [
 				[ { text: "February 2024 to April 2024" }, { text: "Gemma Currie" }, { html: 'Not started' }, { html: '<a href="/project/">Create report</a>' } ],
-			  	[ { text: "November 2023 to January 2024" }, { text: "Gemma Currie" }, { text: "30 May 2024" }, { html: '<a href="#">View</a>' } ],
-			  	[ { text: "August 2023 to October 2023"}, { text: "Gemma Currie"}, { text: "28 February 2024"}, { html: '<a href="#">View</a>' } ]			  			
+			  	[ { text: "November 2023 to January 2024" }, { text: "Gemma Currie" }, { text: "30 May 2024" }, { html: '<a href="/project/view">View</a>' } ],
+			  	[ { text: "August 2023 to October 2023"}, { text: "Gemma Currie"}, { text: "28 February 2024"}, { html: '<a href="/project/view">View</a>' } ]			  			
 			]
 		  }) }}
 
