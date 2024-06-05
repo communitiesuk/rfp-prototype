@@ -5,8 +5,8 @@
 
 {% set showNav = true %}
 
-{% set pageHeading = "Project users" %}
-{% set pageSection = '' + data.projectName + '' %}
+{% set pageHeading = "Users" %}
+{% set pageSection = "Warwickshire county council" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -19,50 +19,53 @@
   <div class="govuk-grid-column-full">
 
 
-    <h2 class="govuk-heading-m">Project reporters</h2>
+    <!-- <h2 class="govuk-heading-m">Project reporters</h2>
     {{ govukButton({
       text: "Add a project reporter"
-    }) }}
+    }) }} -->
 
 
 		{{ govukTable({      
       captionClasses: "govuk-table__caption--m",      
       head: [
         { text: "Name", classes: "govuk-!-width-one-quarter" },
+        { text: "Role", classes: "govuk-!-width-one-quarter"  },
         { text: "Email", classes: "govuk-!-width-one-third" },
-        { text: "Permissions"  },
-        { text: "", classes: "govuk-!-width-one-quarter", format: "numeric" }
+        
+        { text: "" }
       ],
       rows: [
         [
-          { text: "Alex Smith" },
+          { text: "Kate Harries" },          
+          { text: "Section 151 Officer" },
           { text: "alex.smith@localgov.co.uk" },
-          { text: "Full" },
-          { html: '<a href="/users/edit">Edit</a> | <a href="#">Remove</a>', format: "numeric" }
+          { html: '<a href="/users/edit">Change</a>', format: "numeric" }
         ],
         [
-          { text: "Alex Smith" },
+        { text: "Gemma Currie" },             
+          { text: "Reporter" },
           { text: "alex.smith@localgov.co.uk" },
-          { text: "Viewing" },
-          { html: '<a href="/users/edit">Edit</a> | <a href="#">Remove</a>', format: "numeric" }
+          { html: '<a href="/users/edit">Change</a>', format: "numeric" }
         ],
         [
-          { text: "Alex Smith" },
+        { text: "Gideon Goldberg" },          
+          { text: "Senior Reporting Officer (SRO)" },
           { text: "alex.smith@localgov.co.uk" },
-          { text: "Viewing" },
-          { html: '<a href="/users/edit">Edit</a> | <a href="#">Remove</a>', format: "numeric" }
+          { html: '<a href="/users/edit">Change</a>', format: "numeric" }
         ],
         [
-          { text: "Alex Smith" },
+        { text: "Alex Smith" },          
+          { text: "Reporter" },
           { text: "alex.smith@localgov.co.uk" },
-          { text: "Full" },
-          { html: '<a href="/users/edit">Edit</a> | <a href="#">Remove</a>', format: "numeric" }
+          { html: '<a href="/users/edit">Change</a>', format: "numeric" }
         ]
       ]
     }) }}
 
 
-    <h2 class="govuk-heading-m">Senior Reporting Officer (SRO)</h2>
+    
+
+    <!-- <h2 class="govuk-heading-m">Senior Reporting Officer (SRO)</h2>
 		{{ govukTable({      
       captionClasses: "govuk-table__caption--m",      
       head: [
@@ -99,7 +102,7 @@
         ]        
       ]
     }) }}
-
+ -->
 
 
   </div>

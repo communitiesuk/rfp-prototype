@@ -1,10 +1,10 @@
 {% extends "layouts/main.html" %}
 
 {% set showBackLink = false %}
-{% set showNav = true %}
+{% set showNav = false %}
 
 
-{% set pageHeading = "Programmes and projects" %}
+{% set pageHeading = "Rugby warm hub reports" %}
 {% set pageSection = "Warwickshire county council " %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -14,35 +14,35 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
-		
 
+		<ul class="govuk-list govuk-list--bullet">
+
+				<li>Project summary</li>
+				<li>Dates for completion</li>
+				<li>Reporting periods</li>				
+				<li>Reports due</li>
+				<li>View reports already submitted</li>
+				<li>Show details of contact person</li>
+				<li>Show details of section 151 person</li>
+				<!-- <li>List of users</li> -->
+				<li>Project ID</li>
+
+
+		</ul>
 
 		<!-- <h2 class="govuk-heading-m">Programme 1</h2> -->
 
 
-		{{ govukSummaryList({
-			card: { title: { text: "Food bank fund"}, actions: { items: [ { href: "#", text: "Reports", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+		<!-- {{ govukSummaryList({
+			card: { title: { text: "Programme Name"}, actions: { items: [ { href: "#", text: "Report", visuallyHiddenText: "of University of Gloucestershire" }, { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
 			rows: [
-				{ key: { html: '<a href="/project">Rugby warm hub</a>' }, value: { html: "Report due 2 June 2024 " } },
-				{ key: { text: "Rubgy warm hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", text: "Reports", visuallyHiddenText: "age" } ] } },
-				{ key: { text: "Rugby warm hub" }, value: { html: " " }, actions: { items: [ { href: "/project", text: "View", visuallyHiddenText: "age" } ] } }
+				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project/", text: "View", visuallyHiddenText: "age" } ] } },
+				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project/", text: "View", visuallyHiddenText: "age" } ] } }
 				
 			  	
 			  
 			]
-	  	}) }}
-
-
-		  {{ govukSummaryList({
-			card: { title: { text: "Programme Name 2"}, actions: { items: [ { href: "#", text: "Report", visuallyHiddenText: "of University of Gloucestershire" }, { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
-			rows: [
-				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", text: "View", visuallyHiddenText: "age" } ] } }
-				
-				
-			  	
-			  
-			]
-	  	}) }}
+	  	}) }} -->
 
 		<!-- {{ govukSummaryList({
 			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
