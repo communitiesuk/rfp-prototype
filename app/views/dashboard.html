@@ -11,7 +11,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-full">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 		
@@ -21,22 +21,18 @@
 
 
 		{{ govukSummaryList({
-			card: { title: { text: "Food bank fund"}, actions: { items: [ { href: "#", text: "Reports", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Food bank fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "of University of Gloucestershire" }, { href: "#", classes: "govuk-link--no-visited-state", text: "Programme overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
 			rows: [
-				{ key: { html: '<a href="/project">Rugby warm hub</a>' }, value: { html: "Report due 2 June 2024 " } },
-				{ key: { text: "Rubgy warm hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", text: "Reports", visuallyHiddenText: "age" } ] } },
-				{ key: { text: "Rugby warm hub" }, value: { html: " " }, actions: { items: [ { href: "/project", text: "View", visuallyHiddenText: "age" } ] } }
-				
-			  	
-			  
+				{ key: { text: "Rugby warm hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Community food project" }, value: { html: "Report due 30 August 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 
 
 		  {{ govukSummaryList({
-			card: { title: { text: "Programme Name 2"}, actions: { items: [ { href: "#", text: "Report", visuallyHiddenText: "of University of Gloucestershire" }, { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Programme Name</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Report", visuallyHiddenText: "of University of Gloucestershire" }, { href: "#", classes: "govuk-link--no-visited-state", text: "Programme overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
 			rows: [
-				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", text: "View", visuallyHiddenText: "age" } ] } }
+				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "age" } ] } }
 				
 				
 			  	
