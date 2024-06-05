@@ -4,8 +4,8 @@
 {% set showBread = true %}
 {% set showNav = true %}
 
-{% set pageHeading = "Edit user" %}
-{% set pageSection = '' + data.projectName + '' %}
+{% set pageHeading = "Kate Harries" %}
+{% set pageSection = "Warwickshire county council" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 
@@ -16,8 +16,102 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
   
-      <p>Content to follow.</p>
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Kate Harries"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Role"
+            },
+            value: {
+              text: "Section 151 Officer"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Email"
+            },
+            value: {
+              text: "kate.harries@localgov.co.uk"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Phone number"
+            },
+            value: {
+              text: "00700070070"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "address"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Permissions"
+            },
+            value: {
+              html: '<p class="govuk-body">Sign-off</p>'
+            },
+            actions: {
+              items: [                
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "contact details"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+
+
+      <p class="govuk-body"><a class="govuk-link" href="#">Remove this user</a></p>
   </div>  
 </div>
+
+
 
 {% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set showNav = false %}
+
+
+{% set pageHeading = "Rugby warm hub reports" %}
+{% set pageSection = "Warwickshire county council " %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+
+	</div>
+	<div class="govuk-grid-column-two-thirds">	
+		<h2 class="govuk-heading-m">About the project</h2>
+		<p>A project summary is a comprehensive report on the project's key details and its status at the time the report is written.</p>
+
+		<ul class="govuk-list govuk-list--bullet">
+			<!-- <li>Project summary</li> -->
+			<li>Dates for completion</li>
+			<li>Reporting periods</li>				
+			<li>Reports due</li>
+			<li>View reports already submitted</li>
+			<!-- <li>Show details of contact person</li> -->
+			<!-- <li>Show details of section 151 person</li> -->
+			<!-- <li>List of users</li> -->
+			<!-- <li>Project ID</li> -->
+		</ul>
+	</div>
+  	<div class="govuk-grid-column-one-third">
+
+		{% include "includes/projectBox.html "%}
+		
+		
+  	
+	</div>
+</div>
+
+{% endblock %}

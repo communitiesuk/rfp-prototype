@@ -1,19 +1,71 @@
 {% extends "layouts/main.html" %}
 
 {% set showBackLink = false %}
-{% set showNav = false %}
+{% set showNav = true %}
 
 
-{% set pageHeading = "Pathfinders" %}
-{% set pageSection = "Funding programmes" %}
+{% set pageHeading = "Programmes and projects" %}
+{% set pageSection = "Warwickshire county council " %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-full">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+		
+
+
+		<!-- <h2 class="govuk-heading-m">Programme 1</h2> -->
+
+
+		{{ govukSummaryList({
+			card: { title: { html: '<span class="govuk-!-font-size-24">Food bank fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Programme overview", visuallyHiddenText: "of Food bank fund" }, { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for Food bank fund" } ] } },
+			rows: [
+				{ key: { text: "Rugby warm hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Community food project" }, value: { html: "Report due 30 August 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } }
+			]
+	  	}) }}
+
+
+		  {{ govukSummaryList({
+			card: { title: { html: '<span class="govuk-!-font-size-24">Programme Name</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Programme overview", visuallyHiddenText: "of programme name" }, { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for programme name" } ] } },
+			rows: [
+				{ key: { text: "Project name" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } }
+				
+				
+			  	
+			  
+			]
+	  	}) }}
+
+		<!-- {{ govukSummaryList({
+			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			rows: [
+				{ key: { text: "Contact" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
+				{ key: { text: "Section 151 officer" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
+				{ key: { text: "Reports due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "/project/", text: "Complete", visuallyHiddenText: "age" } ] } }
+			  	
+			  
+			]
+	  	}) }} -->
+
+
+<!-- 
+		<h2 class="govuk-heading-m">Programme 2</h2>
+
+
+		{{ govukSummaryList({
+			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
+			rows: [
+				{ key: { text: "Contact" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
+				{ key: { text: "Section 151 officer" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
+				{ key: { text: "Reports due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "/project/", text: "Complete", visuallyHiddenText: "age" } ] } }
+			  	
+			  
+			]
+	  	}) }} -->
 
   <!-- </div>
   <div class="govuk-grid-column-full">
@@ -51,27 +103,12 @@
 		 ]
 	   }) }} -->
  
-		<h2 class="govuk-heading-l">Regenerating Manchester’s Green Spaces</h2>
+		<!-- <h2 class="govuk-heading-l">Regenerating Manchester’s Green Spaces</h2> -->
 
-    	{{ govukSummaryList({
-      		card: { title: { text: "Programme reports"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
-      		rows: [
-			  { key: { text: "Due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "#", text: "Complete", visuallyHiddenText: "age" } ] } },
-			  { key: { text: "Completed" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }
-      		]
-    	}) }}
 
-		{{ govukSummaryList({
-			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
-			rows: [
-				{ key: { text: "Contact" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
-				{ key: { text: "Section 151 officer" }, value: { html: "Kate Harries" }, actions: { items: [ { href: "/project/", text: "Change", visuallyHiddenText: "age" } ] } },  
-				{ key: { text: "Reports due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "/project/", text: "Complete", visuallyHiddenText: "age" } ] } },
-			  	{ key: { text: "Completed reports" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }
-			  
-			]
-	  	}) }}
-
+		
+		  
+<!-- 
 	  	{{ govukSummaryList({
 			card: { title: { text: "Wildlife Corridor project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
 			rows: [
@@ -79,7 +116,7 @@
 		  		{ key: { text: "Completed" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }		  
 			]
   		}) }}
-		
+		 -->
 <!--       
 
 
