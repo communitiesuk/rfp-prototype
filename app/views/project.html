@@ -25,7 +25,17 @@
 		<h2 class="govuk-heading-m">Intro</h2>
 		<p>A project summary is a comprehensive report on the project's key details and its status at the time the report is written. A project summary is a comprehensive report on the project's key details and its status at the time the report is written.</p>
 
-
+		<ul class="govuk-list govuk-list--bullet">
+			<li>Project summary</li>
+			<li>Dates for completion</li>
+			<li>Reporting periods</li>				
+			<li>Reports due</li>
+			<li>View reports already submitted</li>
+			<li>Show details of contact person</li>
+			<li>Show details of section 151 person</li>
+			<li>List of users</li>
+			<li>Project ID</li>
+		</ul>
 
 		<h2 class="govuk-heading-m govuk-!-margin-top-7">Reports due</h2>
 		{{ govukSummaryList({		
@@ -33,6 +43,8 @@
 			rows: [				
 				
 				{ key: { text: "Reporter" }, value: { html: "Gemma Currie" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Deadline" }, value: { html: "26 July 2024" } },
+				{ key: { text: "Deadline" }, value: { html: "26 July 2024" } },
 				{ key: { text: "Deadline" }, value: { html: "26 July 2024" } },
 				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--blue">Not started</strong>' }, actions: { items: [ { href: "/project/", classes: "govuk-link--no-visited-state", text: "Create report", visuallyHiddenText: "for this project" } ] } }
 			]
@@ -46,6 +58,8 @@
 				
 				{ key: { text: "Reporter" }, value: { html: "Gemma Currie" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
 				{ key: { text: "Deadline" }, value: { html: "28 April 2024" } },
+				{ key: { text: "Deadline" }, value: { html: "28 April 2024" } },
+				{ key: { text: "Deadline" }, value: { html: "28 April 2024" } },
 				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--green">30 May 2024</strong>' }, actions: { items: [ { href: "/project/view", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
@@ -55,6 +69,8 @@
 			rows: [				
 				
 				{ key: { text: "Reporter" }, value: { html: "Sam Williams" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Deadline" }, value: { html: "29 January 2024" } },
+				{ key: { text: "Deadline" }, value: { html: "29 January 2024" } },
 				{ key: { text: "Deadline" }, value: { html: "29 January 2024" } },
 				{ key: { text: "Date submitted" }, value: { html: '<strong class="govuk-tag govuk-tag--green">28 February 2024</strong>' }, actions: { items: [ { href: "/project/view", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
 			]
@@ -73,13 +89,7 @@
 	<div class="govuk-grid-column-full">
 
 		
-
-
-
-
-
-
-		{{ govukTable({
+		<!-- {{ govukTable({
 			caption: "Reports",
 			captionClasses: "govuk-table__caption--m",
 			firstCellIsHeader: true,
@@ -94,7 +104,7 @@
 			  	[ { text: "November 2023 to January 2024" }, { text: "Gemma Currie" }, { text: "30 May 2024" }, { html: '<a href="/project/view">View</a>' } ],
 			  	[ { text: "August 2023 to October 2023"}, { text: "Gemma Currie"}, { text: "28 February 2024"}, { html: '<a href="/project/view">View</a>' } ]			  			
 			]
-		  }) }}
+		  }) }} -->
 
 	</div>
 
