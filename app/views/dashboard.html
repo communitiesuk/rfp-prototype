@@ -4,29 +4,31 @@
 {% set showNav = true %}
 
 
-{% set pageHeading = "Programmes and projects" %}
+{% set pageHeading = "Funds and projects" %}
 {% set pageSection = "Warwickshire county council " %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-three-quarters">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 		
-	
-		
+<!-- 	
+		<h2 class="govuk-heading-m">Food bank fund</h2>
+		<p class="govuk-heading-s">Blackpool youth hub</p>
+		<p class="govuk-heading-s">Ready for work</p> -->
 
 
 		<!-- <h2 class="govuk-heading-m">Programme 1</h2> -->
 
 
 		{{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'} },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Create report", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } },
-				{ key: { text: "Ready for work" }, value: { html: "Report due 30 August 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Ready for work" }, value: { html: "Report due 30 August 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 
@@ -34,7 +36,7 @@
 		  {{ govukSummaryList({
 			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'} },
 			rows: [
-				{ key: { text: "Safe spaces for young people" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Safe spaces for young people" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } }
 				
 				
 			  	
