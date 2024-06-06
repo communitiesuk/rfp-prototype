@@ -26,17 +26,26 @@
             <p>These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
             
             <div class="govuk-button-group">
-                <form action="/dashboard" method="post" >                    
+                <!-- <form action="/dashboard" method="post" >                    
                     {{ govukButton({
                         text: "Start at programme level"
                     }) }}
-                </form> 
+                </form>  -->
                                 
                 <form action="/service-start" method="post" >                    
                     {{ govukButton({
-                        text: "Service login"
+                        text: "Sign in using microsoft"
                     }) }}
                 </form> 
+
+                <form action="/service-start?useOneLogin=Yes" method="post" >                    
+                    {{ govukButton({
+                        text: "Sign in using GOV.UK One Login"
+                    }) }}
+                </form> 
+
+
+                
                 
             </div>
 
