@@ -8,22 +8,34 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% import "macros/page-title.njk" as macroPageTitle %}
 {% import "macros/page-header.njk" as macroPageHeader %}
 
-
 {% block beforeContent %}
 
-{% if showPhaseBanner != false %}
-{{ govukPhaseBanner({
-    tag: { text: "Prototype" },
-    html: "This is a prototype. It is not a real service."
-}) }}
-{% endif %}
+	<!-- Phasebanner -->
+	{% if showPhaseBanner != false %}
+		{{ govukPhaseBanner({
+			tag: { text: "Prototype" },
+			html: "This is a prototype. It is not a real service."
+		}) }}
+	{% endif %}
+	
+	<!-- Primary Nav -->
+	{% if showNav == true %}
+		{{ xGovukSecondaryNavigation({
+			visuallyHiddenTitle: "Secondary menu",
+			items: [							
+				{ text: "Users", href: "/users/" },
+				{ text: "Programmes and projects", href: "/dashboard" }
+			]
+		}) }}
+	{% endif %} 
 
-        {% if showBackLink != false %}
-            {{ govukBackLink({
-                text: "Back",
-                href: "javascript:history.go(-1)"
-            }) }}
-        {% endif %}
+	<!-- Back Link -->
+	{% if showBackLink != false %}
+		{{ govukBackLink({
+			text: "Back",
+			href: "javascript:history.go(-1)"
+		}) }}
+	{% endif %}
 
 
         <!-- {% if showBread == true %}
@@ -47,19 +59,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 
 
-        {% if showNav == true %}
-        {{ xGovukSecondaryNavigation({
-            visuallyHiddenTitle: "Secondary menu",
-            items: [
-            
-            { text: "Organisation details", href: "/project/" }, 	  
-            
-				        
-              	{ text: "Users", href: "/users/" },
-                { text: "Programmes and projects", href: "/project/" }
-            ]
-        }) }}
-    {% endif %} 
+        
         
 
 {% endblock %}
