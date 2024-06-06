@@ -23,12 +23,25 @@
 
 		<!-- <h2 class="govuk-heading-m">Programme 1</h2> -->
 
+		{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+<p class="govuk-notification-banner__heading">
+    Your report for 'Village hall extension' is due in 10 days.
+    <a class="govuk-notification-banner__link" href="#">Complete report</a>.
+  </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html
+}) }}
+
 
 		{{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Create report", visuallyHiddenText: "for Food bank fund" } ] } },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due 2 June 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } },
-				{ key: { text: "Ready for work" }, value: { html: "Report due 30 August 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due on 2 June 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Ready for work" }, value: { html: "Last report <br> 30 August" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
 
@@ -36,7 +49,7 @@
 		  {{ govukSummaryList({
 			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'} },
 			rows: [
-				{ key: { text: "Safe spaces for young people" }, value: { html: "Report due July 2023 to September 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View project", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Village hall extension" }, value: { html: "Reporting period <July 2023 to December 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
 				
 				
 			  	
