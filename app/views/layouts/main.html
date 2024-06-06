@@ -20,13 +20,29 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 	
 	<!-- Primary Nav -->
 	{% if showNav == true %}
+		
+		{% if data['nav'] == "users" %}
 		{{ xGovukSecondaryNavigation({
 			visuallyHiddenTitle: "Secondary menu",
 			items: [							
-				{ text: "Users", href: "/users/" },
-				{ text: "Programmes and projects", href: "/dashboard" }
+				{ text: "Users", href: "/users/?nav=users", current: true },
+				{ text: "Programmes and projects", href: "/dashboard?nav=pro" }
 			]
 		}) }}
+		
+		{% else %}
+
+		{{ xGovukSecondaryNavigation({
+			visuallyHiddenTitle: "Secondary menu",
+			items: [							
+				{ text: "Users", href: "/users/?nav=users" },
+				{ text: "Programmes and projects", href: "/dashboard?nav=pro", current: true }
+			]
+		}) }}
+
+		{% endif %}
+
+
 	{% endif %} 
 
 	<!-- Back Link -->
@@ -37,18 +53,18 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 		}) }}
 	{% endif %}
 
-
-        <!-- {% if showBread == true %}
+<!-- 
+        {% if showBread == true %}
         {{ govukBreadcrumbs({
           items: [
-            { text: "Programmes", href: "/dashboard" },
-            { text: "Regenerating Manchester Green Spaces", href: "/project/" }
+            { text: "Programme and projects", href: "/dashboard?nav=pro" },
+            { text: "Project name", href: "/project" }			
             
           ]
         }) }}
-        {% endif %}
+        {% endif %} -->
 
-
+<!--
 		 {{ xGovukPrimaryNavigation({
         	visuallyHiddenTitle: "Navigation",
           	items: [		  		
