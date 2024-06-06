@@ -11,51 +11,52 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-three-quarters">
+	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}						
 		
-<!-- 	
-		<h2 class="govuk-heading-m">Food bank fund</h2>
-		<p class="govuk-heading-s">Blackpool youth hub</p>
-		<p class="govuk-heading-s">Ready for work</p> -->
+		<!-- {% set reportDue %}
+		<p class="govuk-notification-banner__heading">
+			Your report for ’Blackpool youth hub’ is due in 10 days.
+			<a class="govuk-notification-banner__link" href="/project/">Complete report</a>.
+		</p>
+		{% endset %}
 
+		{{ govukNotificationBanner({
+  			html: reportDue
+		}) }} -->
 
-		<!-- <h2 class="govuk-heading-m">Programme 1</h2> -->
+	</div>
+	<div class="govuk-grid-column-full">
 
-		{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+		{{ govukSummaryList({
+			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'} },
+			rows: [
+				{ key: { text: "Village hall extension" }, value: { html: "Report due:<br>12 October 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
+			]
+	  	}) }}
 
-{% set html %}
-<p class="govuk-notification-banner__heading">
-    Your report for 'Village hall extension' is due in 10 days.
-    <a class="govuk-notification-banner__link" href="#">Complete report</a>.
-  </p>
-{% endset %}
-
-{{ govukNotificationBanner({
-  html: html
-}) }}
-
-
+		
 		{{ govukSummaryList({
 			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due on 2 June 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
-				{ key: { text: "Ready for work" }, value: { html: "Last report <br> 30 August" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Blackpool youth hub" }, value: { html: "Report due:<br>16 June 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Ready for work" }, value: { html: "Report due:<br>30 August 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Piloting Place-Based Innovation Catalysts" }, value: { html: "Report due:<br>22 September 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
 			]
 	  	}) }}
-
 
 		  {{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'} },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Gypsy, Roma and Traveller education programme</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Village hall extension" }, value: { html: "Reporting period <July 2023 to December 2023 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
 				
 				
-			  	
-			  
 			]
 	  	}) }}
+		
+
+
+		
 
 		<!-- {{ govukSummaryList({
 			card: { title: { text: "Growing Community Green Spaces project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
@@ -91,72 +92,7 @@
 
 	   
 
-	   <!-- <h3 class="govuk-heading-s">Programme reports due</h3>
-	   <p><a href="#">Regenerating Manchester’s Green Spaces</a></p>
-	   <hr class="govuk-section-break--m">
- 
-	   <h3 class="govuk-heading-s">Project reports due</h3>
-	   <p><a href="/project/">Growing Community Green Spaces</a></p>
-	   <p><a href="#">Wildlife Corridor</a></p>
- 
-	   <h3 class="govuk-heading-s">Project reports completed</h3>
-	   {{ govukDetails({
-		 summaryText: "Show completed reports",
-		 text: "To follow"
-	   }) }} -->
-
- <!-- 
-	   {{ govukAccordion({
-		 id: "accordion-default",
-		 items: [
-		   {
-			 heading: {
-			   text: "Project reports completed"              
-			 },
-			 content: {
-			   html: '<p class="govuk-body">To follow.</p>'
-			 }
-		   }
-		 ]
-	   }) }} -->
- 
-		<!-- <h2 class="govuk-heading-l">Regenerating Manchester’s Green Spaces</h2> -->
-
-
-		
-		  
-<!-- 
-	  	{{ govukSummaryList({
-			card: { title: { text: "Wildlife Corridor project"}, actions: { items: [ { href: "#", text: "Overview", visuallyHiddenText: "of University of Gloucestershire" } ] } },
-			rows: [
-		  		{ key: { text: "Due" }, value: { html: "July 2023 to September 2023" }, actions: { items: [ { href: "#", text: "Complete", visuallyHiddenText: "age" } ] } },
-		  		{ key: { text: "Completed" }, value: { html: "April 2023 to June 2023" }, actions: { items: [ { href: "#", text: "View", visuallyHiddenText: "nationality" } ] } }		  
-			]
-  		}) }}
-		 -->
-<!--       
-
-
-      <h2 class="govuk-heading-m">Warrington Digital Enterprise Hub</h2>
-
-      <h3 class="govuk-heading-s">Programme reports due</h3>
-      <p><a href="#">Warrington Digital Enterprise Hub</a></p>
-      <hr class="govuk-section-break--m">
-
-      <h3 class="govuk-heading-s">Project reports due</h3>
-      <p><a href="#">Locating and Preparing the Digital Hub</a></p>
-      <p><a href="#">Resourcing Technologies</a></p>
-      <p><a href="#">Another project</a></p>
-
-      <h3 class="govuk-heading-s">Project reports completed</h3>
-      {{ govukDetails({
-        summaryText: "Show completed reports",
-        text: "To follow"
-      }) }}
-      <hr class="govuk-section-break--m">
-
-
-      <p><a href="#">View previous programme reports</a></p> -->
+	   
 
   </div>
 </div>
