@@ -4,9 +4,11 @@ module.exports = {
 
   projectName: "Growing Community Green Spaces",
   reportPeriod: "July 2023 to September 2023",
+  projectID: "123456",  
   completionDate: "30 May 2025",
-  contactPerson: "Kate Harries",
-  section151: "Brian Coult"
+  contactPerson: "Gemma Currie",
+  section151: "Kate Harries"
+  
 
   
 }
