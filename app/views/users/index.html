@@ -17,11 +17,14 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
   </div>
   <div class="govuk-grid-column-three-quarters">
-    
+	
+	<form method="post" action="/users/add/" >
     {{ govukButton({
-      text: "Add a new user"
+      text: "Add a new user"	  
     }) }}
+	</form>
 
+	
     <h2 class="govuk-heading-m govuk-!-margin-bottom-1 govuk-!-margin-top-5">Reporters</h2>
 		
 		{{ govukTable({      
