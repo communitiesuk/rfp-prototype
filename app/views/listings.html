@@ -12,7 +12,7 @@
 
         {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
 
-        <p class="govuk-body-s">Last updated 4 June 2024</p>
+        <p class="govuk-body-s">Last updated 7 June 2024</p>
         <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
 
     </div>
@@ -24,7 +24,13 @@
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/dashboard" >Dashboard (Name TBC)</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/dashboard" >Funds and projects</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/project" >Project dashboard</a></li>
+
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/users/" >Users</a></li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit user</a></li>
+                </ul>
                 
             </ul>                  
 
@@ -43,7 +49,7 @@
         {% set reportHtml %}
             <h3 class="govuk-heading-m">Report</h3>
             <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Project Overview</a></li>                    
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Report start ( Task List )</a></li>                    
                 <ul class="govuk-list govuk-list--bullet">                        
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >How is your project progressing?</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/" >Do you have any upcoming communications opportunities?</a></li> 
