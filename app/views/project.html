@@ -17,16 +17,18 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 		
+	</div>
+	<div class="govuk-grid-column-two-thirds">
 
-		<h2 class="govuk-heading-m govuk-!-margin-top-7">Reports due</h2>
-		{{ govukSummaryList({		
+		<h2 class="govuk-heading-m">Reports due</h2>
+		{{ govukSummaryList({				
 			card: { title: { text: "Due by 10 December 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Start report", visuallyHiddenText: "for this project" } ] } },	
 			rows: [				
 				
 				{ key: { text: "Reporting period" }, value: { html: "1 April 2024 to 30 September 2024" } },
 				{ key: { text: "Project location" }, value: { html: "26 July 2024" } },
-				{ key: { text: "Reporters" }, value: { html: "Gemma Currie, Lukas Dibben" } },
-				{ key: { text: "Sign-off" }, value: { html: "Kate Harries, Brian Coult" } }
+				{ key: { text: "Reporters" }, value: { html: "Gemma Currie, Lukas Dibben" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Change", visuallyHiddenText: "for this project" } ] } },
+				{ key: { text: "Sign-off" }, value: { html: "Kate Harries, Brian Coult" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Change", visuallyHiddenText: "for this project" } ] } }
 				
 			]
 	  	}) }}
@@ -37,14 +39,14 @@
 		  <h2 class="govuk-heading-m govuk-!-margin-top-7">Submitted reports</h2>
 
 		  {{ govukSummaryList({		
-			card: { title: { text: "Due by 10 December 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Start report", visuallyHiddenText: "for this project" } ] } },	
+			card: { title: { text: "Submitted 30 May 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } },	
 			rows: [				
 				
 				{ key: { text: "Reporting period" }, value: { html: "November 2023 to January 2024" } },
 				{ key: { text: "Project location" }, value: { html: "26 July 2024" } },
 				{ key: { text: "Reporters" }, value: { html: "Gemma Currie, Lukas Dibben" } },
-				{ key: { text: "Sign-off" }, value: { html: "Kate Harries, Brian Coult" } },
-				{ key: { text: "Date submitted" }, value: { html: '30 May 2024' }, actions: { items: [ { href: "/project/", classes: "govuk-link--no-visited-state", text: "View report", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Sign-off" }, value: { html: "Kate Harries, Brian Coult" } }
+				
 			]
 	  	}) }}
 
