@@ -44,7 +44,17 @@
             </ul>              
         {% endset -%}  
 
-
+        {% set pathfindersHtml %}
+        <h3 class="govuk-heading-m">Pathfinders report</h3>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who will be signing off the report</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who else will be contributing to the report? </a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Completion dates</a></li>
+                      
+            
+            
+        </ul>              
+    {% endset -%}  
         
         {% set reportHtml %}
             <h3 class="govuk-heading-m">Report</h3>
@@ -153,6 +163,7 @@
         {{ govukTabs({
             items: [                               
             { label: "Service pages", id: "service", panel: { html: serviceHtml } },
+            { label: "Pathfinders report", id: "pathfindersReport", panel: { html: pathfindersHtml } },                        
             { label: "Report", id: "report", panel: { html: reportHtml } },                        
             { label: "Admin", id: "admin", panel: { html: adminHtml } },             
             { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }                    
