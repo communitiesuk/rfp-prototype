@@ -9,60 +9,56 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
+        {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
 
-      <ul class="govuk-list govuk-body-s">
-        <li>Last updated: <span class="govuk-!-font-weight-bold">17 June 2024</span></li>
-        <li>Prototype version: {{releaseVersion}}</li>
-      </ul>
+        <ul class="govuk-list govuk-body-s">
+            <li>Last updated: <span class="govuk-!-font-weight-bold">17 June 2024</span></li>
+            <li>Prototype version: {{releaseVersion}}</li>
+        </ul>
+    
+    </div>
+    <div class="govuk-grid-column-two-thirds">
 
-      
 
+        <span class="govuk-caption-m">Current baseline</span>
+        <h2 class="govuk-heading-m">Main flow and listings</h2>      
+        <p>These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
+    
+        <div class="govuk-button-group">         
+            <form action="/service-start?useOneLogin=" method="post" >                    
+                {{ govukButton({
+                    text: "Sign in using microsoft"
+                }) }}
+            </form> 
 
-      <span class="govuk-caption-m">Current baseline</span>
-            <h2 class="govuk-heading-m">Main flow and listings</h2>      
-            <p>These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
-            
-            <div class="govuk-button-group">
-                <!-- <form action="/dashboard" method="post" >                    
-                    {{ govukButton({
-                        text: "Start at programme level"
-                    }) }}
-                </form>  -->
-                                
-                <form action="/service-start?useOneLogin=" method="post" >                    
-                    {{ govukButton({
-                        text: "Sign in using microsoft"
-                    }) }}
-                </form> 
-
-                <form action="/service-start?useOneLogin=Yes" method="post" >                    
-                    {{ govukButton({
-                        text: "Sign in using GOV.UK One Login"
-                    }) }}
-                </form> 
-                
-                
-            </div>
-
-            <!-- <h2 class="govuk-heading-m">Page listings</h2>  -->
-            <p>Breakdown of pages within the service listed individually.</p>     
-            <form action="/listings" method="post" >                    
-              {{ govukButton({
-                  text: "Page listings",
-                  classes: "govuk-button--secondary"
-              }) }}
-          </form>            
-
-            
-        
-        
+            <form action="/service-start?useOneLogin=Yes" method="post" >                    
+                {{ govukButton({
+                    text: "Sign in using GOV.UK One Login"
+                }) }}
+            </form>             
         </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+    
+        <h2 class="govuk-heading-m govuk-!-margin-top-5">Assets</h2>      
+        <!-- <p>Breakdown of pages within the service listed individually.</p>      -->
+        <!-- <form action="/listings" method="post" >                    
+            {{ govukButton({
+                text: "Page listings",
+                classes: "govuk-button--secondary"
+            }) }}
+        </form>     -->
 
-
-  </div>
+        <ul class="govuk-list">
+            <li><a class="govuk-link" href="/listings">Page listings</a></li>
+            <li><a class="govuk-link" href="https://github.com/communitiesuk/rfp-prototype" target="_blank">Github repo</a></li>
+            <li><a class="govuk-link" href="https://www.figma.com/design/2dH3cosIBd2Fr7LUFvJBZN/%2F%2F-Submit-%2F%2F-Submit-Monitoring-Data?node-id=1871-148479" target="_blank">Figma flat files</a></li>
+            <li><a class="govuk-link" href="https://www.figma.com/design/c7hbpCzabqtCvENDA27hQo/Report-Funding-Progress?node-id=2402-728&t=zMG3VaZSUGKvfUUs-0" target="_blank">Figma workflows</a></li>
+        
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
