@@ -4,7 +4,7 @@
 {% set showNav = true %}
 
 
-{% set pageHeading = "Funds and projects" %}
+{% set pageHeading = "Fund reports" %}
 {% set pageSection = "Warwickshire county council " %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -30,24 +30,32 @@
 	<div class="govuk-grid-column-three-quarters">
 
 		{{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'} },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Pathfinders</span>'}, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Napton village hall extension" }, value: { html: "Report due:<br>12 October 2024 " }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Napton village hall extension" }, value: { html: "Report due: 12 October 2024 " } }
 			]
 	  	}) }}
 
 		
 		{{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for Food bank fund" } ] } },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Getting Building Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
-				{ key: { text: "Boddington youth hub" }, value: { html: "Report due:<br>16 June 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
-				{ key: { text: "Elevating local communities" }, value: { html: "Report due:<br>30 August 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } },
-				{ key: { text: "Piloting Place-Based Innovation Catalysts" }, value: { html: "Report due:<br>22 September 2024" }, actions: { items: [ { href: "/project", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for this project" } ] } }
+				{ key: { text: "Napton village hall extension" }, value: { html: "Report due: 12 October 2024 " } }
+			]
+	  	}) }}
+
+		
+		{{ govukSummaryList({
+			card: { title: { html: '<span class="govuk-!-font-size-24">Community Renewal Fund</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for Food bank fund" } ] } },
+			rows: [
+				{ key: { text: "Boddington youth hub" }, value: { html: "Report due: 16 June 2024" } },
+				{ key: { text: "Elevating local communities" }, value: { html: "Report due: 30 August 2024" } },
+				{ key: { text: "Piloting Place-Based Innovation Catalysts" }, value: { html: "Report due: 22 September 2024" } }
 			]
 	  	}) }}
 
 		  {{ govukSummaryList({
-			card: { title: { html: '<span class="govuk-!-font-size-24">Gypsy, Roma and Traveller education programme</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "View details", visuallyHiddenText: "for Food bank fund" } ] } },
+			card: { title: { html: '<span class="govuk-!-font-size-24">Gypsy, Roma and Traveller education programme</span>'}, actions: { items: [ { href: "#", classes: "govuk-link--no-visited-state", text: "Reports", visuallyHiddenText: "for Food bank fund" } ] } },
 			rows: [
 				
 				
