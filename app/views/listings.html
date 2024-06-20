@@ -136,17 +136,20 @@
         {% endset -%}  
 
         {% set signoffHtml %}            
-        <h3 class="govuk-heading-m">Sign off</h3>            
+        <h3 class="govuk-heading-m">Sign off</h3>
+        
             <ul class="govuk-list govuk-list--bullet">
-                
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Reporter flow</h4>        
                 
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/submit-report" >Submit your report</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmation" >Report submitted</a></li>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-submitted" >Email: Report submitted</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/section151" >Email: Section 151 sign off</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-submitted" >Email: Report submitted (Reporter)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/section151" >Email: Report submitted (Section 151)</a></li>
                 </ul>
+
+                <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Section 151 Officer flow</h4>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in?userType=Section151" >Sign in</a></li>
 
 
@@ -155,10 +158,11 @@
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/confirmation?status=decline" >Report declined</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/confirmation?status=" >Report signed off</a></li>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined-confirmation" >Email: Report declined confirmation</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Report declined</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation" >Email: Report signed off confirmation 151</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation-reporter" >Email: Report signed off confirmation reporter</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation" >Email: Report signed off confirmation (Section 151)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined-confirmation" >Email: Report declined confirmation (Section 151)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation-reporter" >Email: Report signed off confirmation (Reporter)</a></li>                    
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Report declined confirmation (Reporter)</a></li>
+                    
                 </ul>
                 
                 
