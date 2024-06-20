@@ -3,7 +3,7 @@
 {% set showBackLink = true %}
 
 {% set pageHeading = "Check your answers" %}
-{% set pageSection = "Submit your report" %}
+{% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,28 +13,30 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-	
+<!-- 	
 	<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 		<div class="govuk-summary-list__row">
 			<dt class="govuk-summary-list__key">Option</dt>
 			<dd class="govuk-summary-list__value">Answer given</dd>
 			<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-		</div>
+		</div> -->
 		
 	</dl>
 
+	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<p class="govuk-body-l">Check answers shown here dont include lines, only as illustration</p>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-		<h2 class="govuk-heading-m govuk-!-margin-top-9">Submitting your report</h2>		
-		<p>By submitting this report you are confirming that, to the best of your knowledge, the information is accurate and up to date and all issues effecting delivery have been reported on.</p>		
 
+		
         <div class="govuk-button-group">
         	{{ govukButton({
-            	text: "Accept and submit this report",
-				href: "/project/report/confirmation"
+            	text: "Continue",
+				href: "/project/report/submit-report"
           	}) }}            
 
-			<a class="govuk-link" href="#">Cancel and return to report</a>
+			<a class="govuk-link" href="#">Cancel</a>
         </div>
 
   	</div>  

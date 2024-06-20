@@ -1,0 +1,41 @@
+{% extends "layouts/email.html" %}
+
+
+
+{% set title = "Section 151 sign off" %}
+
+{% block pageTitle %}
+  {{title}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">{{ title }}</h1>        
+    
+    <p>Your monitoring and evaluation spreadsheet is ready to be downloaded.</p>
+    <p><a href="#">Download your spreadsheet (MS Excel Spreadsheet, {size} KB)</a></p>
+    
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
+    <p>This is an automated message. Do not reply to this email. If you need help, contact us: <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+
+
+
+
+
+  
+    <p><a href="/sign-in?userType=Section151">MAGIC LINK</a></p>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

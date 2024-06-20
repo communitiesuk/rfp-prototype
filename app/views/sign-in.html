@@ -13,7 +13,12 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      	
 
+
+		{% if data['userType'] == "Section151" %}
+		<form method="post" action="/project/sign-off/" >
+		{% else %}
       	<form method="post" action="/dashboard" >
+		{% endif %}
 
 			{{ govukInput({
 				label: {
