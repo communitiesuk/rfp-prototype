@@ -18,24 +18,22 @@
     </div>
     <div class="govuk-grid-column-full">       
         
-        {% set serviceHtml %}            
-        <h3 class="govuk-heading-m">Main pages</h3>
-                        
+        {% set serviceHtml %}                    
+            
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Main pages</h2>
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/service-start" >Start page</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/dashboard" >Funds and projects</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project" >Project dashboard</a></li>
-
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/users/" >Users</a></li>
                 <ul class="govuk-list govuk-list--bullet">
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit user</a></li>
-                </ul>
-                
+                </ul>                
             </ul>                  
 
-            <h2 class="govuk-heading-s">Footer pages</h2>
-            <ul class="govuk-list govuk-list--bullet">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Footer pages</h2>
+            <ul class="govuk-list govuk-list--bullet">                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/help" >Help</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/privacy-notice" >Privacy Notice</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/terms-and-conditions" >Terms and conditions</a></li>
@@ -44,31 +42,29 @@
             </ul>              
         {% endset -%}  
 
-        {% set pathfindersHtml %}
-        <h3 class="govuk-heading-m">Pathfinders report</h3>
-        <ul class="govuk-list govuk-list--bullet">
-            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who will be signing off the report?</a></li>
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s role?</a></li>
-            </ul>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who else will be contributing to the report? </a></li>
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>                
-            </ul>
-            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Completion dates</a></li>
-            <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the financial completion date?</a></li>                
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the practical completion date?</a></li>                
-            </ul>
-                      
-            
-            
-        </ul>              
-    {% endset -%}  
+
         
-        {% set reportHtml %}
-            <h3 class="govuk-heading-m">Report</h3>
+        {% set reportHtml %}            
+
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Pathfinder</h2>
+            <ul class="govuk-list govuk-list--bullet">                
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who will be signing off the report?</a></li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s role?</a></li>
+                </ul>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who else will be contributing to the report? </a></li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>                
+                </ul>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Completion dates</a></li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the financial completion date?</a></li>                
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the practical completion date?</a></li>                
+                </ul>
+            </ul>  
+
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Other sections</h2>            
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Report start ( Task List )</a></li>                    
                 <ul class="govuk-list govuk-list--bullet">                        
@@ -135,12 +131,9 @@
             </ul>              
         {% endset -%}  
 
-        {% set signoffHtml %}            
-        <h3 class="govuk-heading-m">Sign off</h3>
-        
+        {% set signoffHtml %}                    
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Reporter flow</h2>        
             <ul class="govuk-list govuk-list--bullet">
-                <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Reporter flow</h4>        
-                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/submit-report" >Submit your report</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmation" >Report submitted</a></li>
@@ -148,11 +141,11 @@
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-submitted" >Email: Report submitted (Reporter)</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/section151" >Email: Report submitted (Section 151)</a></li>
                 </ul>
-
-                <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Section 151 Officer flow</h4>
+            </ul>
+            
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Section 151 Officer flow</h2>
+            <ul class="govuk-list govuk-list--bullet">            
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in?userType=Section151" >Sign in</a></li>
-
-
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/" >Sign off and submit project report</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/reason-for-decline" >Why have you declined this report?</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/confirmation?status=decline" >Report declined</a></li>
@@ -161,24 +154,15 @@
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation" >Email: Report signed off confirmation (Section 151)</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined-confirmation" >Email: Report declined confirmation (Section 151)</a></li>
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation-reporter" >Email: Report signed off confirmation (Reporter)</a></li>                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Report declined confirmation (Reporter)</a></li>
-                    
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Report declined confirmation (Reporter)</a></li>                    
                 </ul>
-                
-                
-
-
-                
-
-                
-                
             </ul>              
         {% endset -%} 
 
         {% set adminHtml %}            
-        <h3 class="govuk-heading-m">Admin pages</h3>
-        <p>To follow</p>
-            <ul class="govuk-list govuk-list--bullet">
+        
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Admin pages</h2>
+            <ul class="govuk-list govuk-list--bullet">                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/admin/completion-date" >What’s the financial completion date?</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/admin/practical-completion-date" >What’s your practical completion date?</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/admin/organisation-name" >What’s the name of the organisation?</a></li>      
@@ -200,8 +184,8 @@
 
 
         {% set findHtml %}            
-        <h3 class="govuk-heading-m">Find monitoring data</h3>            
-            <ul class="govuk-list govuk-list--bullet">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Find monitoring data</h2>            
+            <ul class="govuk-list govuk-list--bullet">                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/find/download-data" >Get monitoring and evaluation data</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/find/confirmation" >Request received</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/get-data" >Email: Monitoring and evaluation data</a></li>                
@@ -213,9 +197,8 @@
             <!-- Tabs -->
         {{ govukTabs({
             items: [                               
-            { label: "Service pages", id: "service", panel: { html: serviceHtml } },
-            { label: "Pathfinders report", id: "pathfindersReport", panel: { html: pathfindersHtml } },                        
-            { label: "Report", id: "report", panel: { html: reportHtml } },                        
+            { label: "Service pages", id: "service", panel: { html: serviceHtml } },            
+            { label: "Reports", id: "report", panel: { html: reportHtml } },                        
             { label: "Sign off", id: "signoff", panel: { html: signoffHtml } },                        
             { label: "Admin", id: "admin", panel: { html: adminHtml } },             
             { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }                    
