@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Submit your report" %}
+{% set pageHeading = "Send your report" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,17 +13,26 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-            <ul class="govuk-list govuk-list--bullet">
-                <li></li>
-                <li></li>
+            
 
             </ul>
 
-			<p class="govuk-body">By submitting this report you are confirming that, to the best of your knowledge, the information is accurate and up to date and all issues effecting delivery have been reported on.</p>		
+			<p class="govuk-body">You can now submit your report to be reviewed and signed off by:</p>		
+
+			<ul class="govuk-list govuk-list--bullet">
+                <li>Kate Harries - Section 151 Officer</li>
+                <li>Brian Coult - Chief Finance Officer</li></ul>
+
+			<p class="govuk-body">If your report is signed off, you'll receive an email to let you know.</p>	
+
+			<p class="govuk-body">If your report is declined for any reason, you'll receive an email letting you know why. You can then address any problems resend the report.</p>	
+
+
+			<p class="govuk-body"></p>	
 
 
         	{{ govukButton({
-            	text: "Submit this report",
+            	text: "Send report",
 				href: "/project/report/confirmation"
           	}) }}            
 			
