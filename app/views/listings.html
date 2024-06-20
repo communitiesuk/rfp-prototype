@@ -46,88 +46,126 @@
         
         {% set reportHtml %}            
 
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Pathfinder</h2>
-            <ul class="govuk-list govuk-list--bullet">                
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who will be signing off the report?</a></li>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s role?</a></li>
-                </ul>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who else will be contributing to the report? </a></li>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>                
-                </ul>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Completion dates</a></li>
-                <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the financial completion date?</a></li>                
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the practical completion date?</a></li>                
-                </ul>
-            </ul>  
-
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Other sections</h2>            
+            <h2 class="govuk-heading-m">Pathfinder</h2>
             <ul class="govuk-list govuk-list--bullet">
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Report start ( Task List )</a></li>                    
-                <ul class="govuk-list govuk-list--bullet">                        
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >How is your project progressing?</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/" >Do you have any upcoming communications opportunities?</a></li> 
+                <li>
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Reference data</h3>
                     <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/" >Title of the communication opportunity</a></li> 
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/details" >Tell us in more detail about your upcoming communications</a></li> 
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/more" >Do you want to add any further communications?</a></li> 
-                    </ul>                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/" >What is your overall RAG rating?</a></li>   
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/">What is your overall RAG rating?</a></li>   
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/schedule">What is your schedule RAG rating?</a></li>   
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/budget">What is your budget RAG rating?</a></li>   
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/resourcing">What is your overall RAG rating?</a></li>   
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/information">Is there anything you need to tell us about your ratings?</a></li>   
-                    </ul>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/" >Do you need to add any project challenges?</a></li>
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/" >Title of the project challenge</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/details" >Tell us more about this project challenge</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/more" >Do you want to add any more project challenges?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who will be signing off the report?</a></li>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s role?</a></li>
+                        </ul>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Who else will be contributing to the report? </a></li>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s {NAME}’s email address?</a></li>                
+                        </ul>                
+                    </ul>  
 
-                    </ul>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/riba/" >Select an option to update your RIBA reporting stage</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/delivery-plan/milestones/" >Project milestones</a></li>
-                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/" >Do you need to add any project issues?</a></li>
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Programme progress</h3>
                     <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/" >Title of issue?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/impact" >Rate the impact of the issue?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/details" >Tell us in more detail about the issue</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/measures" >What are you doing to address the issue?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/support" >Do you need any support from us?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/" >Do you want to add any more issues?</a></li>
-                    </ul>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/" >Do you need to add any project risks?</a></li>
-                    <ul class="govuk-list govuk-list--bullet">
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/" >Title of issue</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/category" >What category is the risk?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/details" >Tell us how you will mitigate this risk</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/likelihood" >What is the likelihood of this risk becoming an issue?</a></li>
-                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/more" >Do you want to add any more risks?</a></li>                        
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Completion dates</a></li>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the financial completion date?</a></li>                
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What’s the practical completion date?</a></li>                                    
+                        </ul>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >How is the delivery of your projects progressing?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Are there any issues affecting the delivery of your projects?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Are there any significant milestones that you’d like to tell us about?</a></li>
                     </ul>
 
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/expenditure/" >Project expenditure</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>
-                    <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li> -->
 
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmamtion" >Report submitted</a></li>
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Project locations</h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Projects</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Add postcode</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Change postcode</a></li>                
+                    </ul>
 
-                </ul>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
-                <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
-                </ul>            
-                
-                
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Project RAG ratings</h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Ratings defined</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What is the spend RAG rating for this project?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What is the delivery RAG rating for this project?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Why have you given these ratings? ( could be on reveal on previous pages)</a></li>
+                    </ul>
+
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Risks</h3>
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What are the main risks across your projects?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What is the name of the risk?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What is the risk category?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What might go wrong and what would the outcome be?</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >What is the pre-mitigated likelihood score?</a></li>
+                    </ul>
+                </li>                
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                <li>
+                    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Other funds (TBC)</h2>            
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/" >Report start ( Task List )</a></li>                    
+                        <ul class="govuk-list govuk-list--bullet">                        
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/progress-summary" >How is your project progressing?</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/" >Do you have any upcoming communications opportunities?</a></li> 
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/" >Title of the communication opportunity</a></li> 
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/details" >Tell us in more detail about your upcoming communications</a></li> 
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/communications/add/more" >Do you want to add any further communications?</a></li> 
+                            </ul>                    
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/" >What is your overall RAG rating?</a></li>   
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/">What is your overall RAG rating?</a></li>   
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/schedule">What is your schedule RAG rating?</a></li>   
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/budget">What is your budget RAG rating?</a></li>   
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/resourcing">What is your overall RAG rating?</a></li>   
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/ragRating/information">Is there anything you need to tell us about your ratings?</a></li>   
+                            </ul>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/" >Do you need to add any project challenges?</a></li>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/" >Title of the project challenge</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/details" >Tell us more about this project challenge</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/challenges/add/more" >Do you want to add any more project challenges?</a></li>
+
+                            </ul>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/overview/riba/" >Select an option to update your RIBA reporting stage</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/delivery-plan/milestones/" >Project milestones</a></li>
+                            
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/" >Do you need to add any project issues?</a></li>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/" >Title of issue?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/impact" >Rate the impact of the issue?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/details" >Tell us in more detail about the issue</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/measures" >What are you doing to address the issue?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/support" >Do you need any support from us?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/issues/add/" >Do you want to add any more issues?</a></li>
+                            </ul>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/" >Do you need to add any project risks?</a></li>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/" >Title of issue</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/category" >What category is the risk?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/details" >Tell us how you will mitigate this risk</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/likelihood" >What is the likelihood of this risk becoming an issue?</a></li>
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/issues-risks/risks/add/more" >Do you want to add any more risks?</a></li>                        
+                            </ul>
+
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/expenditure/" >Project expenditure</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                    
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>
+                            <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li> -->
+
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmamtion" >Report submitted</a></li>
+
+                        </ul>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/support/" >Project support</a></li>
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/project/users/" >Project users</a></li>                
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
+                        </ul> 
+                    </ul>
+                </li>           
+                            
             </ul>              
         {% endset -%}  
 
