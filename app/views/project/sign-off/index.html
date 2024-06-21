@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "Sign off and submit project report" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+      	<p class="govuk-body">Content about what they are doing.</p>
+      
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      	<p class="govuk-body-l">Option to view or download report, dont include lines, only as illustration. (TBC)</p>
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		
+      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li></li>
+      	</ul>
+
+		<div class="govuk-button-group">
+          
+        	<form method="post" action="/project/sign-off/confirmation" >	  
+          		
+				<input type="hidden" name="reportStatus" id="reportStatus" value="Signed" />
+				{{ govukButton({
+            		text: "Sign off this report"
+          		}) }}
+
+        	</form>
+
+        	<form method="post" action="/project/sign-off/reason-for-decline" >
+
+          		<input type="hidden" name="reportStatus" id="reportStatus" value="Declined" />
+				{{ govukButton({
+            		text: "Decline sign off",
+            		classes: "govuk-button--secondary"            		
+          		}) }}
+  			</form>
+          
+        </div>
+
+	</div>  
+</div>
+
+{% endblock %}

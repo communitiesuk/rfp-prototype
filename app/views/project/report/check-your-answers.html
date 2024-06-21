@@ -3,7 +3,7 @@
 {% set showBackLink = true %}
 
 {% set pageHeading = "Check your answers" %}
-{% set pageSection = "Submit your report" %}
+{% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -13,29 +13,41 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-	
+<!-- 	
 	<dl class="govuk-summary-list govuk-!-margin-bottom-9">
 		<div class="govuk-summary-list__row">
 			<dt class="govuk-summary-list__key">Option</dt>
 			<dd class="govuk-summary-list__value">Answer given</dd>
 			<dd class="govuk-summary-list__actions"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a></dd>
-		</div>
+		</div> -->
 		
 	</dl>
 
+	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<p class="govuk-body-l">Check answers shown here don't include lines, only as illustration</p>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+		<p class="govuk-body">You can now send your report to be reviewed and signed off by:</p>		
 
-		<h2 class="govuk-heading-m govuk-!-margin-top-9">Submitting your report</h2>		
-		<p>By submitting this report you are confirming that, to the best of your knowledge, the information is accurate and up to date and all issues effecting delivery have been reported on.</p>		
+		<ul class="govuk-list govuk-list--bullet">
+			<li>Kate Harries - Section 151 Officer</li>
+			<li>Brian Coult - Chief Finance Officer</li></ul>
 
-        <div class="govuk-button-group">
-        	{{ govukButton({
-            	text: "Accept and submit this report",
-				href: "/project/report/confirmation"
-          	}) }}            
+		<p class="govuk-body">You’ll receive an email when your report has been signed off.</p>	
 
-			<a class="govuk-link" href="#">Cancel and return to report</a>
-        </div>
+		<form method="post" action="/project/report/confirmation" >
+
+			<input type="hidden" name="reportStatus" id="reportStatus" value="Sent" />
+        
+			<div class="govuk-button-group">
+        		{{ govukButton({
+            		text: "Send report",
+					classes: "govuk-!-margin-top-5"
+          		}) }}
+				<a class="govuk-link" href="#">Cancel</a>
+        	</div>
+
+		</form>
 
   	</div>  
 </div>
