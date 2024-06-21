@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Change postcode" %}
+{% set pageHeading = "What is the new postcode for this project?" %}
 {% set pageSection = "Project locations" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,8 +13,39 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 			
+        <div class="govuk-inset-text">
+            <p>Play back project name</p>
+        </div>
 
-		
+		<p>If a project has multiple postcodes, enter the postcodes with a comma seperating each one.</p>
+
+        <form method="post" action="/report/locations/" >
+            
+            {{ govukInput({
+                label: {
+                  text: "Title of issue",
+                  classes: "govuk-label govuk-visually-hidden",
+                  isPageHeading: false
+                },     
+				hint: {
+					text: "For example, AB1D 2EF, WC1 3RJ."
+				},
+                classes: "govuk-!-width-two-thirds",           
+                id: "projectLocation",
+                name: "projectLocation"
+            }) }}
+
+			<div class="govuk-button-group">
+				{{ govukButton({
+				  text: "Continue"
+				}) }}
+				<!-- {{ govukButton({
+				  text: "Save as draft",
+				  classes: "govuk-button--secondary"
+				}) }} -->
+		  	</div>
+
+		</form>
 
   	</div>	  
 </div>

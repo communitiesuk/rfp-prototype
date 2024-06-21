@@ -3,7 +3,7 @@
 {% set showBackLink = true %}
 
 {% set pageHeading = "Project locations" %}
-{% set pageSection = "Caption header" %}
+{% set pageSection = "Pathfinders" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -12,9 +12,58 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-			
-
 		
+        <p class="govuk-body">Introduction text for this section.</p>
+
+    </div>
+    <div class="govuk-grid-column-full">
+
+        <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption govuk-table__caption--l">Locations</caption> -->
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-half">Project name</th>
+                    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Location</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">George Elliott Visitor Centre</td>
+                    <td class="govuk-table__cell">CV11 5QS</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/change-postcode">Edit</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Digital Skills and Innovation Centre</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/add-postcode">Add location</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">The Saints</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/add-postcode">Add location</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Weddington Road Cycle Scheme</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/add-postcode">Add location</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Visiting Nuneaton: Changing Perspectives</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/add-postcode">Add location</a></td>
+                </tr>
+            </tbody>
+          </table>
+
+
+          <form method="post" action="/report/locations/" >        
+				
+            {{ govukButton({
+				text: "Save and continue"
+			}) }}
+		
+		</form>
 
   	</div>	  
 </div>
