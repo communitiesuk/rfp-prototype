@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "How is the delivery of your projects progressing?" %}
+{% set pageSection = "Programme progress" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+			
+
+		<form method="post" action="/project/report/progress/issues" >
+            
+			{{ govukTextarea({
+				name: "projectIssueMeasures",
+				id: "projectIssueMeasures",
+				label: {
+				  text: "Can you provide more detail?",
+				  classes: "govuk-label govuk-visually-hidden",
+				  isPageHeading: true
+				},
+				hint: {
+				  text: ""
+				}
+			}) }} 
+			
+			{{ govukButton({
+				text: "Continue"
+			}) }}			
+
+		</form>
+
+  	</div>	  
+</div>
+
+{% endblock %}
