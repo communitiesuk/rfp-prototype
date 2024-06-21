@@ -2,7 +2,7 @@
 
 {% set showBackLink = false %}
 
-{% if data['status'] == "decline" %}
+{% if data['reportStatus'] == "Declined" %}
 	{% set pageHeading = "Report declined" %}
 {% else %}
 	{% set pageHeading = "Report signed off" %}
@@ -21,21 +21,19 @@
 		}) }}
 	
 
-		{% if data['status'] == "declined" %}
+		{% if data['reportStatus'] == "Declined" %}
 
 			<p class="govuk-body">We have sent you a confirmation email.</p>			
 			<h2 class="govuk-heading-m">What happens next</h2>	
 			<p class="govuk-body">We will email the person responsible bla bla bla .....</p>		  
-			<p class="govuk-body-s"><a href="/emails/report-declined-confirmation">Report declined confirmation</a></p>
+			<p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/report-declined-confirmation">Go to email sent to Section 151 officer</a></p>
 
 		{% else %}
 
 			<p class="govuk-body">We have sent you a confirmation email.</p>			
 			<h2 class="govuk-heading-m">What happens next</h2>	
-			<p class="govuk-body">We will email the person responsible bla bla bla .....</p>		  
-			
-			<p class="govuk-body-s"><a href="/emails/report-signed-off-confirmation">Report signed-off confirmation</a></p>
-
+			<p class="govuk-body">We will email the person responsible bla bla bla .....</p>		  			
+			<p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/report-signed-off-confirmation">Go to email sent to Section 151 officer</a></p>
 
 		{% endif %}
 		

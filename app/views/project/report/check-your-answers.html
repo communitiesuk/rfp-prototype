@@ -33,17 +33,21 @@
 			<li>Kate Harries - Section 151 Officer</li>
 			<li>Brian Coult - Chief Finance Officer</li></ul>
 
-		<p class="govuk-body">You'll receive an email when your report has been signed off.</p>	
+		<p class="govuk-body">You’ll receive an email when your report has been signed off.</p>	
 
-		
-        <div class="govuk-button-group">
-        	{{ govukButton({
-            	text: "Send report",
-				href: "/project/report/submit-report"
-          	}) }}            
+		<form method="post" action="/project/report/confirmation" >
 
-			<a class="govuk-link" href="#">Cancel</a>
-        </div>
+			<input type="hidden" name="reportStatus" id="reportStatus" value="Sent" />
+        
+			<div class="govuk-button-group">
+        		{{ govukButton({
+            		text: "Send report",
+					classes: "govuk-!-margin-top-5"
+          		}) }}
+				<a class="govuk-link" href="#">Cancel</a>
+        	</div>
+
+		</form>
 
   	</div>  
 </div>

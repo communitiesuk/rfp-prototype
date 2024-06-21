@@ -9,53 +9,36 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-two-thirds">
 
-      {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      <p>Content about what they are doing.</p>    
-      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-        <li></li>
-        <li></li>
-      
-      </ul>
+      	<p>Content about what they are doing.</p>    
+      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li></li>
+      	</ul>
 
-      
+      	<form method="post" action="/project/sign-off/confirmation" >	  
 
-      <form method="post" action="/project/sign-off/confirmation?status=decline" >	  
-
-
-        {{ govukTextarea({
-          name: "moreDetail",
-          id: "more-detail",
-          label: {
-            text: "Why have you declined this report",
-            classes: "govuk-label--l govuk-visually-hidden",
-            isPageHeading: false
-          },
-          hint: {
-            text: "Do not include personal or financial information, like your National Insurance number or credit card details."
-          }
-        }) }}
+        	{{ govukTextarea({
+          		name: "reportReasonDeclined",
+          		id: "reportReasonDeclined",
+          		label: {
+            		text: "Why have you declined this report",
+            		classes: "govuk-label--l govuk-visually-hidden",
+            		isPageHeading: false
+          		},
+          		hint: {
+            		text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+          		}
+        	}) }}          
         
-  
-        <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Continue"
-          }) }}
-
-          
-  
-          
-        </div>
+          	{{ govukButton({
+            	text: "Continue"
+          	}) }}
 
         </form>
 
-
-
-
-  </div>
-  
+  </div>  
 </div>
-
 {% endblock %}
