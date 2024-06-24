@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Report submitted" %}
+{% set title = "Your report has been sent for review" %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,12 +19,20 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>Your monitoring and evaluation spreadsheet is ready to be downloaded.</p>
-    <p><a href="#">Download your spreadsheet (MS Excel Spreadsheet, {size} KB)</a></p>
+    <p>Your report for ((fund name)) has been sent to ((user_name_and_role)) and ((user_name_and_role)) for review.</p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>	
+
+    <p>Once reviewed, your report will either be submitted or declined - you'll be sent an email to let you know.</p>
+
+    <p>If your report is declined, the email will contain information about why the report was declined and you will be able to correct any issues and resend the report for another review.</p>
+
+    <h2 class="govuk-heading-m">Get help</h2>	
+
+    <p>If you have any questions or need help, email us at fsd@levellingup.gov.uk.</p>
     
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     
-    <p>This is an automated message. Do not reply to this email. If you need help, contact us: <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+    
 
 
 
