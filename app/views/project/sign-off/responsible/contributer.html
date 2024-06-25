@@ -16,7 +16,7 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
 
-		<form method="post" action="#" >
+		<form method="post" action="/project/sign-off/responsible/check-your-answers" >
 		
 		
 		{{ govukInput({
@@ -26,8 +26,8 @@
 			  isPageHeading: false
 			},                
 			classes: "govuk-!-width-two-thirds",
-			id: "signOffName",
-			name: "signOffName"
+			id: "contributerName",
+			name: "contributerName"
 		}) }}       
 		
 		
@@ -39,8 +39,8 @@
 			},                
 			classes: "govuk-!-width-two-thirds",
 			type: "email",
-			id: "adminContactEmail",
-			name: "adminContactEmail"
+			id: "contributerEmail",
+			name: "contributerEmail"
 		}) }}  
 
 

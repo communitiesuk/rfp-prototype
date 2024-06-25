@@ -4,7 +4,7 @@
 {% set showBackLink = true %}
 {% endif %}
 
-{% set pageHeading = "Who else will be contributing to the report?" %}
+{% set pageHeading = "Who will be signing off the report?" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -16,7 +16,7 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
 
-		<form method="post" action="/project/report/contributing-to-report" >
+		<form method="post" action="/project/sign-off/responsible/role" >
 		
 		
 		{{ govukInput({
@@ -39,12 +39,12 @@
 			},                
 			classes: "govuk-!-width-two-thirds",
 			type: "email",
-			id: "adminContactEmail",
-			name: "adminContactEmail"
+			id: "signOffEmail",
+			name: "signOffEmail"
 		}) }}  
 
 
-		{{ govukInput({
+		<!-- {{ govukInput({
 			label: {
 			  text: "Role",
 			  classes: "govuk-label",
@@ -53,7 +53,7 @@
 			classes: "govuk-!-width-two-thirds",
 			id: "adminContactName",
 			name: "adminContactName"
-		}) }}   
+		}) }}    -->
 
 		
 			{{ govukButton({

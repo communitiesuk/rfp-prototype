@@ -4,7 +4,13 @@
 {% set showBackLink = true %}
 {% endif %}
 
-{% set pageHeading = "Will anyone else be contributing to the report?" %}
+
+{% if data['signOffName'] %}
+	{% set pageHeading = 'What’s ' + data.signOffName + '’s role?' %}
+{% else %}
+	{% set pageHeading = "What’s their role?" %}
+{% endif %}
+
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -16,10 +22,11 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
 
-		<form method="post" action="/project/sign-off/responsible/check-your-answers" >
-			{{ govukRadios({
-				classes: "govuk-radios--inline",
-				name: "contributingReport",							
+		<form method="post" action="/project/sign-off/responsible/contributing-to-report" >
+		
+		
+			{{ govukRadios({				
+				name: "signOffRole",							
 				fieldset: {
 				  legend: {
 					text: "Do you want to add any further communications?",
@@ -28,15 +35,15 @@
 					}
 				},				
 				items: [
-				  { value: "Yes~/project/sign-off/responsible/contributer", text: "Yes", checked: checked("contributingReport", "Yes")  },
-				  { value: "No", text: "No", checked: checked("contributingReport", "No")  }
+				  { value: "Section 151 Officer", text: "Section 151 Officer", checked: checked("signOffRole", "Section 151 Officer")  },
+				  { value: "Chief Finance Officer", text: "Chief Finance Officer", checked: checked("signOffRole", "Chief Finance Officer")  }
 				]
 			}) }}
-            
-			
-				{{ govukButton({
-				  text: "Continue"
-				}) }}
+
+		
+			{{ govukButton({
+			  text: "Continue"
+			}) }}	
 
 		</form>
 
