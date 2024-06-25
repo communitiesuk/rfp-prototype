@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Report signed off confirmation" %}
+{% set title = "You signed off a report for ((organisation_name))" %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,13 +19,15 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>This is the email to Section 151 officer.</p>
-    <p>Your monitoring and evaluation spreadsheet is ready to be downloaded.</p>
-    <p><a href="#">Download your spreadsheet (MS Excel Spreadsheet, {size} KB)</a></p>
+    <p>You successfully signed off and submitted a report from ((organisation_name)) to ((fund_name)).</p>
+
+    <p>Reporting period<br><strong>July 2023 to September 2023</strong></p>
+  
+    <p><a href="#">Sign in to view or download the submitted report</a></p>
     
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    
-    <p>This is an automated message. Do not reply to this email. If you need help, contact us: <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+    <h2 class="govuk-heading-m">Get help</h2>	
+
+    <p>If you have any questions or need help, email us at fsd@levellingup.gov.uk.</p>
 
 
 
