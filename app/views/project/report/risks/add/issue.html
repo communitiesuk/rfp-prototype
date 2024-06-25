@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "What might go wrong and what would the outcome be?" %}
+{% set pageSection = "Risks" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+	
+		<form method="post" action="/project/report/risks/add/likelihood" >
+            
+           
+
+			{{ govukCharacterCount({
+				name: "reportReasonDeclined",
+				id: "reportReasonDeclined",
+				maxwords: 100,
+				label: {
+				  text: pageHeading,
+				  classes: "govuk-label--l govuk-visually-hidden",
+				  isPageHeading: false
+				},
+				hint: {
+				  text: "Do not include any personal information like phone numbers or email addresses"
+				}
+		  }) }}     
+			
+			{{ govukButton({
+				text: "Save and continue"
+			}) }}
+				
+
+		</form>
+
+  	</div>
+
+</div>
+
+{% endblock %}
