@@ -12,7 +12,7 @@
 
         {{ macroPageHeader.pageHeader(pageHeading,pageSection) }} 
 
-        <p class="govuk-body-s">Last updated 17 June 2024</p>
+        <p class="govuk-body-s">Last updated 25 June 2024</p>
         <p class="govuk-body govuk-!-margin-bottom-7">Some pages have dynamic content, so if using the links and not navigating through the service flows that lead to each page, its not always possible to show the right content for all scenarios.</p>
 
     </div>
@@ -176,23 +176,23 @@
                 <li>Submit your report (removed)</li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmation" >Report submitted</a></li>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-submitted" >Email: Report submitted (Reporter)</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/section151" >Email: Report submitted (Section 151)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-submitted" >Email: Your report for ((fund_name)) has been sent for review (Reporter)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/section151" >Email: Review needed: funding progress report for ((organisation_name)) (Section 151)</a></li>
                 </ul>
             </ul>
             
             <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Section 151 Officer flow</h2>
             <ul class="govuk-list govuk-list--bullet">            
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in?userType=Section151" >Sign in</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/" >Sign off and submit project report</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/" >Sign off and submit report</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/reason-for-decline" >Why have you declined this report?</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/confirmation?reportStatus=Declined" >Report declined</a></li>
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off/confirmation?reportStatus=" >Report signed off</a></li>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation" >Email: Report signed off confirmation (Section 151)</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined-confirmation" >Email: Report declined confirmation (Section 151)</a></li>
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation-reporter" >Email: Report signed off confirmation (Reporter)</a></li>                    
-                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Report declined confirmation (Reporter)</a></li>                    
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation" >Email: You signed off a report for ((organisation_name)) (Section 151)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined-confirmation" >Email: You declined a report from ((organisation_name)) (Section 151)</a></li>
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-signed-off-confirmation-reporter" >Email: Your report has been signed off (Reporter)</a></li>                    
+                    <li><a class="govuk-link govuk-link--no-visited-state" href="/emails/report-declined" >Email: Your report for ((fund_name)) has been declined (Reporter)</a></li>                    
                 </ul>
             </ul>              
         {% endset -%} 
