@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Your report has been sent for review" %}
+{% set title = "Your report for ((fund_name)) has been sent for review" %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,7 +19,9 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>Your report for ((fund_name)) has been sent to ((user_name_and_role)) and ((user_name_and_role)) for review.</p>
+    <p>Your report for ((fund_name)) has been sent to ((user_name_and_role)) and ((user_name_and_role)) for review. </p>
+
+    <p>Reporting period<br><strong>July 2023 to September 2023</strong></p>
 
     <h2 class="govuk-heading-m">What happens next</h2>	
 

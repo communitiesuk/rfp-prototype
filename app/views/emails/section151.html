@@ -2,7 +2,7 @@
 
 
 
-{% set title = "A funding progress report is ready for your review" %}
+{% set title = "A funding progress report for ((organisation_name)) is ready for review" %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,7 +19,9 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>((user_name)) from ((organisation_name)) has sent you a report for ((reporting_period)) to be reviewed.</p>
+    <p>((user_name)) from ((organisation_name)) has sent you a report to be reviewed.</p>
+
+    <p>Reporting period<br><strong>July 2023 to September 2023</strong></p>
 
     <p><a href="#">Sign in to review the report</a></p>
 
