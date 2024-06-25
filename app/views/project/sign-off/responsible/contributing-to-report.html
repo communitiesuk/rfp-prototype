@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+
+{% if data['userType'] != "Section151" %}
+{% set showBackLink = true %}
+{% endif %}
+
+{% set pageHeading = "Will anyone else be contributing to the report?" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+
+		<form method="post" action="/project/report/responsible/sign-off-email" >
+			{{ govukRadios({
+				classes: "govuk-radios--inline",
+				name: "projectRisksAddMore",							
+				fieldset: {
+				  legend: {
+					text: "Do you want to add any further communications?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
+					}
+				},				
+				items: [
+				  { value: "Yes~/project/report/who", text: "Yes", checked: checked("projectRisksAddMore", "Yes")  },
+				  { value: "No", text: "No", checked: checked("projectRisksAddMore", "No")  }
+				]
+			}) }}
+            
+			
+				{{ govukButton({
+				  text: "Continue"
+				}) }}
+
+		</form>
+
+	</div>  
+</div>
+
+{% endblock %}
