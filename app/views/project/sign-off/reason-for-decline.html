@@ -13,7 +13,7 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      	<p>Tell the reporter why you're declining this report. You could include:</p>    
+      	<p>Tell the reporter why you’re declining this report. You could include:</p>    
       	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
         	<li>details about any corrections needed</li>
 			<li>any support they might need to correct the problem</li>
@@ -21,9 +21,10 @@
 
       	<form method="post" action="/project/sign-off/confirmation" >	  
 
-        	{{ govukTextarea({
+        	{{ govukCharacterCount({
           		name: "reportReasonDeclined",
           		id: "reportReasonDeclined",
+				maxwords: 300,
           		label: {
             		text: "Why have you declined this report",
             		classes: "govuk-label--l govuk-visually-hidden",

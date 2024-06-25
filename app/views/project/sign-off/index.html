@@ -1,6 +1,8 @@
 {% extends "layouts/main.html" %}
 
+{% if data['userType'] != "Section151" %}
 {% set showBackLink = true %}
+{% endif %}
 
 {% set pageHeading = "Sign off and submit report" %}
 {% set pageSection = "" %}
@@ -15,7 +17,11 @@
 
       	<p class="govuk-body">((user_name)) has completed a report ready for your review and sign off.</p>
 
-		<p class="govuk-body">Reporting period<br><strong>July 2023 to September 2023</strong</p>
+		<!-- Commented this out until we know what we are puttin gin. -->
+		  <!-- <div class="govuk-inset-text">
+			<p>Reporting period: <strong>July 2023 to September 2023</strong></p>
+			</div> -->
+	  
       
       	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
       	<p class="govuk-body-l">Option to view or download report, don't include lines, only as illustration. (TBC)</p>
