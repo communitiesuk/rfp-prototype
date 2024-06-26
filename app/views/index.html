@@ -2,7 +2,7 @@
 
 {% set showBackLink = false %}
 
-{% set pageHeading = "Reporting funding progress" %}
+{% set pageHeading = "Report funding progress" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -17,6 +17,10 @@
             <li>Last updated: <span class="govuk-!-font-weight-bold">21 June 2024</span></li>
             <li>Prototype version: {{releaseVersion}}</li>
         </ul>
+
+        <p>This is the prototype for the Report funding progress (Report) service. The service gives grant recipients a way to report on monitoring and evaluation data. </p>
+
+        <p>Report aims to replace Submit monitoring and evaluation data (Submit) by iteratively moving away from users inputting information into a spreadsheet to form-based question flows and a task list. </p>
     
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -44,6 +48,7 @@
     
         <h2 class="govuk-heading-m govuk-!-margin-top-5">Assets</h2>              
         <ul class="govuk-list">
+            <li><a class="govuk-link" href="https://submit-monitoring-data.test.access-funding.test.levellingup.gov.uk/login">Submit MVP (current service)</a></li>
             <li><a class="govuk-link" href="/listings">Page listings</a></li>
             <li><a class="govuk-link" href="https://github.com/communitiesuk/rfp-prototype" target="_blank">Github repo</a></li>
             <li><a class="govuk-link" href="https://www.figma.com/design/2dH3cosIBd2Fr7LUFvJBZN/%2F%2F-Submit-%2F%2F-Submit-Monitoring-Data?node-id=1871-148479" target="_blank">Figma flat files</a></li>
