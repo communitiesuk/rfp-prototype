@@ -2,52 +2,55 @@
 
 {% set showBackLink = false %}
 
-{% set pageHeading = "Reporting funding progress" %}
-{% set pageSection = "" %}
+{% set pageHeading = "Report funding progress" %}
+{% set pageSection = "Prototype" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-        {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}
-
-        <ul class="govuk-list govuk-body-s">
-            <li>Last updated: <span class="govuk-!-font-weight-bold">25 June 2024</span></li>
-            <li>Prototype version: {{releaseVersion}}</li>
-        </ul>
-    
+        {{ macroPageHeader.pageHeader(pageHeading,pageSection) }}        
     </div>
+    
     <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">This is the prototype for the Report funding progress (Report) service. The service gives grant recipients a way to report on monitoring and evaluation data. </p>
+        <p class="govuk-body">Report aims to replace Submit monitoring and evaluation data (Submit) by iteratively moving away from users inputting information into a spreadsheet to form-based question flows and a task list. </p>
+    
 
-
-        <span class="govuk-caption-m">Current baseline</span>
-        <h2 class="govuk-heading-m">Main flow and listings</h2>      
-        <p>These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
+        
+        <h2 class="govuk-heading-m">Current baseline</h2>      
+        <p class="govuk-body">These are the main flows, but you will also be able to select various data to preload (once built) to include specific scenarios, pages and content.</p>      
     
         <div class="govuk-button-group">         
             <form action="/service-start?useOneLogin=" method="post" >                    
                 {{ govukButton({
-                    text: "Sign in using microsoft"
+                    text: "Service start"
                 }) }}
             </form> 
 
             <form action="/service-start?useOneLogin=Yes" method="post" >                    
                 {{ govukButton({
-                    text: "Sign in using GOV.UK One Login"
+                    text: "Alternative using GOV.UK One Login"
                 }) }}
             </form>             
         </div>
     </div>
+
     <div class="govuk-grid-column-one-third">
-    
+        
+        <ul class="govuk-list govuk-body-s">
+            <li>Last updated: <span class="govuk-!-font-weight-bold">27 June 2024</span></li>
+            <li>Prototype version: {{releaseVersion}}</li>
+        </ul>
+
         <h2 class="govuk-heading-m govuk-!-margin-top-5">Assets</h2>              
         <ul class="govuk-list">
-            <li><a class="govuk-link" href="/listings">Page listings</a></li>
-            <li><a class="govuk-link" href="https://github.com/communitiesuk/rfp-prototype" target="_blank">Github repo</a></li>
-            <li><a class="govuk-link" href="https://www.figma.com/design/2dH3cosIBd2Fr7LUFvJBZN/%2F%2F-Submit-%2F%2F-Submit-Monitoring-Data?node-id=1871-148479" target="_blank">Figma flat files</a></li>
-            <li><a class="govuk-link" href="https://www.figma.com/design/c7hbpCzabqtCvENDA27hQo/Report-Funding-Progress?node-id=2402-728&t=zMG3VaZSUGKvfUUs-0" target="_blank">Figma workflows</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="https://submit-monitoring-data.test.access-funding.test.levellingup.gov.uk/login" target="_blank">Submit MVP (current service)</a></li>            
+            <li><a class="govuk-link govuk-link--no-visited-state" href="https://github.com/communitiesuk/rfp-prototype" target="_blank">Github repository</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/design/2dH3cosIBd2Fr7LUFvJBZN/%2F%2F-Submit-%2F%2F-Submit-Monitoring-Data?node-id=1871-148479" target="_blank">Figma flat files</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="https://www.figma.com/design/c7hbpCzabqtCvENDA27hQo/Report-Funding-Progress?node-id=2402-728&t=zMG3VaZSUGKvfUUs-0" target="_blank">Figma workflows</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="/listings">Page listings</a></li>
         
         </ul>
     </div>
