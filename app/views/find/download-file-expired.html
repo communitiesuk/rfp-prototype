@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Your data link has expired" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		
+
+		<p>Your data download expired after 7 days.</p>						
+		<p>You can:</p>
+		<ul class="govuk-list govuk-list--bullet">
+			<li><a href="/find/confirmation">resend the download link</a> using your previous filtered options</li>
+			<li><a href="/find/download-data">create a new monitoring and evaluation data download</a></li>
+		</ul>
+		
+		
+		<!-- <form method="post" action="/find/confirmation" >
+
+			{{ govukButton({
+				text: "Download your data"	
+			}) }}
+
+		</form>		
+			 -->
+
+  	</div>	  
+</div>
+
+{% endblock %}
