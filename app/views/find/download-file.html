@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Your data is ready to be downloaded" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+
+
+		<p>You requested </p>						
+		
+		<form method="post" action="#" >
+
+			{{ govukButton({
+				text: "Download your data"	
+			}) }}
+
+		</form>		
+			
+
+  	</div>	  
+</div>
+
+{% endblock %}
