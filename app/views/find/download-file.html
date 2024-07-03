@@ -1,0 +1,35 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Your data is ready to be downloaded" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<div class="govuk-inset-text">
+			<p>You requested a data download on <span class="govuk-!-font-weight-bold">{date}</span>.
+			<br>File format: <span class="govuk-!-font-weight-bold">{format_type}, {size} KB</span></p>
+		</div>
+		
+		<form method="post" action="#" >
+
+			{{ govukButton({
+				text: "Download your data",
+				classes: "govuk-!-margin-top-3"
+			}) }}
+
+		</form>		
+			
+
+  	</div>	  
+</div>
+
+{% endblock %}
