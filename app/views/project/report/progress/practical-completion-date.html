@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What’s the practical completion date?" %}
+{% set pageHeading = "What is the practical completion date?" %}
 {% set pageSection = "Programme progress" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,7 +13,7 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-		<p>This is the date the grant elements of the project will be physically complete.</p>
+		<p>This is the date the grant elements of the projects will be physically complete and all outputs achieved.</p>
 
 		<form method="post" action="/project/report/progress/delivery" >
             
