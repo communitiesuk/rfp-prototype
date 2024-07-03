@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Are there any significant milestones or achievements you'd like to tell us about?" %}
+{% set pageHeading = "Are there any significant milestones or achievements you’d like to tell us about?" %}
 {% set pageSection = "Programme progress" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -22,9 +22,10 @@
 
 		<form method="post" action="#" >
             
-			{{ govukTextarea({
+			{{ govukCharacterCount({
 				name: "projectIssueMeasures",
 				id: "projectIssueMeasures",
+				maxwords: 500,
 				label: {
 				  text: "Can you provide more detail?",
 				  classes: "govuk-label govuk-visually-hidden",

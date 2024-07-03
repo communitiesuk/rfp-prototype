@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What’s the activity completion date?" %}
+{% set pageHeading = "What is the activity completion date?" %}
 {% set pageSection = "Programme progress" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -11,11 +11,9 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-		
-		
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      				
 
-		<form method="post" action="#" >
+		<form method="post" action="/project/report/progress/practical-completion-date" >
             
 			{{ govukDateInput({
 				id: "adminActivityCompletionDate",

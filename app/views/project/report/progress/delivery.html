@@ -23,9 +23,10 @@
 
 		<form method="post" action="/project/report/progress/issues" >
             
-			{{ govukTextarea({
+			{{ govukCharacterCount({
 				name: "projectIssueMeasures",
 				id: "projectIssueMeasures",
+				maxwords: 500,
 				label: {
 				  text: "Can you provide more detail?",
 				  classes: "govuk-label govuk-visually-hidden",
