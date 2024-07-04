@@ -16,7 +16,7 @@ router.use(radioButtonRedirect)
 
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their email address
-router.post('/email-address-page', function (req, res) {
+router.post('/find/download-data', function (req, res) {
 
     notify.sendEmail(
       // this long string is the template ID, copy it from the template
@@ -30,6 +30,6 @@ router.post('/email-address-page', function (req, res) {
   
     // This is the URL the users will be redirected to once the email
     // has been sent
-    res.redirect('/confirmation-page');
+    res.redirect('/find/confirmation');
   
   });
