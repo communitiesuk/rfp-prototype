@@ -20,11 +20,6 @@
 			  { key: { text: "Delivery" }, value: { text: data['projectRagRatingDelivery'] } }			  
 			]
 		}) }}		      	
-
-		<!-- {{ govukDetails({
-			summaryText: "Understanding RAG ratings",
-			text: "To follow"
-		}) }} -->
 					
 		<form method="post" action="/project/report/rag/" >	
 						
@@ -39,10 +34,7 @@
 						text: "Provide more detail",
 						classes: "govuk-label",
 						isPageHeading: false
-					},					
-					hint: {
-						text: "Do not include personal or financial information, like your National Insurance number or credit card details."
-					}
+					}					
 				}) }}
 
 			{% endset -%}
