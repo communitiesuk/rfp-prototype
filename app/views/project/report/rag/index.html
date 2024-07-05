@@ -1,5 +1,4 @@
 {% extends "layouts/main.html" %}
-
 {% set showBackLink = true %}
 
 {% set pageHeading = "Project RAG ratings" %}
@@ -13,13 +12,11 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-        <p class="govuk-body">You need to report on the spend risk and delivery risk for each project using RAG ratings. </p>
-            
-        <p class="govuk-body">Use the <a href="/project/report/rag/rag-examples" target="_blank">RAG rating examples (opens in a new tab)</a> to help you complete the ratings as accurately as possible. </p>
-        <br>
+        <p class="govuk-body">You need to report on the spend risk and delivery risk for each project using RAG ratings. </p>            
+        <p class="govuk-body">Use the <a href="/project/report/rag/rag-examples" target="_blank">RAG rating examples (opens in a new tab)</a> to help you complete the ratings as accurately as possible. </p>        
 
     </div>
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full govuk-!-margin-top-3">
 
         {{ govukSummaryList({
             card: {
@@ -28,12 +25,12 @@
             rows: [
                 {
                     key: { text: "Spend RAG rating" },
-                    value: { html: "Amber/Green" },
+                    value: { html: '<strong class="govuk-tag govuk-tag--yellow">Amber</strong><strong class="govuk-tag govuk-tag--green">Green</strong>' },
                     actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "age" } ] }
                 },
                 {
                     key: { text: "Delivery RAG rating" },
-                    value: { html: "Amber" },
+                    value: { html: '<strong class="govuk-tag govuk-tag--yellow">Amber</strong>' },
                     actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "nationality" } ] }
                 },
                 {
@@ -42,26 +39,14 @@
                     actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "working situation" } ] } 
                 }
             ]
-        }) }}
-        
-
-        <!-- {{ govukSummaryList({
-            card: {
-                title: { text: "Digital Skills and Innovation Centre" }                
-            },
-            rows: [
-                {
-                    key: { text: "Ratings" },
-                    value: { html: '<a href="/project/report/rag/spend" class="govuk-link govuk-link--no-visited-state">Enter RAG ratings</a>' }                     
-                }
-            ]           
-        }) }} -->
+        }) }}    
 
         {{ govukSummaryList({
             card: {
                 title: { text: "Digital Skills and Innovation Centre" },
                 actions: {
-                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Enter RAG ratings", visuallyHiddenText: "to this project" } ] }
+                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Enter RAG ratings", visuallyHiddenText: "to this project" } ] 
+                }
             }            
         }) }}
 
@@ -70,7 +55,8 @@
             card: {
                 title: { text: "The Saints" },
                 actions: {
-                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Enter RAG ratings", visuallyHiddenText: "to this project" } ] }
+                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Enter RAG ratings", visuallyHiddenText: "to this project" } ] 
+                }
             }            
         }) }}
 
@@ -78,7 +64,8 @@
             card: {
                 title: { text: "Weddington Road Cycle Scheme" },
                 actions: {
-                    items: [ { href: "/project/report/rag/spend",  classes:"govuk-link govuk-link--no-visited-state", text: "Add RAG ratings", visuallyHiddenText: "to this project" } ] }
+                    items: [ { href: "/project/report/rag/spend",  classes:"govuk-link govuk-link--no-visited-state", text: "Add RAG ratings", visuallyHiddenText: "to this project" } ] 
+                }
             }            
         }) }}
 
@@ -86,16 +73,12 @@
             card: {
                 title: { text: "Visiting Nuneaton: Changing Perspectives" },
                 actions: {
-                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Add RAG ratings", visuallyHiddenText: "to this project" } ] }
+                    items: [ { href: "/project/report/rag/spend", classes:"govuk-link govuk-link--no-visited-state", text: "Add RAG ratings", visuallyHiddenText: "to this project" } ] 
+                }
             }            
         }) }}
 
-
-
-       
-
-
-          <form method="post" action="/report/locations/" >        
+        <form method="post" action="/report/locations/" >        
 				
             {{ govukButton({
 				text: "Continue",

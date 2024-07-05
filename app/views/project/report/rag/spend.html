@@ -1,5 +1,4 @@
 {% extends "layouts/main.html" %}
-
 {% set showBackLink = true %}
 
 {% set pageHeading = "What is the spend RAG rating for this project?" %}
@@ -12,8 +11,6 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-
-    
 					
 		<form method="post" action="/project/report/rag/delivery" >	  
 
@@ -28,22 +25,17 @@
 				  }
 				},
 				items: [
-				{ value: "Green", text: "Green", checked: checked("projectRagRatingSpend", "Green") },
-				{ value: "Amber/Green", text: "Amber/Green", checked: checked("projectRagRatingSpend", "Amber/Green") },  
-				{ value: "Amber", text: "Amber", checked: checked("projectRagRatingSpend", "Amber") },
-				{ value: "Amber/Red", text: "Amber/Red", checked: checked("projectRagRatingSpend", "Amber/Red") },
-				{ value: "Red", text: "Red", checked: checked("projectRagRatingSpend", "Red") }
-				  
-				  
+					{ value: "Green", text: "Green", checked: checked("projectRagRatingSpend", "Green") },
+					{ value: "Amber/Green", text: "Amber/Green", checked: checked("projectRagRatingSpend", "Amber/Green") },  
+					{ value: "Amber", text: "Amber", checked: checked("projectRagRatingSpend", "Amber") },
+					{ value: "Amber/Red", text: "Amber/Red", checked: checked("projectRagRatingSpend", "Amber/Red") },
+					{ value: "Red", text: "Red", checked: checked("projectRagRatingSpend", "Red") }								  
 				]
 			}) }}
 
-
-				
-				{{ govukButton({
-				    text: "Continue"
-				}) }}
-
+			{{ govukButton({
+				text: "Continue"
+			}) }}
 
 		</form>
 
