@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What is the practical completion date?" %}
+{% set pageHeading = "What is the activity completion date?" %}
 {% set pageSection = "Programme progress" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -11,15 +11,13 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-		
-		<p>This is the date the grant elements of the projects will be physically complete and all outputs achieved.</p>
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      				
 
-		<form method="post" action="/project/report/progress/delivery" >
+		<form method="post" action="/project/report/progress/practical-completion-date" >
             
 			{{ govukDateInput({
-				id: "adminPracticalCompletionDate",
-				namePrefix: "adminPracticalCompletionDate",
+				id: "adminActivityCompletionDate",
+				namePrefix: "adminActivityCompletionDate",
 				fieldset: {
 					legend: {
 						text: pageHeading,

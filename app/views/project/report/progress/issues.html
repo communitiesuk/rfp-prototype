@@ -13,13 +13,19 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-		<p>We use this information to see how we might be able to help.</p>
+		<p>We use this information to see how we might be able to help. For example, you could tell us about:</p>
+      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li>content from Pathfinders TBC</li>
+        	<li>content from Pathfinders TBC</li>
+        	<li>content from Pathfinders TBC</li>
+			</ul>
 
 		<form method="post" action="/project/report/progress/milestones" >
             
-			{{ govukTextarea({
+			{{ govukCharacterCount({
 				name: "projectIssueMeasures",
 				id: "projectIssueMeasures",
+				maxwords: 500,
 				label: {
 				  text: "Can you provide more detail?",
 				  classes: "govuk-label govuk-visually-hidden",
