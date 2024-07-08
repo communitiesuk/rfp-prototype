@@ -27,39 +27,7 @@
 			}) }}
 		
 		</form>
-
-        	{{ govukSummaryList({
-        		card: {
-              		title: { text: "Risk One" },
-			  		actions: {
-						items: [
-							{ href: "#", text: "Delete risk", visuallyHiddenText: "from the list" }				  
-						]
-			  		}
-            	},
-				rows: [
-					{
-						key: { text: "Title" },
-						value: { text: data.projectRiskTitle  },
-						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "title of risk" } ] }
-					},
-					{
-						key: { text: "Category" },
-						value: { text: data.projectRiskCategory  },
-						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "category of risk" } ] }
-					},
-					{
-						key: { text: "What could go wrong and what would outcome be" },
-						value: { text: data.reportReasonDeclined },
-						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "description of what could go wrong" } ] }
-					},
-					{
-						key: { text: "Pre-mitigated likelihood score" },
-						value: { text: data.projectRiskLikelihood },
-						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "likelihood score" } ] } 
-					}
-            	]
-        	}) }}    	
+        	
 		
 			{{ govukSummaryList({
 				card: {
@@ -83,12 +51,12 @@
 					},
 					{
 						key: { text: "What could go wrong and what would outcome be" },
-						value: { text: data.reportReasonDeclined },
+						value: { text: data.projectRiskOutcome },
 						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "description of what could go wrong" } ] }
 					},
 					{
 						key: { text: "Pre-mitigated likelihood score" },
-						value: { text: data.projectRiskLikelihood },
+						value: { text: data.projectRiskScore },
 						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "likelihood score" } ] } 
 					}
 				]
