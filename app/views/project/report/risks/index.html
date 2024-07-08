@@ -38,23 +38,14 @@
 				  { value: "No", text: "No" }
 				]
 			}) }}
-
-			<div class="govuk-button-group">
-				{{ govukButton({
-				  text: "Save and continue"
-				}) }}
-
-				<!-- {{ govukButton({
-				  text: "Save as draft",
-				  classes: "govuk-button--secondary",
-				  href: "/project/?report-8-status=inProgress"
-				}) }} -->
-		  </div>
+			
+			{{ govukButton({
+				text: "Save and continue"
+			}) }}						  
 
 		</form>
 
 	</div>
-    
 </div>
 
 {% endblock %}
