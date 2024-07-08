@@ -16,8 +16,8 @@
 		<form method="post" action="/project/report/risks/add/more" >
             
             {{ govukRadios({
-				name: "projectRiskLikelihood",
-				id: "projectRiskLikelihood",
+				name: "projectRiskScore",
+				id: "projectRiskScore",
 				fieldset: {
 				  legend: {
 					text: pageHeading,
@@ -26,11 +26,11 @@
 				  }
 				},
 				items: [
-				  { value: "Extremely Unlikely", text: "Extremely Unlikely", checked: checked("projectRiskLikelihood", "Extremely Unlikely") },
-				  { value: "Unlikely", text: "Unlikely", checked: checked("projectRiskLikelihood", "Unlikely") },
-				  { value: "Neutral", text: "Neutral", checked: checked("projectRiskLikelihood", "Neutral") },
-				  { value: "Likely", text: "Likely", checked: checked("projectRiskLikelihood", "Likely") },
-				  { value: "Extremely Likely", text: "Extremely Likely", checked: checked("projectRiskLikelihood", "Extremely Likely") }
+				  { value: "Extremely Unlikely", text: "Extremely Unlikely", checked: checked("projectRiskScore", "Extremely Unlikely") },
+				  { value: "Unlikely", text: "Unlikely", checked: checked("projectRiskScore", "Unlikely") },
+				  { value: "Neutral", text: "Neutral", checked: checked("projectRiskScore", "Neutral") },
+				  { value: "Likely", text: "Likely", checked: checked("projectRiskScore", "Likely") },
+				  { value: "Extremely Likely", text: "Extremely Likely", checked: checked("projectRiskScore", "Extremely Likely") }
 				]
 			}) }}  
 
