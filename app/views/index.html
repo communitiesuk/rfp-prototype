@@ -111,7 +111,7 @@
         
         {% set reportHtml %}            
 
-            <h2 class="govuk-heading-s">Pathfinder report (TBD)</h2>
+            <h2 class="govuk-heading-s">Pathfinders</h2>
             <ul class="govuk-list govuk-list--bullet">
                 <li>
                     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Reference data</h3>
@@ -175,7 +175,7 @@
                         </li>
                                             
                 </li>                
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
                 <li>
                     <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Other funds (TBC)</h2>            
                     <ul class="govuk-list govuk-list--bullet">
@@ -228,7 +228,7 @@
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                    
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>
-                            <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li> -->
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li>
 
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmamtion" >Report submitted</a></li>
@@ -240,7 +240,7 @@
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
                         </ul> 
                     </ul>
-                </li>           
+                </li>            -->
                             
             </ul>              
         {% endset -%}  
@@ -314,7 +314,7 @@
         {{ govukTabs({
             items: [                               
             { label: "Service pages", id: "service", panel: { html: serviceHtml } },            
-            { label: "Admin", id: "admin", panel: { html: adminHtml } },             
+            
             { label: "Reports", id: "report", panel: { html: reportHtml } },                        
             { label: "Sign off", id: "signoff", panel: { html: signoffHtml } },                        
             
@@ -323,6 +323,8 @@
         }) }}
 
         <p class="govuk-body govuk-!-font-size-16"><a class="govuk-back-link" href="/data">Data been stored as part of current session</a></p>
+
+        <!-- { label: "Admin", id: "admin", panel: { html: adminHtml } },              -->
 
     </div>
 </div>
