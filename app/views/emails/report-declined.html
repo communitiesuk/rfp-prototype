@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Report declined" %}
+{% set title = "Your report for ((fund_name)) has been declined" %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -18,13 +18,23 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
-    <p>This is the email instructing the reporter that the section 151 has declined the report.</p>
-    <p>Your monitoring and evaluation spreadsheet is ready to be downloaded.</p>
-    <p><a href="#">Download your spreadsheet (MS Excel Spreadsheet, {size} KB)</a></p>
+    <p>Your report for ((fund_name)) has been declined by:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Kate Harries - Section 151 Officer</li>
+      <li>Brian Coult - Chief Finance Officer</li></ul>
     
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-inset-text">
+      <p>Reporting period: <strong>July 2023 to September 2023</strong></p>
+      </div>
+
+    <p>Reason for decline: PLAYBACK THEIR REASON HERE</p>
+
+    <p><a href="#">Sign in to amend the report and resend for review</a></p>
     
-    <p>This is an automated message. Do not reply to this email. If you need help, contact us: <a href="mailto:fsd.support@levellingup.gov.uk">fsd.support@levellingup.gov.uk</a>.</p>
+    <h2 class="govuk-heading-m">Get help</h2>	
+
+    <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
 
 
 

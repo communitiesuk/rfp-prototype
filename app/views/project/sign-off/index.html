@@ -1,8 +1,10 @@
 {% extends "layouts/main.html" %}
 
+{% if data['userType'] != "Section151" %}
 {% set showBackLink = true %}
+{% endif %}
 
-{% set pageHeading = "Sign off and submit project report" %}
+{% set pageHeading = "Sign off and submit report" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,14 +15,24 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      	<p class="govuk-body">Content about what they are doing.</p>
+      	<p class="govuk-body">((user_name)) has completed a report ready for your review.</p>
+
+		<!-- Commented this out until we know what we are puttin gin. -->
+		  <!-- <div class="govuk-inset-text">
+			<p>Reporting period: <strong>July 2023 to September 2023</strong></p>
+			</div> -->
+	  
       
       	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-      	<p class="govuk-body-l">Option to view or download report, dont include lines, only as illustration. (TBC)</p>
+      	<p class="govuk-body-l">Option to view or download report, don't include lines, only as illustration. (TBC)</p>
       	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 		
-      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-        	<li></li>
+		  <p class="govuk-body">You can now:</p>
+
+		
+		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li>sign off the report and submit it to ((fund_name))</li>
+			<li>decline the report and provide a reason why so that ((user_name)) can amend the report and resend for review</li>
       	</ul>
 
 		<div class="govuk-button-group">
@@ -29,7 +41,7 @@
           		
 				<input type="hidden" name="reportStatus" id="reportStatus" value="Signed" />
 				{{ govukButton({
-            		text: "Sign off this report"
+            		text: "Sign off and submit report"
           		}) }}
 
         	</form>

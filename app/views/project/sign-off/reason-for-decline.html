@@ -13,23 +13,25 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      	<p>Content about what they are doing.</p>    
+      	<p>Tell the reporter why you’re declining this report. You could include:</p>    
       	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-        	<li></li>
+        	<li>details about any corrections needed</li>
+			<li>any support they might need to correct the problem</li>
       	</ul>
 
       	<form method="post" action="/project/sign-off/confirmation" >	  
 
-        	{{ govukTextarea({
+        	{{ govukCharacterCount({
           		name: "reportReasonDeclined",
           		id: "reportReasonDeclined",
+				maxwords: 300,
           		label: {
             		text: "Why have you declined this report",
             		classes: "govuk-label--l govuk-visually-hidden",
             		isPageHeading: false
           		},
           		hint: {
-            		text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+            		text: "Do not include any personal information like phone numbers or email addresses"
           		}
         	}) }}          
         

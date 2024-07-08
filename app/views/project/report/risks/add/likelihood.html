@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "What is the pre-mitigated likelihood score?" %}
+{% set pageSection = "Risks" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+	
+		<form method="post" action="/project/report/risks/add/more" >
+            
+            {{ govukRadios({
+				name: "projectRiskLikelihood",
+				id: "projectRiskLikelihood",
+				fieldset: {
+				  legend: {
+					text: pageHeading,
+					isPageHeading: true,
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
+				  }
+				},
+				items: [
+				  { value: "Extremely Unlikely", text: "Extremely Unlikely", checked: checked("projectRiskLikelihood", "Extremely Unlikely") },
+				  { value: "Unlikely", text: "Unlikely", checked: checked("projectRiskLikelihood", "Unlikely") },
+				  { value: "Neutral", text: "Neutral", checked: checked("projectRiskLikelihood", "Neutral") },
+				  { value: "Likely", text: "Likely", checked: checked("projectRiskLikelihood", "Likely") },
+				  { value: "Extremely Likely", text: "Extremely Likely", checked: checked("projectRiskLikelihood", "Extremely Likely") }
+				]
+			}) }}  
+
+		
+				{{ govukButton({
+				  text: "Save and continue"
+				}) }}
+		
+
+		</form>
+
+  	</div>
+
+</div>
+
+{% endblock %}

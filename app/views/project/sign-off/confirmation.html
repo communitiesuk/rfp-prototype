@@ -17,6 +17,7 @@
 
         {{ govukPanel({
 			titleText: pageHeading,
+			classes: "govuk-!-margin-bottom-5",
 			html: "Reporting period<br><strong>July 2023 to September 2023</strong>"
 		}) }}
 	
@@ -25,14 +26,15 @@
 
 			<p class="govuk-body">We have sent you a confirmation email.</p>			
 			<h2 class="govuk-heading-m">What happens next</h2>	
-			<p class="govuk-body">We will email the person responsible bla bla bla .....</p>		  
+			<p class="govuk-body">We’ve emailed ((user_name)) to let them know the report has been declined and included the reason you gave.</p>	
+			<p class="govuk-body">They will be able to correct the report and resend it to you for review.</p>		  
 			<p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/report-declined-confirmation">Go to email sent to Section 151 officer</a></p>
 
 		{% else %}
 
-			<p class="govuk-body">We have sent you a confirmation email.</p>			
+			<p class="govuk-body">We have sent you a confirmation email. </p>			
 			<h2 class="govuk-heading-m">What happens next</h2>	
-			<p class="govuk-body">We will email the person responsible bla bla bla .....</p>		  			
+			<p class="govuk-body">We’ve emailed ((user_name)) to let them know the report has been reviewed and signed off. The report has now been submitted to ((fund_name)).</p>		  			
 			<p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/report-signed-off-confirmation">Go to email sent to Section 151 officer</a></p>
 
 		{% endif %}
