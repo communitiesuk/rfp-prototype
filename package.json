@@ -11,7 +11,6 @@
     "govuk-frontend": "^5.3.1",
     "govuk-prototype-kit": "13.16.2",
     "jquery": "3.7.1",
-    "notifications-node-client": "8.2.0",
     "radio-button-redirect": "^1.2.0"
   }
 }
