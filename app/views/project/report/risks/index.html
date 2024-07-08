@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What are the main risks across your projects?" %}
+{% set pageHeading = "Risks across your projects" %}
 {% set pageSection = "Risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,16 +13,49 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 			
+		<p>Some content to explain...</p>
+
+	</div>
+    <div class="govuk-grid-column-full govuk-!-margin-top-3">
 
 		<form method="post" action="/project/report/risks/add/" >
             
            
 			
 			{{ govukButton({
-				text: "Continue"
+				text: "Add risk"
 			}) }}
 		
 		</form>
+
+        {{ govukSummaryList({
+            card: {
+              title: { text: data.projectRiskTitle }
+            },
+            rows: [
+                {
+                    key: { text: "Category" },
+                    value: { text: data.projectRiskCategory  },
+                    actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "category of risk" } ] }
+                },
+                {
+                    key: { text: "What could go wrong and what would outcome be" },
+                    value: { text: data.reportReasonDeclined },
+                    actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "description of what could go wrong" } ] }
+                },
+                {
+                    key: { text: "Pre-mitigated likelihood score" },
+                    value: { text: data.projectRiskLikelihood },
+                    actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "likelihood score" } ] } 
+                }
+            ]
+        }) }}    
+
+        
+
+
+
+		
 
   	</div>	  
 </div>
