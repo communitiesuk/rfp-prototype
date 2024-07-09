@@ -49,7 +49,17 @@
 						key: { text: "Pre-mitigated likelihood score" },
 						value: { text: data.projectRiskScore },
 						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "likelihood score" } ] } 
-					}
+					},
+					{
+						key: { text: "Pre-mitigated impact score" },
+						value: { text: data.projectRiskImpactScore },
+						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "impact score" } ] } 
+					},
+					{
+						key: { text: "How you will manage the risk" },
+						value: { text: data.projectRiskMitigation },
+						actions: { items: [ { href: "#", text: "Change", visuallyHiddenText: "how you will manage the risk" } ] } 
+					}					
 				]
 			}) }}    	
 

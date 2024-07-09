@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "Why is this a risk?" %}
+{% set pageHeading = "How will you manage the risk?" %}
 {% set pageSection = "Risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,22 +13,22 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
-		<form method="post" action="/project/report/risks/add/likelihood" >
+		<form method="post" action="/project/report/risks/add/more" >
             
            
 
 			{{ govukCharacterCount({
-				name: "projectRiskOutcome",
-				id: "projectRiskOutcome",
+				name: "projectRiskMitigation",
+				id: "projectRiskMitigation",
 				maxwords: 100,
-				value: data['projectRiskOutcome'],
+				value: data['projectRiskMitigation'],
 				label: {
 				  text: pageHeading,
 				  classes: "govuk-label--l govuk-visually-hidden",
 				  isPageHeading: false
 				},
 				hint: {
-				  text: "Explain what might go wrong and what the outcome could be."
+				  text: "Explain what mitigations you have or plan to have in place to manage the risk."
 				}
 		  }) }}     
 			
