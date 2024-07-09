@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What is the pre-mitigated likelihood of this risk becoming an issue?" %}
+{% set pageHeading = "What is the likelihood of this risk becoming an issue?" %}
 {% set pageSection = "Risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -12,6 +12,12 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<p>Your answer should take into consideration how likely the risk is to become an issue before mitigation. </p>
+		<p>Your answer should be based on the risk as it is now, before any mitigations have been put in place.</p>
+
+
+		<p>Your answer should take into consideration how likely the risk is to become an issue, before any mitigations have been put in place. </p>
 	
 		<form method="post" action="/project/report/risks/add/impact" >
             
