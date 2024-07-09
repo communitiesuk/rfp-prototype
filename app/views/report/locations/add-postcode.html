@@ -2,8 +2,8 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What is the postcode for this project?" %}
-{% set pageSection = "Project locations" %}
+{% set pageHeading = "What are the postcodes for this project?" %}
+{% set pageSection = "Project postcodes" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 			
         <div class="govuk-inset-text">
-            <p>Play back project name</p>
+            <p>{project name playback}</p>
         </div>
 
 		<p>If a project has multiple postcodes, enter the postcodes with a comma seperating each one.</p>
@@ -37,7 +37,7 @@
 
 			<div class="govuk-button-group">
 				{{ govukButton({
-				  text: "Continue"
+				  text: "Add postcodes"
 				}) }}
 				<!-- {{ govukButton({
 				  text: "Save as draft",
