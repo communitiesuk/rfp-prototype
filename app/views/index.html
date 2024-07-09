@@ -111,7 +111,7 @@
         
         {% set reportHtml %}            
 
-            <h2 class="govuk-heading-s">Pathfinder report (TBD)</h2>
+            <h2 class="govuk-heading-s">Pathfinders</h2>
             <ul class="govuk-list govuk-list--bullet">
                 <li>
                     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Reference data</h3>
@@ -164,18 +164,19 @@
 
                     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Risks</h3>
                     
-                        <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/" >What are the main risks across your projects?</a>
+                        <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/" >Do you need to add any project risks?</a>
                             <ul class="govuk-list govuk-list--bullet">                        
                                 <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/" >What is the name of the risk?</a></li>
                                 <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/category" >What is the risk category?</a></li>
                                 <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/issues" >What might go wrong and what would the outcome be?</a></li>
-                                <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/likelihood" >What is the pre-mitigated likelihood score?</a></li>
-                                <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/more" >Do you want to add any more risks?</a></li>
+                                <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/likelihood" >What is the pre-mitigated likelihood score?</a></li>                                
                             </ul>
+                            <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/add/more" >Do you want to add any more risks?</a></li>
+                            <li><strong class="govuk-tag govuk-tag--green">In progress</strong> <a class="govuk-link govuk-link--no-visited-state" href="/project/report/risks/project-risks" >Project risks</a>
                         </li>
                                             
                 </li>                
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
                 <li>
                     <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Other funds (TBC)</h2>            
                     <ul class="govuk-list govuk-list--bullet">
@@ -228,7 +229,7 @@
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outputs/" >Project outputs</a></li>
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/outcomes/" >Project outcomes</a></li>                    
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/changes/" >Project changes</a></li>
-                            <!-- <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li> -->
+                            <li><a class="govuk-link govuk-link--no-visited-state" href="/project/sign-off-and-submission/" >Sign off and submit project report</a></li>
 
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/check-your-answers" >Check your answers</a></li>
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/project/report/confirmamtion" >Report submitted</a></li>
@@ -240,7 +241,7 @@
                             <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit a user</a></li>
                         </ul> 
                     </ul>
-                </li>           
+                </li>            -->
                             
             </ul>              
         {% endset -%}  
@@ -314,7 +315,7 @@
         {{ govukTabs({
             items: [                               
             { label: "Service pages", id: "service", panel: { html: serviceHtml } },            
-            { label: "Admin", id: "admin", panel: { html: adminHtml } },             
+            
             { label: "Reports", id: "report", panel: { html: reportHtml } },                        
             { label: "Sign off", id: "signoff", panel: { html: signoffHtml } },                        
             
@@ -323,6 +324,8 @@
         }) }}
 
         <p class="govuk-body govuk-!-font-size-16"><a class="govuk-back-link" href="/data">Data been stored as part of current session</a></p>
+
+        <!-- { label: "Admin", id: "admin", panel: { html: adminHtml } },              -->
 
     </div>
 </div>
