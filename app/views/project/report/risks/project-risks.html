@@ -12,16 +12,26 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-			
+		
 
+
+
+
+		{% if data['projecRisks'] != "No" %}
 		<p class="govuk-body"><a class="gouvk-link govuk-link--no-visited-state" href="/project/report/risks/add/">Add another risk</a></p>
+		{% else %}
+		<p>You have told us you do not have any risks across your projects. </p>
+
+		{% endif %}
 
 		
 
 	</div>
     <div class="govuk-grid-column-full govuk-!-margin-top-3">
 
-		
+
+
+			{% if data['projecRisks'] != "No" %}
         	
 		
 			{{ govukSummaryList({
@@ -62,8 +72,11 @@
 				]
 			}) }}    	
 
+			{% endif %}
 
-			<form method="post" action="#" >
+	</div>
+	<div class="govuk-grid-column-two-thirds">
+			<form method="post" action="/project/pathfinders-report?reportSectionFour=complete" >
             <div class="govuk-inset-text">
 				<p class="govuk-body">You can return to this section at any time to edit it before sending your report.</p>
 			</div>
