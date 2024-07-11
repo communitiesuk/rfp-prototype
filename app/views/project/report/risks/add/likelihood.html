@@ -2,7 +2,7 @@
 
 {% set showBackLink = true %}
 
-{% set pageHeading = "What is the pre-mitigated likelihood score?" %}
+{% set pageHeading = "What is the likelihood of this risk becoming an issue?" %}
 {% set pageSection = "Risks" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -12,6 +12,8 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<p>Your answer should be based on the risk level before any mitigations have been put in place.  </p>
 	
 		<form method="post" action="/project/report/risks/add/impact" >
             
@@ -26,11 +28,11 @@
 				  }
 				},
 				items: [
-				  { value: "Extremely Unlikely", text: "Extremely Unlikely", checked: checked("projectRiskScore", "Extremely Unlikely") },
+				  { value: "Extremely unlikely", text: "Extremely unlikely", checked: checked("projectRiskScore", "Extremely inlikely") },
 				  { value: "Unlikely", text: "Unlikely", checked: checked("projectRiskScore", "Unlikely") },
 				  { value: "Neutral", text: "Neutral", checked: checked("projectRiskScore", "Neutral") },
 				  { value: "Likely", text: "Likely", checked: checked("projectRiskScore", "Likely") },
-				  { value: "Extremely Likely", text: "Extremely Likely", checked: checked("projectRiskScore", "Extremely Likely") }
+				  { value: "Extremely likely", text: "Extremely likely", checked: checked("projectRiskScore", "Extremely likely") }
 				]
 			}) }}  
 
