@@ -10,7 +10,7 @@ module.exports = {
   section151: "Kate Harries",
   fundName: "Towns Fund",
   fundDate: "29 July 2024",
-  organisationName: "Acme Council",
+  organisationName: "Wigan Council",
   reporterName: "Gemma Currie",
   reporterEmail: "gemma.currieh@user-research.gov.uk",
   section151Name: "Hugo Furst",
