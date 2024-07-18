@@ -1,5 +1,5 @@
 {% extends "layouts/email.html" %}
-
+{% set serviceName = "" %}
 
 
 {% set title = 'You signed off a report for ' + data.organisationName + '' %}
@@ -15,22 +15,48 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-three-quarters">
 
-    <h1 class="govuk-heading-l">{{ title }}</h1>        
+
+    <div class="email-message">
+    	<table class="govuk-table email-message-meta">
+        	<tbody>
+				<tr>
+                	<th scope="row">From</th>
+                	<td>Report Funding Progress</td>
+              	</tr>                    
+            	<tr>
+              		<th scope="row">To</th>
+              		<td><span class='placeholder-no-brackets'>{{ data.section151Email}}</span></td>
+            	</tr>          
+          		<tr class="email-message-meta">
+            		<th scope="row">Subject</th>
+            		<td>{{ title }}</td>
+          		</tr>
+        	</tbody>
+      	</table>
+      	<div class="email-message-body">
+          <p>You successfully signed off and submitted a report from {{ data.organisationName }} to {{ data.fundName }}.</p>
+
+          <div class="govuk-inset-text">
+            <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
+            </div>
+      
+        
+          <p><a href="#">Sign in to view or download the submitted report</a></p>
+          
+          <h2 class="govuk-heading-m">Get help</h2>	
+      
+          <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+      
     
-    <p>You successfully signed off and submitted a report from {{ data.organisationName }} to {{ data.fundName }}.</p>
+      	</div>
+    </div> 
 
-    <div class="govuk-inset-text">
-      <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
-      </div>
 
-  
-    <p><a href="#">Sign in to view or download the submitted report</a></p>
+        
     
-    <h2 class="govuk-heading-m">Get help</h2>	
-
-    <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+    
 
 
 

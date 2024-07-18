@@ -1,5 +1,5 @@
 {% extends "layouts/email.html" %}
-
+{% set serviceName = "" %}
 
 
 {% set title = 'Your report for ' + data.fundName + ' has been sent for review' %}
@@ -15,81 +15,48 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    <h1 class="govuk-heading-l">{{ title }}</h1>        
-    
-    <p>Your report for Towns Fund has been sent to Hugo Furst, Section 151 Officer.</p>
-
-    <div class="govuk-inset-text">
-    <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
-    </div>
-
-    <h2 class="govuk-heading-m">What happens next</h2>	    
-    <p>Hugo Furst will review the report and either:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>sign off the report and submit it to Towns Fund</li>
-      <li>decline the report</li>
-    </ul>
-    
-    <p>You’ll be sent an email by 29 July 2024 to let you know the outcome. </p>
-
-
-
-    <!-- <p>Your report will either be signed off and submitted to {{ data.fundName }} or declined. You’ll be sent an email by {{ data.fundDate }} to let you know the outcome.</p> -->
-
-    <p>If your report is declined, the email will explain why and you will be able to correct any issues and resend the report for another review.</p>
-
-    <h2 class="govuk-heading-m">Get help</h2>	
-
-    <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
-    
-    
-    
-
-
-
-
-
-
-    <p class="govuk-body-s govuk-!-margin-top-9"><a class="govuk-back-link nochevron" href="/emails/report-signed-off-confirmation-reporter">Email showing report signed off</a></p>
-
-
-<!--   
-
+	<div class="govuk-grid-column-three-quarters">
 
     <div class="email-message">
-      <table class="email-message-meta">
-        <tbody>
-          
-            
-              <tr>
-                <th scope="row">From</th>
-                <td>
-                  Report Funding Progress
-                </td>
-              </tr>
-            
-            
-            <tr>
-              <th scope="row">To</th>
-              <td>
-                <span class='placeholder-no-brackets'>email address</span>
-              </td>
-            </tr>
-          
-          <tr class="email-message-meta">
-            <th scope="row">Subject</th>
-            <td>
-              Your monitoring data file is ready to be downloaded
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="email-message-body">
-        <h2 style="Margin: 0 0 15px 0; padding: 10px 0 0 0; font-size: 27px; line-height: 35px; font-weight: bold; color: #0B0C0C;">Download your file</h2><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Your monitoring data file is now ready to be downloaded.</p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;"><a style="word-wrap: break-word; color: #1D70B8;" href="http://localhost:3004/find/download-file">Visit the data download page to download your file</a></p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">This link will stop working after 7 days.</p><h2 style="Margin: 0 0 15px 0; padding: 10px 0 0 0; font-size: 27px; line-height: 35px; font-weight: bold; color: #0B0C0C;">Get help</h2><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">If you need help, contact us at: fsd@levellingup.gov.uk</p>
-      </div>
-    </div> -->
+    	<table class="govuk-table email-message-meta">
+        	<tbody>
+				<tr>
+                	<th scope="row">From</th>
+                	<td>Report Funding Progress</td>
+              	</tr>                    
+            	<tr>
+              		<th scope="row">To</th>
+              		<td><span class='placeholder-no-brackets'>{{ data.reporterEmail}}</span></td>
+            	</tr>          
+          		<tr class="email-message-meta">
+            		<th scope="row">Subject</th>
+            		<td>{{ title }}</td>
+          		</tr>
+        	</tbody>
+      	</table>
+      	<div class="email-message-body">
+        	<p>Your report for Towns Fund has been sent to Hugo Furst, Section 151 Officer.</p>
+    		<div class="govuk-inset-text">
+    			<p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
+    		</div>
+
+    		<h2 class="govuk-heading-m">What happens next</h2>	    
+    		<p>Hugo Furst will review the report and either:</p>
+    		<ul class="govuk-list govuk-list--bullet">
+      			<li>sign off the report and submit it to Towns Fund</li>
+      			<li>decline the report</li>
+    		</ul>    
+    		<p>You’ll be sent an email by 29 July 2024 to let you know the outcome. </p>
+    		<!-- <p>Your report will either be signed off and submitted to {{ data.fundName }} or declined. You’ll be sent an email by {{ data.fundDate }} to let you know the outcome.</p> -->
+    		<p>If your report is declined, the email will explain why and you will be able to correct any issues and resend the report for another review.</p>
+
+    		<h2 class="govuk-heading-m">Get help</h2>	
+			<p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+    
+      	</div>
+    </div> 
+
+    <p class="govuk-body-s govuk-!-margin-top-9"><a class="govuk-back-link nochevron" href="/emails/report-signed-off-confirmation-reporter">Email showing report signed off</a></p>
 
   </div>
 </div>

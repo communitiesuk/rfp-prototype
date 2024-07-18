@@ -1,5 +1,5 @@
 {% extends "layouts/email.html" %}
-
+{% set serviceName = "" %}
 
 
 {% set title = "Your report has been signed off" %}
@@ -15,11 +15,30 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-three-quarters">
 
-    <h1 class="govuk-heading-l">{{ title }}</h1>        
-    
-    <p>Your report has been signed off by {{data.section151Name}}, Section 151 Officer.</p>
+
+
+
+    <div class="email-message">
+    	<table class="govuk-table email-message-meta">
+        	<tbody>
+				<tr>
+                	<th scope="row">From</th>
+                	<td>Report Funding Progress</td>
+              	</tr>                    
+            	<tr>
+              		<th scope="row">To</th>
+              		<td><span class='placeholder-no-brackets'>{{ data.reporterEmail}}</span></td>
+            	</tr>          
+          		<tr class="email-message-meta">
+            		<th scope="row">Subject</th>
+            		<td>{{ title }}</td>
+          		</tr>
+        	</tbody>
+      	</table>
+      	<div class="email-message-body">
+        	<p>Your report has been signed off by {{data.section151Name}}, Section 151 Officer.</p>
       
       <!-- <ul class="govuk-list govuk-list--bullet">
         <li>Kate Harries - Section 151 Officer</li>
@@ -37,6 +56,16 @@
     <h2 class="govuk-heading-m">Get help</h2>	
 
     <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+    
+      	</div>
+    </div> 
+
+
+
+
+          
+    
+    
 
 
 

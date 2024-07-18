@@ -1,5 +1,5 @@
 {% extends "layouts/email.html" %}
-
+{% set serviceName = "" %}
 
 
 {% set title = 'Review needed: funding progress report for ' +  data.organisationName  + '' %}
@@ -15,32 +15,57 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-three-quarters"><div class="govuk-grid-column-three-quarters"></div>
 
-    <h1 class="govuk-heading-l">{{ title }}</h1>        
-    
-    <p>{{ data.reporterName }} from {{ data.fundName }} has sent you a report to be reviewed.</p>
 
-    <div class="govuk-inset-text">
-      <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
-      </div>
-
-    
-
-    <h2 class="govuk-heading-m">What happens next</h2>	
-
-    <p>Once signed in, you can review the report. If there are no problems, you can sign off the report and submit it to {{ data.fundName }}.</p>
-
-    <p>If there are any issues with the report, you can decline it so {{ data.reporterName }} can correct it and resend. When you decline a report, you’ll be able to explain why and the reporter will be able to make amendments before resending for review.</p>
-
-    <p>You need to review the report by {{ data.fundDate }}.</p>
-
-    <p><a href="/sign-in?userType=Section151">Sign in to review the report</a></p>
-
-    <h2 class="govuk-heading-m">Get help</h2>	
-
-    <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+    <div class="email-message">
+    	<table class="govuk-table email-message-meta">
+        	<tbody>
+				<tr>
+                	<th scope="row">From</th>
+                	<td>Report Funding Progress</td>
+              	</tr>                    
+            	<tr>
+              		<th scope="row">To</th>
+              		<td><span class='placeholder-no-brackets'>{{ data.section151Email}}</span></td>
+            	</tr>          
+          		<tr class="email-message-meta">
+            		<th scope="row">Subject</th>
+            		<td>{{ title }}</td>
+          		</tr>
+        	</tbody>
+      	</table>
+      	<div class="email-message-body">
    
+    
+          <p>{{ data.reporterName }} from {{ data.fundName }} has sent you a report to be reviewed.</p>
+
+          <div class="govuk-inset-text">
+            <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
+            </div>
+      
+          
+      
+          <h2 class="govuk-heading-m">What happens next</h2>	
+      
+          <p>Once signed in, you can review the report. If there are no problems, you can sign off the report and submit it to {{ data.fundName }}.</p>
+      
+          <p>If there are any issues with the report, you can decline it so {{ data.reporterName }} can correct it and resend. When you decline a report, you’ll be able to explain why and the reporter will be able to make amendments before resending for review.</p>
+      
+          <p>You need to review the report by {{ data.fundDate }}.</p>
+      
+          <p><a href="/sign-in?userType=Section151">Sign in to review the report</a></p>
+      
+          <h2 class="govuk-heading-m">Get help</h2>	
+      
+          <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+         
+    
+      	</div>
+    </div> 
+
+
+
 
     
 

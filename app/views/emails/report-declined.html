@@ -1,5 +1,5 @@
 {% extends "layouts/email.html" %}
-
+{% set serviceName = "" %}
 
 
 {% set title = 'Your report for ' + data.fundName + ' has been declined' %}
@@ -15,30 +15,54 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+	<div class="govuk-grid-column-three-quarters">
 
-    <h1 class="govuk-heading-l">{{ title }}</h1>        
-    <p>Your report for {{ data.fundName }} has been declined by {{data.section151Name}}, Section 151 Officer.</p>
-    <!-- <ul class="govuk-list govuk-list--bullet">
-      <li>Kate Harries - Section 151 Officer</li>
-      <li>Brian Coult - Chief Finance Officer</li></ul>
-     -->
 
-    
-      <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
+    <div class="email-message">
+    	<table class="govuk-table email-message-meta">
+        	<tbody>
+				<tr>
+                	<th scope="row">From</th>
+                	<td>Report Funding Progress</td>
+              	</tr>                    
+            	<tr>
+              		<th scope="row">To</th>
+              		<td><span class='placeholder-no-brackets'>{{ data.reporterEmail}}</span></td>
+            	</tr>          
+          		<tr class="email-message-meta">
+            		<th scope="row">Subject</th>
+            		<td>{{ title }}</td>
+          		</tr>
+        	</tbody>
+      	</table>
+      	<div class="email-message-body">
+        	<p>Your report for {{ data.fundName }} has been declined by {{data.section151Name}}, Section 151 Officer.</p>
+          <!-- <ul class="govuk-list govuk-list--bullet">
+            <li>Kate Harries - Section 151 Officer</li>
+            <li>Brian Coult - Chief Finance Officer</li></ul>
+           -->
       
-      <div class="govuk-inset-text">
-        <p><span class="govuk-!-font-weight-bold">Reason for decline:</span><br>
-        {{ data.reportReasonDeclined or 'You have rated your delivery RAG rating for the Napton village hall restoration project as Red but your comments do not correspond as you have said that delivery is progressing extremely well. Is this a mistake?'  }}</p>
-      </div>
-
-    <p><a href="#">Sign in to amend the report and resend for review</a></p>
+          
+            <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
+            
+            <div class="govuk-inset-text">
+              <p><span class="govuk-!-font-weight-bold">Reason for decline:</span><br>
+              {{ data.reportReasonDeclined or 'You have rated your delivery RAG rating for the Napton village hall restoration project as Red but your comments do not correspond as you have said that delivery is progressing extremely well. Is this a mistake?'  }}</p>
+            </div>
+      
+          <p><a href="#">Sign in to amend the report and resend for review</a></p>
+          
+          <h2 class="govuk-heading-m">Get help</h2>	
+      
+          <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
+      
+      
     
-    <h2 class="govuk-heading-m">Get help</h2>	
+      	</div>
+    </div> 
 
-    <p>If you have any questions or need help, email us at <a href="mailto:fsd@levellingup.gov.uk">fsd@levellingup.gov.uk</a>.</p>
-
-
+      
+    
 
 
 
