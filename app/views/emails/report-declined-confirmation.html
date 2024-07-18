@@ -19,7 +19,7 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>You have declined a report from {{ data.organisationName }} to {{ data.fundName }}.</p>
+    <p>You have declined a report for {{ data.fundName }}, sent by {{ data.reporterName}} from {{data.organisationName }}.</p>
 
     
       <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
@@ -27,10 +27,10 @@
 
       <div class="govuk-inset-text">
     <p><span class="govuk-!-font-weight-bold">Reason for decline:</span><br>
-    {{ data.reportReasonDeclined }}</p>
+    {{ data.reportReasonDeclined or 'You have rated your delivery RAG rating for the Napton village hall restoration project as Red but your comments do not correspond as you have said that delivery is progressing extremely well. Is this a mistake?'  }}</p>
     </div>
   
-    <p>The reporter has been sent an email which includes the reason you gave for declining the report. They will be able to make any corrections and resend for review.</p>
+    <p>{{ data.reporterName}} has been sent an email which includes the reason you gave for declining the report. They will be able to make any corrections and resend for review.</p>
     
     <h2 class="govuk-heading-m">Get help</h2>	
 

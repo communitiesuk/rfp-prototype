@@ -18,7 +18,7 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
-    <p>Your report for {{ data.fundName }} has been declined by the Section 151 Officer.</p>
+    <p>Your report for {{ data.fundName }} has been declined by {{data.section151Name}}, Section 151 Officer.</p>
     <!-- <ul class="govuk-list govuk-list--bullet">
       <li>Kate Harries - Section 151 Officer</li>
       <li>Brian Coult - Chief Finance Officer</li></ul>
@@ -28,9 +28,9 @@
       <p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
       
       <div class="govuk-inset-text">
-      <p><span class="govuk-!-font-weight-bold">Reason for decline:</span><br>
-      {{ data.reportReasonDeclined }}</p>
-    </div>
+        <p><span class="govuk-!-font-weight-bold">Reason for decline:</span><br>
+        {{ data.reportReasonDeclined or 'You have rated your delivery RAG rating for the Napton village hall restoration project as Red but your comments do not correspond as you have said that delivery is progressing extremely well. Is this a mistake?'  }}</p>
+      </div>
 
     <p><a href="#">Sign in to amend the report and resend for review</a></p>
     
