@@ -11,7 +11,7 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-        <div class="govuk-panel govuk-panel--confirmation">
+        <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-botton-9">
 			<h1 class="govuk-panel__title">{{pageHeading}}</h1>
 			<div class="govuk-panel__body">
 				Reporting period<br><strong> {{data.reportPeriod}} </strong>
@@ -20,14 +20,15 @@
 	
 		<p class="govuk-body">We have sent you a confirmation email.</p>			
 		<h2 class="govuk-heading-m">What happens next</h2>	
-		<p class="govuk-body">{{ data.section151Name }} the Section 151 Officer responsible for signing off your report, will have 10 days to review it. </p>
+		<p class="govuk-body">{{ data.section151Name }} the Section 151 Officer, will need to review your report by {{ data.fundDate }}.
 			
-		<p class="govuk-body">If there are no problems, they can sign off and submit the report.</p>
-		<p>If they have any concerns or need you to correct something, they can decline the report and let you know why. You’ll recieve an email either way.</p>		  		
-		<p><a href="#" class="govuk-link govuk-link--no-visited-state">Return to fund</a></p>
+		If there are no problems, they can sign off the report and submit it to {{ data.fundName }}.</p>
+		<p>If they have any concerns or need you to correct something, they can decline the report and let you know why.</p>		  		
+		<p>You’ll receive an email to let you know the outcome.</p>
+		<p><a href="#" class="govuk-link govuk-link--no-visited-state">Return to reports</a></p>
 
 		<!-- <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p> -->
-		<p class="govuk-body-s govuk-!-margin-top-9"><a class="govuk-back-link nochevron" href="/emails/report-submitted">Report sent emails</a></p>
+		<p class="govuk-body-s govuk-!-margin-top-9"><a class="govuk-back-link nochevron" href="/emails/report-submitted">Email sent to reporter</a></p>
   	</div>  
 </div>
 
