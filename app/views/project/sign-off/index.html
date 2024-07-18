@@ -15,7 +15,7 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
-      	<p class="govuk-body">((user_name)) has completed a report ready for your review.</p>
+      	<p class="govuk-body">{{ data.reporterName }} has completed a report ready for your review.</p>
 
 		<!-- Commented this out until we know what we are puttin gin. -->
 		  <!-- <div class="govuk-inset-text">
@@ -31,8 +31,8 @@
 
 		
 		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
-        	<li>sign off the report and submit it to ((fund_name))</li>
-			<li>decline the report and provide a reason why so that ((user_name)) can amend the report and resend for review</li>
+        	<li>sign off the report and submit it to {{ data.fundName }}</li>
+			<li>decline the report and provide a reason why so that {{ data.reporterName }} can amend the report and resend for review</li>
       	</ul>
 
 		<div class="govuk-button-group">

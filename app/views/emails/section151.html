@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Review needed: funding progress report for ((organisation_name))" %}
+{% set title = 'Review needed: funding progress report for ' +  data.organisationName  + '' %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,7 +19,7 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>((user_name)) from ((organisation_name)) has sent you a report to be reviewed.</p>
+    <p>{{ data.reporterName }} from {{ data.fundName }} has sent you a report to be reviewed.</p>
 
     <div class="govuk-inset-text">
       <p>Reporting period: <strong>July 2023 to September 2023</strong></p>
@@ -29,11 +29,11 @@
 
     <h2 class="govuk-heading-m">What happens next</h2>	
 
-    <p>Once signed in, you can review the report. If there are no problems, you can sign off the report and submit it to ((fund_name)).</p>
+    <p>Once signed in, you can review the report. If there are no problems, you can sign off the report and submit it to {{ data.fundName }}.</p>
 
-    <p>If there are any issues with the report, you can decline it so ((user_name)) can correct it and resend. When you decline a report, you’ll be able to explain why and the reporter will be able to make amendments before resending for review.</p>
+    <p>If there are any issues with the report, you can decline it so {{ data.reporterName }} can correct it and resend. When you decline a report, you’ll be able to explain why and the reporter will be able to make amendments before resending for review.</p>
 
-    <p>You need to review the report by (( date )).</p>
+    <p>You need to review the report by {{ data.fundDate }}.</p>
 
     <p><a href="/sign-in?userType=Section151">Sign in to review the report</a></p>
 

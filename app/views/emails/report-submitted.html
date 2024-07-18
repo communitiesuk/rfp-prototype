@@ -2,7 +2,7 @@
 
 
 
-{% set title = "Your report for ((fund_name)) has been sent for review" %}
+{% set title = 'Your report for ' + data.fundName + ' has been sent for review' %}
 
 {% block pageTitle %}
   {{title}} - GOV.UK
@@ -19,7 +19,7 @@
 
     <h1 class="govuk-heading-l">{{ title }}</h1>        
     
-    <p>Your report for ((fund_name)) has been sent to ((user_name_and_role)) and ((user_name_and_role)) for review. </p>
+    <p>Your report for {{ data.fundName }} has been sent to {{ data.section151Name }} for review. </p>
 
     <div class="govuk-inset-text">
     <p>Reporting period: <strong>July 2023 to September 2023</strong></p>
@@ -27,7 +27,7 @@
 
     <h2 class="govuk-heading-m">What happens next</h2>	
 
-    <p>Your report will either be signed off and submitted to ((fund_name)) or declined. You’ll be sent an email by (( date )) to let you know the outcome.</p>
+    <p>Your report will either be signed off and submitted to {{ data.fundName }} or declined. You’ll be sent an email by {{ data.fundDate }} to let you know the outcome.</p>
 
     <p>If your report is declined, the email will explain why and you will be able to correct any issues and resend the report for another review.</p>
 
@@ -43,7 +43,7 @@
 
 
   
-    <p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/section151">Go to email sent to Section 151 officer</a></p>
+    <p class="govuk-body-s govuk-!-margin-top-9"><a href="/emails/report-signed-off-confirmation-reporter">Report signed off email</a></p>
 
 
 
