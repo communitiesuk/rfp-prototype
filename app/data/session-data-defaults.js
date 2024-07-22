@@ -11,8 +11,8 @@ module.exports = {
   fundName: "Towns Fund",
   fundDate: "29 July 2024",
   organisationName: "Wigan Council",
-  reporterName: "Gemma Currie",
-  reporterEmail: "gemma.currieh@user-research.gov.uk",
+  reporterName: "Martin Ledson",
+  reporterEmail: "Martin.Ledson@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk",
 
