@@ -2,7 +2,7 @@
 
 {% set showBackLink = false %}
 
-{% set pageHeading = "Report sent" %}
+{% set pageHeading = "Report sent for review" %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -20,9 +20,7 @@
 	
 		<p class="govuk-body">We have sent you a confirmation email.</p>			
 		<h2 class="govuk-heading-m">What happens next</h2>	
-		<p class="govuk-body">{{ data.section151Name }} the Section 151 Officer, will need to review your report by {{ data.fundDate }}.
-			
-		If there are no problems, they can sign off the report and submit it to {{ data.fundName }}.</p>
+		<p class="govuk-body">{{ data.section151Name }}, Section 151 Officer, will need to review and submit the report to {{ data.fundName}} by {{ data.fundDate }}. If there are no problems they can sign off the report and submit it.</p>
 		<p>If they have any concerns or need you to correct something, they can decline the report and let you know why.</p>		  		
 		<p>You’ll receive an email to let you know the outcome.</p>
 		<p><a href="#" class="govuk-link govuk-link--no-visited-state">Return to reports</a></p>
