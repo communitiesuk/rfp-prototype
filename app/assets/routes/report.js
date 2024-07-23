@@ -1,4 +1,4 @@
-const { generateRandomString } = require('../utils/helpers')
+const { generateRandomString } = require('../utils/footer/helpers')
 
 module.exports = router => {
   router.all([
