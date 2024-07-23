@@ -12,8 +12,8 @@ module.exports = {
   fundDate: "1 August 2024",
   dueDate: "22 July 2024",
   organisationName: "Blackpool Council",
-  reporterName: "Jennie Sanson",
-  reporterEmail: "jennie.sanson@user-research.gov.uk",
+  reporterName: "Jennie-Marie Sanson",
+  reporterEmail: "jennie-marie.sanson@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk",
 
