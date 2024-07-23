@@ -44,7 +44,7 @@
 			</ul>
 		</div>
 
-		<form action="/find/confirmation" method="post" >
+		<form action="/get-monitoring-data/confirmation" method="post" >
 
 			{% if data['error'] == "show" %}
 
@@ -100,9 +100,9 @@
 		
 
 		{% if data['error'] == "show" %}
-			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/find/download-data?error=">Hide error</a></p>
+			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/get-monitoring-data/download-data?error=">Hide error</a></p>
 		{% else %}
-			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/find/download-data?error=show">Show error</a></p>
+			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/get-monitoring-data/download-data?error=show">Show error</a></p>
 		{% endif %}
  
   	</div>	  
