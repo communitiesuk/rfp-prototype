@@ -5,7 +5,7 @@
 {% if data['reportStatus'] == "Declined" %}
 	{% set pageHeading = "Report declined" %}
 {% else %}
-	{% set pageHeading = "Report signed off" %}
+	{% set pageHeading = "Report signed off and submitted" %}
 {% endif %}
 {% set pageSection = "" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
