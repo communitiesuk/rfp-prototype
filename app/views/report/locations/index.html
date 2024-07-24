@@ -2,8 +2,7 @@
 
 {% set showBackLink = true %}
 
-
-{% set pageHeading = "Add project postcodes" %}
+{% set pageHeading = "About this section" %}
 {% set pageSection = "Project postcodes" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,94 +12,20 @@
 	<div class="govuk-grid-column-two-thirds">
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-
-    </div>
-    <div class="govuk-grid-column-full">
-
-        <table class="govuk-table">
-            <!-- <caption class="govuk-table__caption govuk-table__caption--l">Locations</caption> -->
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-half">Project</th>
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Postcodes</th>
-                    <th scope="col" class="govuk-table__header"></th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">George Elliott Visitor Centre</td>
-                    <td class="govuk-table__cell">CV11 5QS</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/change-postcode">Edit</a></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Digital Skills and Innovation Centre</td>
-                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Add postcodes</a></td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">The Saints</td>
-                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Add postcodes</a></td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-
-                    <!-- <a href="/report/locations/add-postcode">Add postcodes</a> -->
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Weddington Road Cycle Scheme</td>
-                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Add postcodes</a></td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Visiting Nuneaton: Changing Perspectives</td>
-                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Add postcodes</a></td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                </tr>
-            </tbody>
-          </table>
-
-
-
-
-
-          
-          <!-- <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">George Elliott Visitor Centre</caption>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">                    
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Postcodes</th>
-                    <th scope="col" class="govuk-table__header"></th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">                    
-                    <td class="govuk-table__cell">CV11 5QS</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/change-postcode">Edit</a></td>
-                </tr>                
-            </tbody>
-          </table>
-
-          <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Digital Skills and Innovation Centre</caption>
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">                    
-                    <th scope="col" class="govuk-table__header govuk-!-width-one-third">Postcodes</th>
-                    <th scope="col" class="govuk-table__header"></th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">                    
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/report/locations/add-postcode">Add postcodes</a></td>
-                </tr>                
-            </tbody>
-          </table> -->
-
-
-          <form method="post" action="/report/locations/" >        
-				
-            {{ govukButton({
-				text: "Save and continue"
-			}) }}
 		
+		<p>We use this page to see how we might be able to give information about the section. For example, you what you might need or things we will ask about:</p>
+      	<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li>content TBC</li>
+        	<li>content TBC</li>
+        	<li>content TBC</li>
+			</ul>
+
+		<form method="post" action="/report/locations/postcodes" >            			
+			
+			{{ govukButton({
+				text: "Continue"
+			}) }}			
+
 		</form>
 
   	</div>	  

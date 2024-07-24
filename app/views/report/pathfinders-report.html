@@ -4,7 +4,7 @@
 {% set showBread = true %}
 {% set showNav = false %}
 
-{% set pageHeading = "Reporting period 1 January 2024 to 30 June 2024" %}
+{% set pageHeading = "Report progress" %}
 {% set pageSection = 'Pathfinders' %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -13,18 +13,23 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
 
-    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}    
+		
+		
 
-		<!-- {% set html %}
+		{% if data['notificationReportDue'] == "Yes" %}
+		{% set html %}
   			<p class="govuk-notification-banner__heading">This report is due by 16th June 2024.</p>
 		{% endset %}
 
 		{{ govukNotificationBanner({
   			html: html
-		}) }} -->
+		}) }}
+		{% endif %}
 
 		<p class="govuk-body govuk-!-margin-bottom-7">You will need to send this report for review to {{ data.section151Name }}, Section 151 Officer by {{ data.dueDate }}.</p>		
 	
+		<h2 class="govuk-heading-m">Reporting period 1 January 2024 to 30 June 2024</h2>
 		{% include "includes/taskList/task-pathfinders.html" %}		
 
 		<p class="govuk-body govuk-!-margin-top-7">Content to follow. All content is available under the Open Government Licence v3.0, except where otherwise stated</p>

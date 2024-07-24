@@ -108,6 +108,16 @@
         {% endset -%}  
 
 
+        {% set uploadHtml %}                    
+            
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Upload spreadsheet</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><strong class="govuk-tag govuk-tag--orange">In progress</strong>  <a class="govuk-link govuk-link--no-visited-state" href="/report/upload/" >Upload your reporting spreadsheet</a></li>                                
+            </ul>                  
+
+                         
+        {% endset -%}  
+
         
         {% set reportHtml %}                
 
@@ -311,10 +321,11 @@
             items: [                               
             
             
-            { label: "Reports", id: "report", panel: { html: reportHtml } },                        
-            { label: "Sign off", id: "signoff", panel: { html: signoffHtml } },                        
-            { label: "Service pages", id: "service", panel: { html: serviceHtml } },            
-            { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }                    
+            { label: "Reports", id: "report", panel: { html: reportHtml } },
+            { label: "Upload", id: "upload", panel: { html: uploadHtml } },
+            { label: "Sign off", id: "signoff", panel: { html: signoffHtml } },
+            { label: "Service pages", id: "service", panel: { html: serviceHtml } },
+            { label: "Find Monitoring", id: "findMonitoring", panel: { html: findHtml } }
             ]
         }) }}
 

@@ -3,7 +3,7 @@
 {% set showBackLink = true %}
 
 {% set pageHeading = "About this section" %}
-{% set pageSection = "RAG ratings" %}
+{% set pageSection = "Programme progress" %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
 {% block content %}
@@ -20,7 +20,7 @@
         	<li>content TBC</li>
 			</ul>
 
-		<form method="post" action="/report/rag/rag-ratings" >            			
+		<form method="post" action="/report/progress/completion-date" >            			
 			
 			{{ govukButton({
 				text: "Continue"
