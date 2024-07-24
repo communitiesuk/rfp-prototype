@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+{% set showBackLink = true %}
+
+{% set pageHeading = "What is the spend RAG rating for this project?" %}
+{% set pageSection = "RAG ratings" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+					
+		<form method="post" action="/report/rag/delivery" >	  
+
+			{{ govukRadios({
+				name: "projectRagRatingSpend",
+				id: "projectRagRatingSpend",
+				fieldset: {
+				  legend: {
+					text: "Select an option to update your RIBA reporting stage",
+					isPageHeading: true,
+					classes: "govuk-fieldset__legend govuk-visually-hidden"
+				  }
+				},
+				items: [
+					{ value: "Green", text: "Green", checked: checked("projectRagRatingSpend", "Green") },
+					{ value: "Amber/Green", text: "Amber/Green", checked: checked("projectRagRatingSpend", "Amber/Green") },  
+					{ value: "Amber", text: "Amber", checked: checked("projectRagRatingSpend", "Amber") },
+					{ value: "Amber/Red", text: "Amber/Red", checked: checked("projectRagRatingSpend", "Amber/Red") },
+					{ value: "Red", text: "Red", checked: checked("projectRagRatingSpend", "Red") }								  
+				]
+			}) }}
+
+			{{ govukButton({
+				text: "Continue"
+			}) }}
+
+		</form>
+
+    </div>    
+</div>
+
+{% endblock %}
