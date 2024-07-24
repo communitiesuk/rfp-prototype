@@ -1,4 +1,4 @@
-const helpers = require('./helpers')
+const helpers = require('./footer/helpers')
 
 function originalQuery (req) {
   const originalQueryString = req.originalUrl.split('?')[1]
