@@ -11,9 +11,9 @@ module.exports = {
   fundName: "Towns Fund",
   fundDate: "1 August 2024",
   dueDate: "22 July 2024",
-  organisationName: "Blackpool Council",
-  reporterName: "Jennie-Marie Sanson",
-  reporterEmail: "jennie-marie.sanson@user-research.gov.uk",
+  organisationName: "ACME Council",
+  reporterName: "Lukas Dibben",
+  reporterEmail: "lukas.dibben@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk",
 
