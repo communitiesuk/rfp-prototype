@@ -15,9 +15,9 @@
 
 
 		{% if data['userType'] == "Section151" %}
-		<form method="post" action="/project/sign-off/" >
+		<form method="post" action="/sign-off/" >
 		{% else %}
-      	<form method="post" action="/dashboard" >
+      	<form method="post" action="/funds/dashboard" >
 		{% endif %}
 
 			{{ govukInput({
