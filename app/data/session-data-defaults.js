@@ -11,9 +11,9 @@ module.exports = {
   fundName: "Towns Fund",
   fundDate: "1 August 2024",
   dueDate: "22 July 2024",
-  organisationName: "North East Lincolnshire Council",
-  reporterName: "Emma Smith",
-  reporterEmail: "emma.smith@user-research.gov.uk",
+  organisationName: "ACME Council",
+  reporterName: "Craig Bevington",
+  reporterEmail: "craig.bevington@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk",
 
