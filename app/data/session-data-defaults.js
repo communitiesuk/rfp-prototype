@@ -11,9 +11,9 @@ module.exports = {
   fundName: "Towns Fund",
   fundDate: "5 August 2024",
   dueDate: "26 July 2024",
-  organisationName: "Middlesborough Council",
-  reporterName: "Sam Gilmore",
-  reporterEmail: "sam.gilmore@user-research.gov.uk",
+  organisationName: "ACME Council",
+  reporterName: "Chrispee Bacon",
+  reporterEmail: "chrispee.bacon@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk",
 
