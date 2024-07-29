@@ -15,7 +15,5 @@ module.exports = {
   reporterName: "Jo Calcutt-Scott",
   reporterEmail: "jo.calcutt-scott@user-research.gov.uk",
   section151Name: "Hugo Furst",
-  section151Email: "Hugo.Furst@user-research.gov.uk",
-
-  
+  section151Email: "Hugo.Furst@user-research.gov.uk"
 }

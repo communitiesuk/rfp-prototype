@@ -89,8 +89,17 @@
             <ul class="govuk-list govuk-list--bullet">
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/startPage" >Start page</a></li>                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/sign-in" >Sign in</a></li>                
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/funds/dashboard" >Fund reports</a></li>
-                <li><a class="govuk-link govuk-link--no-visited-state" href="/funds/reports" >Project dashboard</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/funds/dashboard" >Fund reports</a>
+                    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-2">
+                        <li><a class="govuk-link govuk-link--no-visited-state" href="/funds/reports" >{Fund Name} overview</a>
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li><a class="govuk-link govuk-link--no-visited-state" href="/report/" >Report progress</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                
                 <li><a class="govuk-link govuk-link--no-visited-state" href="/users/" >Users</a></li>
                 <ul class="govuk-list govuk-list--bullet">
                     <li><a class="govuk-link govuk-link--no-visited-state" href="/users/edit" >Edit user</a></li>
@@ -113,6 +122,11 @@
             <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Upload spreadsheet</h2>
             <ul class="govuk-list govuk-list--bullet">
                 <li><strong class="govuk-tag govuk-tag--orange">In progress</strong>  <a class="govuk-link govuk-link--no-visited-state" href="/report/upload/" >Upload your reporting spreadsheet</a></li>                                
+
+                <li><strong class="govuk-tag govuk-tag--orange">In progress</strong>  <a class="govuk-link govuk-link--no-visited-state" href="/report/upload/uploaded" >Spreadsheet uploaded</a></li>                                
+
+
+                
             </ul>                  
 
                          

@@ -7,7 +7,7 @@
 
 
 {% set pageHeading = "Pathfinders" %}
-{% set pageSection = "Warwickshire county council " %}
+{% set pageSection = data.organisationName %}
 
 
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
@@ -24,7 +24,7 @@
 
 		<h2 class="govuk-heading-m">Reports due</h2>
 		{{ govukSummaryList({				
-			card: { title: { text: "Due by 10 December 2024" }, actions: { items: [ { href: "/report/pathfinders-report", classes: "govuk-link--no-visited-state", text: "Start report", visuallyHiddenText: "for this project" } ] } },	
+			card: { title: { text: "Due by 10 December 2024" }, actions: { items: [ { href: "/report/", classes: "govuk-link--no-visited-state", text: "Start report", visuallyHiddenText: "for this project" } ] } },	
 			rows: [				
 				
 				{ key: { text: "Reporting period" }, value: { html: "1 April 2024 to 30 September 2024" } },				
