@@ -21,7 +21,9 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
+		<p>Information about emailing them etc.</p>
 
+		
 		<form method="post" action="/sign-off/responsible/contributing-to-report" >
 		
 		
@@ -36,6 +38,7 @@
 				},				
 				items: [
 				  { value: "Section 151 Officer", text: "Section 151 Officer", checked: checked("signOffRole", "Section 151 Officer")  },
+				  { value: "Deputy Section 151 Officer", text: "Deputy Section 151 Officer", checked: checked("signOffRole", "Deputy Section 151 Officer")  },
 				  { value: "Chief Finance Officer", text: "Chief Finance Officer", checked: checked("signOffRole", "Chief Finance Officer")  }
 				]
 			}) }}
