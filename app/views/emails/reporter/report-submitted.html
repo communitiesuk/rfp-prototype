@@ -35,7 +35,7 @@
         	</tbody>
       	</table>
       	<div class="email-message-body">
-        	<p>Your report for Towns Fund has been sent to Hugo Furst, Section 151 Officer.</p>
+        	<p>Your report for {{ data.fundName }} has been sent to Hugo Furst, Section 151 Officer.</p>
     		<div class="govuk-inset-text">
     			<p>Reporting period: <strong>{{ data.reportPeriod }}</strong></p>
     		</div>
@@ -43,7 +43,7 @@
     		<h2 class="govuk-heading-m">What happens next</h2>	    
     		<p>Hugo Furst will review the report and either:</p>
     		<ul class="govuk-list govuk-list--bullet">
-      			<li>sign off the report and submit it to Towns Fund</li>
+      			<li>sign off the report and submit it to {{ data.fundName }}</li>
       			<li>decline the report</li>
     		</ul>    
 			<p class="govuk-body">You will not be able to edit the report while it’s waiting for review.</p>
