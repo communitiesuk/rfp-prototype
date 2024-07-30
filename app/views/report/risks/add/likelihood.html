@@ -14,8 +14,13 @@
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 
 		<p>Your answer should be based on the risk level before any mitigations have been put in place.  </p>
-	
-		<form method="post" action="/report/risks/add/impact" >
+		
+		{% if data['change'] == "active" %}
+			<form method="post" action="/report/risks/project-risks" >
+				{% include "includes/changeStatus.html" %}				
+		{% else %}	
+			<form method="post" action="/report/risks/add/impact" >
+		{% endif %}
             
             {{ govukRadios({
 				name: "projectRiskScore",

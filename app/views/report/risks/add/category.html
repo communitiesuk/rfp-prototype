@@ -13,7 +13,13 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 	
-		<form method="post" action="/report/risks/add/issue" >
+
+		{% if data['change'] == "active" %}
+			<form method="post" action="/report/risks/project-risks" >
+				{% include "includes/changeStatus.html" %}				
+>		{% else %}
+			<form method="post" action="/report/risks/add/issue" >
+		{% endif %}
             
 
             {{ govukCheckboxes({
