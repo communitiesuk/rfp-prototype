@@ -31,8 +31,17 @@
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
 		
-		{% if data['projecRisks'] != "No" %}
-			<p class="govuk-body"><a class="gouvk-link govuk-link--no-visited-state" href="/report/risks/add/">Add another risk</a></p>					
+		{% if data['projecRisks'] != "No" %}			
+			<p class="govuk-body">
+				{% if data['projectRiskTitle'] %}
+					<a class="gouvk-link govuk-link--no-visited-state" href="/report/risks/add/?risk=2">Add a new risk</a>
+				{% elif data['projectRiskTitleTwo'] %}
+					<a class="gouvk-link govuk-link--no-visited-state" href="/report/risks/add/?risk=3">Add a new risk</a>
+				{% elif data['projectRiskTitleThree'] %}
+					<a class="gouvk-link govuk-link--no-visited-state" href="/report/risks/add/?risk=4">Add a new risk</a>
+				{% endif %}
+			
+			</p>
 		{% endif %}
 
 		
