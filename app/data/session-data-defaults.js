@@ -11,9 +11,9 @@ module.exports = {
   fundName: "Towns Fund",
   fundDate: "9 August 2024",
   dueDate: "30 July 2024",
-  organisationName: "Stockport Metropolitan Council",
-  reporterName: "Louis Manifould",
-  reporterEmail: "louis.manifould@user-research.gov.uk",
+  organisationName: "ACME Council",
+  reporterName: "William May",
+  reporterEmail: "william.may@user-research.gov.uk",
   section151Name: "Hugo Furst",
   section151Email: "Hugo.Furst@user-research.gov.uk"
 }
