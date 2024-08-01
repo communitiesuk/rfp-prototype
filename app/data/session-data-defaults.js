@@ -9,11 +9,11 @@ module.exports = {
   contactPerson: "Hugo Furst",
   section151: "Kate Harries",
   fundName: "Towns Fund",
-  fundDate: "9 August 2024",
-  dueDate: "30 July 2024",
-  organisationName: "Barnsley Council",
-  reporterName: "Rebecca Gamble",
-  reporterEmail: "rebecca.gamble@user-research.gov.uk",
-  section151Name: "Hugo Furst",
-  section151Email: "Hugo.Furst@user-research.gov.uk"
+  fundDate: "11 August 2024",
+  dueDate: "1 August 2024",
+  organisationName: "Preston Council",
+  reporterName: "Hugo Furst",
+  reporterEmail: "hugo.furst@user-research.gov.uk",
+  section151Name: "Lee Hurst",
+  section151Email: "lee.hurst@user-research.gov.uk"
 }
