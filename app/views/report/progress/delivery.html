@@ -24,8 +24,8 @@
 		<form method="post" action="/report/progress/issues" >
             
 			{{ govukCharacterCount({
-				name: "projectIssueMeasures",
-				id: "projectIssueMeasures",
+				name: "progressDelivery",
+				id: "progressDelivery",
 				maxwords: 500,
 				label: {
 				  text: "Can you provide more detail?",
@@ -34,7 +34,8 @@
 				},
 				hint: {
 				  text: ""
-				}
+				},
+				value: data.progressDelivery
 			}) }} 
 			
 			{{ govukButton({

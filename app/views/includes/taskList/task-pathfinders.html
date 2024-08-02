@@ -2,8 +2,8 @@
 	{{ govukTaskList({
 		idPrefix: "company-details",
 		items: [
-			{ title: { text: "Programme progress", classes: "govuk-link--no-visited-state" }, href: "/report/progress/",  status: { tag: { text: "Completed" if data['reportSectionOne'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionOne'] == "complete" else "govuk-tag--blue" } } },
-			{ title: { text: "Project postcodes", classes: "govuk-link--no-visited-state" }, href: "/report/locations/", status: { tag: { text: "Completed" if data['reportSectionTwo'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionTwo'] == "complete" else "govuk-tag--blue" } } },
+			{ title: { text: "Programme progress", classes: "govuk-link--no-visited-state" }, href: "/report/progress/",  status: { tag: { text: "Completed" if data['reportSectionProgress'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionProgress'] == "complete" else "govuk-tag--blue" } } },
+			{ title: { text: "Project postcodes", classes: "govuk-link--no-visited-state" }, href: "/report/locations/", status: { tag: { text: "Completed" if data['reportSectionPostcodes'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionPostcodes'] == "complete" else "govuk-tag--blue" } } },
 			{ title: { text: "RAG ratings", classes: "govuk-link--no-visited-state" }, href: "/report/rag/", status: { tag: { text: "Completed" if data['reportSectionThree'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionThree'] == "complete" else "govuk-tag--blue" } } },
 			{ title: { text: "Risks", classes: "govuk-link--no-visited-state" }, href: "/report/risks/", status: { tag: { text: "Completed" if data['reportSectionRisks'] == "complete" else "Not started", classes: "govuk-tag--green" if data['reportSectionRisks'] == "complete" else "govuk-tag--blue" } } }
 			

@@ -20,11 +20,12 @@
 			<li>organise a ministerial visit</li>
 		</ul>
 
-		<form method="post" action="/report/?reportSectionOne=complete" >
+		<form method="post" action="/report/progress/check-your-answers" >
+		<!-- <form method="post" action="/report/?reportSectionProgress=complete" > -->
             
 			{{ govukCharacterCount({
-				name: "projectIssueMeasures",
-				id: "projectIssueMeasures",
+				name: "progressMilestones",
+				id: "progressMilestones",
 				maxwords: 500,
 				label: {
 				  text: "Can you provide more detail?",
@@ -33,7 +34,8 @@
 				},
 				hint: {
 				  text: ""
-				}
+				},
+				value: data.progressMilestones
 			}) }} 
 			
 			{{ govukButton({
