@@ -4,7 +4,7 @@
 {% set showBackLink = true %}
 {% endif %}
 
-{% set pageHeading = "Sign off and submit report" %}
+{% set pageHeading = "Report ready for review" %}
 {% set pageSection = data.fundName %}
 {% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
 
@@ -27,21 +27,23 @@
       	<p class="govuk-body-l">Report would show here for review</p>
       	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 		
-		  <p class="govuk-body">You can now:</p>
+		  <!-- <p class="govuk-body">You can now:</p>
 
 		
 		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
         	<li>sign off the report and submit it to {{ data.fundName }} by {{ data.fundDate }}</li>
 			<li>decline the report and provide a reason why so that {{ data.reporterName }} can amend the report and resend for review</li>
-      	</ul>
+      	</ul> -->
 
-		<div class="govuk-button-group">
+
+		  
+		<div class="govuk-button-group govuk-!-margin-top-7">
           
-        	<form method="post" action="/sign-off/confirmation" >	  
+        	<form method="post" action="/sign-off/submit-report" >	  
           		
 				<input type="hidden" name="reportStatus" id="reportStatus" value="Signed" />
 				{{ govukButton({
-            		text: "Sign off and submit report"
+            		text: "Accept and continue"
           		}) }}
 
         	</form>
@@ -50,7 +52,7 @@
 
           		<input type="hidden" name="reportStatus" id="reportStatus" value="Declined" />
 				{{ govukButton({
-            		text: "Decline sign off",
+            		text: "Request changes to report",
             		classes: "govuk-button--secondary"            		
           		}) }}
   			</form>

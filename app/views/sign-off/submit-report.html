@@ -1,0 +1,74 @@
+{% extends "layouts/nonav.html" %}
+
+{% set showBackLink = true %}
+
+{% set pageHeading = "Submit report" %}
+{% set pageSection = data.fundName %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+		
+		
+
+		<p class="govuk-body">You can now sign off this report and submit it to {{ data.fundName }}.</p>
+		
+		<p>Once the report is submitted:</p>
+		
+		<ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        	<li>you and {{ data.reporterName }} will receive a confirmation email</li>
+			<li>you may be contacted by {{ data.fundName }} if there are any problems</li>			
+      	</ul>
+
+		  
+
+<!-- 
+		  <li>sign off the report and submit it to {{ data.fundName }} by {{ data.fundDate }}</li>
+			<li>decline the report and provide a reason why so that {{ data.reporterName }} can amend the report and resend for review</li> -->
+
+		  
+
+<!-- 		  
+		  <div class="govuk-inset-text">
+			<p class="govuk-body">By submitting this report you are confirming that, to the best of your knowledge, the details provided on the report are correct.</p>
+		</div> -->
+
+
+
+		{{ govukCheckboxes({
+			name: "reportConfirmCheckbox",
+			fieldset: {
+			  legend: {
+				text: "Submit report?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend govuk-visually-hidden"
+			  }
+			},			
+			items: [
+			  {
+				value: "Yes",
+				text: "You confirm that, to the best of your knowledge, the details provided on the report are correct"
+			  }			  
+			]
+		  }) }}
+		  
+	
+	
+          
+        	<form method="post" action="/sign-off/confirmation" >	  
+          		
+				<input type="hidden" name="reportStatus" id="reportStatus" value="Signed" />
+				{{ govukButton({
+            		text: "Confirm and submit report"
+          		}) }}
+
+        	</form>
+
+  	</div>  
+</div>
+
+{% endblock %}
