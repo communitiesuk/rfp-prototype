@@ -1,2 +1,0 @@
-# Report Funding Progress
-Prototype
