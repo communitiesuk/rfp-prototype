@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+
+{% set pageHeading = "Sign in" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      	
+
+
+		{% if data['userType'] == "Section151" %}
+		<form method="post" action="/sign-off/" >
+		{% else %}
+      	<form method="post" action="/funds/dashboard" >
+		{% endif %}
+
+			{{ govukInput({
+				label: {
+					text: "Email address",
+				  	classes: "govuk-label",
+				  	isPageHeading: false
+				},
+				hint: {
+					text: "This is your work email address"
+				},
+				classes: "govuk-!-width-two-thirds",
+				id: "signInEmail",
+				name: "signInEmail",
+				type: "email"
+			}) }}
+
+			{{ govukInput({
+				label: {
+					text: "Password",
+				  	classes: "govuk-label",
+				  	isPageHeading: false
+				},
+				classes: "govuk-!-width-two-thirds",
+				id: "signInPassword",
+				name: "signInPassword",
+				type: "password"
+			}) }}
+        	
+			{{ govukButton({
+        		text: "Sign in",        	        	
+				classes: "govuk-!-margin-top-5"
+      		}) }}
+      	
+		</form>
+
+		<ul class="govuk-list">
+            <li><a href="#" class="govuk-link govuk-link--no-visited-state">I have forgotten my password</a></li>            			
+        </ul>		
+
+  	</div>
+</div>
+
+{% endblock %}

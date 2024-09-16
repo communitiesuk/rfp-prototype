@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+{% set showBackLink = false %}
+{% set serviceName = "Find monitoring data" %}
+
+{% set pageHeading = "Get monitoring and evaluation data" %}
+{% set pageSection = "" %}
+{% block pageTitle %}{{ macroPageTitle.pageTitle(pageHeading) }}{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+		{% if data['error'] == "show" %}
+		{{ govukErrorSummary({
+			titleText: "There is a problem",
+			errorList: [
+			  {
+				text: "Select which format you need",
+				href: "#"
+			  }
+			  
+			]
+		  }) }}
+
+		  {% endif %}
+
+
+    	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
+
+		<p class="govuk-body">Use the filters to select the data you need.</p>		
+		<p class="govuk-body">You will get all of the data from all projects and programmes if you do not select any filters.</p>
+
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<p class="govuk-body-l">Filters shown here dont include lines, only as illustration</p>
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+		<div class="govuk-inset-text">
+			<p class="govuk-body">We will:</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>send you an email to the address you’ve signed in with</li>
+				<li>include a link in the email for you to download your data</li>
+			</ul>
+		</div>
+
+		<form action="/get-monitoring-data/confirmation" method="post" >
+
+			{% if data['error'] == "show" %}
+
+			{{ govukRadios({			
+				name: "dataFormat",
+				fieldset: {
+				  legend: {
+					text: "Which format do you need?",
+					isPageHeading: false,
+					classes: "govuk-fieldset__legend--s"
+				  }
+				},			
+				items: [
+				  { value: "excel", text: "XLSX (Microsoft Excel)" },
+				  { value: "json", text: "JSON" }
+				],
+	
+	
+				errorMessage: {
+					text: "Select which format you need"
+				  }
+			}) }}	
+
+
+			{% else %}
+
+		{{ govukRadios({			
+			name: "dataFormat",
+			fieldset: {
+			  legend: {
+				text: "Which format do you need?",
+				isPageHeading: false,
+				classes: "govuk-fieldset__legend--s"
+			  }
+			},			
+			items: [
+			  { value: "excel", text: "XLSX (Microsoft Excel)" },
+			  { value: "json", text: "JSON" }
+			]
+		}) }}		
+		
+		{% endif %}
+		
+		<input type="hidden" id="emailAddress" name="emailAddress" value="brian.coult@levellingup.gov.uk" />
+
+			{{ govukButton({
+				text: "Confirm and request data "
+			}) }}
+
+		</form>
+
+		<p class="govuk-!-font-size-19"><a class="govuk-link govuk-link--no-visited-state" href="">Access the funding glossary</a></p>
+		
+
+		{% if data['error'] == "show" %}
+			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/get-monitoring-data/download-data?error=">Hide error</a></p>
+		{% else %}
+			<p class="govuk-!-font-size-16 govuk-!-margin-top-9"><a href="/get-monitoring-data/download-data?error=show">Show error</a></p>
+		{% endif %}
+ 
+  	</div>	  
+
+
+</div>
+
+{% endblock %}

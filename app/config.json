@@ -1,3 +1,4 @@
 {
-  "serviceName": "Service name goes here"
+  "serviceName": "Report funding progress",
+  "port": 3004
 }
