@@ -1,0 +1,18 @@
+{{ govukCheckboxes({
+  name: "regionFilter",
+  classes: "govuk-checkboxes--small",
+  fieldset: {  legend: { text: "Which types of fund?", isPageHeading: false, classes: "govuk-visually-hidden" } },
+  hint: { text: "Select all that apply" },
+  items: [
+	{ value: "HSF", text: "East" },
+	{ value: "PF", text: "East Midlands" },
+	{ value: "TD", text: "London" },
+	{ value: "TD", text: "North East" },
+	{ value: "TD", text: "North West" },
+	{ value: "TD", text: "Scotland" },
+	{ value: "TD", text: "South East" },
+	{ value: "TD", text: "South West" },
+	{ value: "TD", text: "West Midlands" },
+	{ value: "TD", text: "Yorkshire and the Humber" }
+  ]
+}) }}
