@@ -32,8 +32,96 @@
 		<p class="govuk-body">Use the filters to select the data you need.</p>		
 		<p class="govuk-body">You will get all of the data from all projects and programmes if you do not select any filters.</p>
 
+	</div>
+</div>
+		
+		
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-		<p class="govuk-body-l">Filters shown here dont include lines, only as illustration</p>
+		
+		<div class="govuk-grid-row">
+			<div class="govuk-grid-column-one-third">
+		
+				<!-- {{ govukAccordion({
+		  	  		id: "accordion-default",
+		  			items: [
+					  { heading: { text: "Filter by funds" }, content: { html: '<p class="govuk-body">This is the content for Writing well for the web.</p>' } },
+					  { heading: { text: "Filter by regions" }, content: { html: '<p class="govuk-body">This is the content for Writing well for specialists.</p>' } },
+					  { heading: { text: "Filter by funded organisation" }, content: { html: '<p class="govuk-body">This is the content for Know your audience.</p>' } },
+					  { heading: { text: "Filter by outcomes" }, content: { html: '<p class="govuk-body">This is the content for How people read.</p>' } },
+					  { heading: { text: "Filter by return periods" }, content: { html: '<p class="govuk-body">This is the content for How people read.</p>' } }
+		  			]
+				}) }}	
+				 -->
+				
+				<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+					
+					<div class="govuk-accordion__section">
+						<div class="govuk-accordion__section-header">
+							<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-1">Filter by funds</span></h2>
+						</div>
+						<div id="accordion-default-content-1" class="govuk-accordion__section-content">
+							<p class="govuk-body">This is example content for section.</p>
+							{% include "includes/find/funds-filter.html" %}
+						</div>
+				  	</div>
+				  	
+					<div class="govuk-accordion__section">
+						<div class="govuk-accordion__section-header">
+					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-2">Filter by regions</span></h2>
+						</div>
+						<div id="accordion-default-content-2" class="govuk-accordion__section-content">
+							
+							
+					    	{% include "includes/find/region-filter.html" %}
+						</div>
+					</div>
+				  	
+					<div class="govuk-accordion__section">
+						<div class="govuk-accordion__section-header">
+					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-3">Filter by funded organisation</span></h2>
+						</div>
+						<div id="accordion-default-content-3" class="govuk-accordion__section-content">
+					    	{% include "includes/find/organisation-filter.html" %}
+						</div>
+					</div>
+				  	
+					<div class="govuk-accordion__section">
+						<div class="govuk-accordion__section-header">
+							<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-4">Filter by outcomes</span></h2>
+						</div>
+						<div id="accordion-default-content-4" class="govuk-accordion__section-content">
+							{% include "includes/find/outcomes-filter.html" %}
+						</div>
+					</div>
+				  
+				  	<div class="govuk-accordion__section">
+					  	<div class="govuk-accordion__section-header">
+					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-4">Filter by return periods</span></h2>
+						</div>
+					    <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+							<p class="govuk-body">Each quarter is inclusive and up to the end of the month.</p>
+							
+							
+							
+							
+							<!-- Each quarter is inclusive and up to the end of the month, for example, April to the end of June for Q1. -->
+							{% include "includes/find/period-filter.html" %}
+						</div>
+					</div>
+				
+				</div>				
+													
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			
+		</div>
+		</div>
+		
+		
+		
 		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 		<div class="govuk-inset-text">

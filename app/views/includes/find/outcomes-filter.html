@@ -1,0 +1,21 @@
+{{ govukCheckboxes({
+  name: "outcomesFilter",
+  classes: "govuk-checkboxes--small",
+  fieldset: {  legend: { text: "Which types of fund?", isPageHeading: false, classes: "govuk-visually-hidden" } },
+  hint: { text: "Select all that apply" },
+  items: [
+	{ value: "HSF", text: "Bespoke" },
+	{ value: "PF", text: "Business" },
+	{ value: "TD", text: "Culture" },
+	{ value: "TD", text: "Custom" },
+	{ value: "TD", text: "Economy" },
+	{ value: "TD", text: "Education" },
+	{ value: "TD", text: "Enhancing subregional and regional connectivity" },
+	{ value: "TD", text: "Health and Wellbeing" },
+	{ value: "TD", text: "Improving the quality of life of residents" },
+	{ value: "TD", text: "Place" },
+	{ value: "TD", text: "Regeneration" },
+	{ value: "TD", text: "Strengthening the visitor and local service economy" },
+	{ value: "TD", text: "Transport" }	
+  ]
+}) }}

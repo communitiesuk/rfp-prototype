@@ -1,0 +1,75 @@
+
+
+{{ govukRadios({
+  name: "quarterFrom",
+  classes: "govuk-radios--small",
+  fieldset: {
+	legend: {
+	  text: "Financial Quarter",
+	  isPageHeading: false,
+	  classes: "govuk-fieldset__legend"
+	}
+  },
+  
+  items: [
+	{ value: "1", text: "April to June" },
+	{ value: "2", text: "July to September" },
+	{ value: "3", text: "October to December" },
+	{ value: "4", text: "January to March" }
+  ]
+}) }}
+
+
+
+{{ govukSelect({
+  id: "yearFrom",
+  name: "yearFrom",
+  label: {
+	text: "Year "
+  }, items: [ 
+	{ value: "published", text: "2019 to 2020" },	
+	{ value: "views", text: "2020 to 2021" },
+	{ value: "comments", text: "2021 to 2022" },
+	{ value: "comments", text: "2022 to 2023" },
+	{ value: "comments", text: "2023 to 2024" },
+	{ value: "comments", text: "2024 to 2025", selected: true }
+  ]
+}) }}
+
+
+
+
+{{ govukRadios({
+  name: "quarterToo",
+  classes: "govuk-radios--small",
+  fieldset: {
+	legend: {
+	  text: "Financial Quarter",
+	  isPageHeading: false,
+	  classes: "govuk-fieldset__legend"
+	}
+  },
+  
+  items: [
+	{ value: "1", text: "April to June" },
+	{ value: "2", text: "July to September" },
+	{ value: "3", text: "October to December" },
+	{ value: "4", text: "January to March" }
+  ]
+}) }}
+
+
+{{ govukSelect({
+  id: "yearToo",
+  name: "yearToo",
+  label: {
+	text: "Year "
+  }, items: [ 
+	{ value: "published", text: "2019 to 2020" },	
+	{ value: "views", text: "2020 to 2021" },
+	{ value: "comments", text: "2021 to 2022" },
+	{ value: "comments", text: "2022 to 2023" },
+	{ value: "comments", text: "2023 to 2024" },
+	{ value: "comments", text: "2024 to 2025", selected: true }
+  ]
+}) }}
