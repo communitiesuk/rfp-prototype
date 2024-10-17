@@ -28,8 +28,7 @@
 
 
     	{{ macroPageHeader.pageHeader(pageHeading,pageSection) }}      
-		
-		<h2 class="govuk-heading-s">Filters</h2>
+				
 		<p class="govuk-body">Use the filters to select the data you need.</p>						
 		<p class="govuk-body">If you do not select any filters, you will get all of the data from all projects and programmes.</p>
 		
@@ -57,63 +56,666 @@
 		  			]
 				}) }}	
 				 -->
+
+				{{ govukAccordion({
+					id: "accordion-default",
+					showAllSectionsText: "Show all filters",
+					hideAllSectionsText: "Hide all filters",
+					items: [
+						{
+							heading: { text: "Grant" },
+							content: { 
+								html: 
+								'<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+										<legend class="govuk-fieldset__legend govuk-visually-hidden"><h1 class="govuk-fieldset__heading">Grant</h1></legend>
+										<div id="grant-hint" class="govuk-hint">Select all that apply</div>
+										<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant" name="grant" type="checkbox" value="High Street Fund">
+												<label class="govuk-label govuk-checkboxes__label" for="grant">High Street Fund</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant-2" name="grant" type="checkbox" value="Pathfinders">
+												<label class="govuk-label govuk-checkboxes__label" for="grant-2">Pathfinders</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant-3" name="grant" type="checkbox" value="Town Deal">
+												<label class="govuk-label govuk-checkboxes__label" for="grant-3">Town Deal</label>
+											</div>											
+										</div>
+									</fieldset>
+								</div>'
+							}
+					  	},
+					  	{
+							heading: { text: "Region" },
+							content: { 
+								html: 
+								'<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+										<legend class="govuk-fieldset__legend govuk-visually-hidden"><h1 class="govuk-fieldset__heading">Region</h1></legend>
+										<div id="grant-hint" class="govuk-hint">Select all that apply</div>
+										<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="East">
+												<label class="govuk-label govuk-checkboxes__label" for="region">East</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-2" name="region" type="checkbox" value="East Midlands">
+												<label class="govuk-label govuk-checkboxes__label" for="region-2">East Midlands</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-3" name="region" type="checkbox" value="London">
+												<label class="govuk-label govuk-checkboxes__label" for="region-3">London</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-4" name="region" type="checkbox" value="North East">
+												<label class="govuk-label govuk-checkboxes__label" for="region-4">North East</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-5" name="region" type="checkbox" value="North West">
+												<label class="govuk-label govuk-checkboxes__label" for="region-5">North West</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-6" name="region" type="checkbox" value="Scotland">
+												<label class="govuk-label govuk-checkboxes__label" for="region-6">Scotland</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-7" name="region" type="checkbox" value="South East">
+												<label class="govuk-label govuk-checkboxes__label" for="region-7">South East</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-8" name="region" type="checkbox" value="South West">
+												<label class="govuk-label govuk-checkboxes__label" for="region-8">South West</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-9" name="region" type="checkbox" value="West Midlands">
+												<label class="govuk-label govuk-checkboxes__label" for="region-9">West Midlands</label>
+											</div>											
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="region-10" name="region" type="checkbox" value="Yorkshire and the Humber">
+												<label class="govuk-label govuk-checkboxes__label" for="region-10">Yorkshire and the Humber</label>
+											</div>											
+										</div>
+									</fieldset>
+								</div>'
+							}
+					  	},
+					  	{
+							heading: { text: "Organisation" },
+							content: { 
+								html: 
+								'<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+										<legend class="govuk-fieldset__legend govuk-visually-hidden"><h1 class="govuk-fieldset__heading">Organisation</h1></legend>
+										<div id="grant-hint" class="govuk-hint">Select all that apply</div>
+										<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="Amber Valley Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation">Amber Valley Borough Council</label>
+												</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-1" name="organisation" type="checkbox" value="Ashfield District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-1">Ashfield District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="Barnsley Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-2">Barnsley Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="Bedford Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-3">Bedford Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="Blackburn with Darwen Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisatio-4">Blackburn with Darwen Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-5" name="organisation" type="checkbox" value="Blackpool Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-5">Blackpool Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-6" name="organisation" type="checkbox" value="Bolton Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-6">Bolton Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-7" name="organisation" type="checkbox" value="Boston Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-7">Boston Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-8" name="organisation" type="checkbox" value="Bournemouth, Christchurch and Poole Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-8">Bournemouth, Christchurch and Poole Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-9" name="organisation" type="checkbox" value="Bradford Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-9">Bradford Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-10" name="organisation" type="checkbox" value="Broxtowe Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-10">Broxtowe Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-11" name="organisation" type="checkbox" value="Buckinghamshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-11">Buckinghamshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-12" name="organisation" type="checkbox" value="Calderdale Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-12">Calderdale Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-13" name="organisation" type="checkbox" value="Charnwood Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-13">Charnwood Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-14" name="organisation" type="checkbox" value="Cheshire East Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-14">Cheshire East Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-15" name="organisation" type="checkbox" value="Cheshire West and Chester Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-15">Cheshire West and Chester Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-16" name="organisation" type="checkbox" value="Chesterfield Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-16">Chesterfield Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-17" name="organisation" type="checkbox" value="City of Lincoln Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-17">City of Lincoln Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-18" name="organisation" type="checkbox" value="City of Wolverhampton Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-18">City of Wolverhampton Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-19" name="organisation" type="checkbox" value="Colchester City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-19">Colchester City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-20" name="organisation" type="checkbox" value="Cornwall Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-20">Cornwall Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-21" name="organisation" type="checkbox" value="Crawley Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-21">Crawley Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-22" name="organisation" type="checkbox" value="Cumberland Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-22">Cumberland Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-23" name="organisation" type="checkbox" value="Darlington Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-23">Darlington Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-24" name="organisation" type="checkbox" value="Derby City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-24">Derby City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-25" name="organisation" type="checkbox" value="Doncaster Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-25">Doncaster Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-26" name="organisation" type="checkbox" value="Dover District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-26">Dover District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-27" name="organisation" type="checkbox" value="Dudley Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-27">Dudley Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-28" name="organisation" type="checkbox" value="Durham County Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-28">Durham County Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-29" name="organisation" type="checkbox" value="East Lindsey District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-29">East Lindsey District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-30" name="organisation" type="checkbox" value="East Riding of Yorkshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-30">East Riding of Yorkshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-31" name="organisation" type="checkbox" value="East Staffordshire Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-31">East Staffordshire Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-32" name="organisation" type="checkbox" value="East Suffolk Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-32">East Suffolk Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-33" name="organisation" type="checkbox" value="Erewash Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-33">Erewash Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-34" name="organisation" type="checkbox" value="Fenland District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-34">Fenland District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-35" name="organisation" type="checkbox" value="Fylde Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-35">Fylde Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-36" name="organisation" type="checkbox" value="Great Yarmouth Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-36">Great Yarmouth Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-37" name="organisation" type="checkbox" value="Halton Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-37">Halton Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-38" name="organisation" type="checkbox" value="Harlow District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-38">Harlow District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-39" name="organisation" type="checkbox" value="Hartlepool Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-39">Hartlepool Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-40" name="organisation" type="checkbox" value="Hastings Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-40">Hastings Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-41" name="organisation" type="checkbox" value="Herefordshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-41">Herefordshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-42" name="organisation" type="checkbox" value="High Peak Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-42">High Peak Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-43" name="organisation" type="checkbox" value="Huntingdonshire District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-43">Huntingdonshire District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-44" name="organisation" type="checkbox" value="Ipswich Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-44">Ipswich Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-45" name="organisation" type="checkbox" value="King&#39;s Lynn and West Norfolk">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-45">King&#39;s Lynn and West Norfolk</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-46" name="organisation" type="checkbox" value="Kirklees Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-46">Kirklees Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-47" name="organisation" type="checkbox" value="Leeds Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-47">Leeds Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-48" name="organisation" type="checkbox" value="Lewes District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-48">Lewes District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-49" name="organisation" type="checkbox" value="London Borough of Haringey">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-49">London Borough of Haringey</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-50" name="organisation" type="checkbox" value="London Borough of Harrow">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-50">London Borough of Harrow</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-51" name="organisation" type="checkbox" value="London Borough of Sutton Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-51">London Borough of Sutton Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-52" name="organisation" type="checkbox" value="London Borough of Wandsworth">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-52">London Borough of Wandsworth</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-53" name="organisation" type="checkbox" value="Mansfield District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-53">Mansfield District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-54" name="organisation" type="checkbox" value="Medway Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-54">Medway Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-55" name="organisation" type="checkbox" value="Middlesbrough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-55">Middlesbrough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-56" name="organisation" type="checkbox" value="Milton Keynes City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-56">Milton Keynes City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-57" name="organisation" type="checkbox" value="Newark and Sherwood District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-57">Newark and Sherwood District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-58" name="organisation" type="checkbox" value="Newcastle-under-Lyme Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-58">Newcastle-under-Lyme Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-59" name="organisation" type="checkbox" value="North Devon Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-59">North Devon Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-60" name="organisation" type="checkbox" value="North East Derbyshire District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-60">North East Derbyshire District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-61" name="organisation" type="checkbox" value="North East Lincolnshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-61">North East Lincolnshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-62" name="organisation" type="checkbox" value="North Lincolnshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-62">North Lincolnshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-63" name="organisation" type="checkbox" value="North Northamptonshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-63">North Northamptonshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-64" name="organisation" type="checkbox" value="Northumberland County Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-64">Northumberland County Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-65" name="organisation" type="checkbox" value="North Yorkshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-65">North Yorkshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-66" name="organisation" type="checkbox" value="Norwich City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-66">Norwich City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-67" name="organisation" type="checkbox" value="Nottingham City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-67">Nottingham City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-68" name="organisation" type="checkbox" value="Nuneaton and Bedworth">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-68">Nuneaton and Bedworth</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-69" name="organisation" type="checkbox" value="Nuneaton &amp; Bedworth Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-69">Nuneaton &amp; Bedworth Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-70" name="organisation" type="checkbox" value="Oldham Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-70">Oldham Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-71" name="organisation" type="checkbox" value="Pendle Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-71">Pendle Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-72" name="organisation" type="checkbox" value="Peterborough City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-72">Peterborough City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-73" name="organisation" type="checkbox" value="Plymouth City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-73">Plymouth City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-74" name="organisation" type="checkbox" value="Portsmouth City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-74">Portsmouth City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-75" name="organisation" type="checkbox" value="Preston City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-75">Preston City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-76" name="organisation" type="checkbox" value="Redcar &amp; Cleveland Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-76">Redcar &amp; Cleveland Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-77" name="organisation" type="checkbox" value="Redditch Borough Council ">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-77">Redditch Borough Council </label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-78" name="organisation" type="checkbox" value="Rochdale Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-78">Rochdale Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-79" name="organisation" type="checkbox" value="Rotherham Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-79">Rotherham Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-80" name="organisation" type="checkbox" value="Royal Borough of Greenwich">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-80">Royal Borough of Greenwich</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-81" name="organisation" type="checkbox" value="Sandwell Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-81">Sandwell Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-82" name="organisation" type="checkbox" value="Sefton Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-82">Sefton Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-83" name="organisation" type="checkbox" value="Sheffield City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-83">Sheffield City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-84" name="organisation" type="checkbox" value="Somerset Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-84">Somerset Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-85" name="organisation" type="checkbox" value="South Gloucestershire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-85">South Gloucestershire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-86" name="organisation" type="checkbox" value="South Kesteven District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-86">South Kesteven District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-87" name="organisation" type="checkbox" value="South Ribble Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-87">South Ribble Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-88" name="organisation" type="checkbox" value="South Tyneside Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-88">South Tyneside Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-89" name="organisation" type="checkbox" value="Southwark Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-89">Southwark Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-90" name="organisation" type="checkbox" value="Stafford Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-90">Stafford Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-91" name="organisation" type="checkbox" value="Stevenage Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-91">Stevenage Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-92" name="organisation" type="checkbox" value="St Helens Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-92">St Helens Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-93" name="organisation" type="checkbox" value="Stockport Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-93">Stockport Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-94" name="organisation" type="checkbox" value="Stockton-on-Tees Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-94">Stockton-on-Tees Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-95" name="organisation" type="checkbox" value="Stockton-On-Tees Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-95">Stockton-On-Tees Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-96" name="organisation" type="checkbox" value="Sunderland City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-96">Sunderland City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-97" name="organisation" type="checkbox" value="Swindon Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-97">Swindon Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-98" name="organisation" type="checkbox" value="Tamworth Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-98">Tamworth Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-99" name="organisation" type="checkbox" value="Teignbridge District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-99">Teignbridge District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-100" name="organisation" type="checkbox" value="Telford &amp; Wrekin Council ">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-100">Telford &amp; Wrekin Council </label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-101" name="organisation" type="checkbox" value="Thanet District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-101">Thanet District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-102" name="organisation" type="checkbox" value="Thurrock Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-102">Thurrock Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-103" name="organisation" type="checkbox" value="Torbay Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-103">Torbay Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-104" name="organisation" type="checkbox" value="Trafford Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-104">Trafford Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-105" name="organisation" type="checkbox" value="Wakefield Metropolitan Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-105">Wakefield Metropolitan Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-106" name="organisation" type="checkbox" value="Walsall Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-106">Walsall Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-107" name="organisation" type="checkbox" value="Warrington Borough Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-107">Warrington Borough Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-108" name="organisation" type="checkbox" value="Warwick District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-108">Warwick District Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-109" name="organisation" type="checkbox" value="Westmorland &amp; Furness Council ">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-109">Westmorland &amp; Furness Council </label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-110" name="organisation" type="checkbox" value="West Northamptonshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-110">West Northamptonshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-111" name="organisation" type="checkbox" value="Wigan Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-111">Wigan Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-112" name="organisation" type="checkbox" value="Wiltshire Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-112">Wiltshire Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-113" name="organisation" type="checkbox" value="Wirral Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-113">Wirral Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-114" name="organisation" type="checkbox" value="Worcester City Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-114">Worcester City Council</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="organisation-115" name="organisation" type="checkbox" value="Wyre Forest District Council">
+												<label class="govuk-label govuk-checkboxes__label" for="organisation-115">Wyre Forest District Council</label>
+											</div>										
+										</div>
+									</fieldset>
+								</div>'
+							}
+					  	},
+					  	{
+							heading: { text: "Outcome" },
+							content: { 
+								html: 
+								'<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+										<legend class="govuk-fieldset__legend govuk-visually-hidden"><h1 class="govuk-fieldset__heading">Outcome</h1></legend>
+										<div id="grant-hint" class="govuk-hint">Select all that apply</div>
+										<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome" name="outcome" type="checkbox" value="Bespoke">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome">Bespoke</label>
+											</div>									  
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-2" name="outcome" type="checkbox" value="Business">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-2">Business</label>
+											</div>									  
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-3" name="outcome" type="checkbox" value="Culture">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-3">Culture</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-4" name="outcome" type="checkbox" value="Custom">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-4"> Custom</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-5" name="outcome" type="checkbox" value="Economy">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-5"> Economy</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-6" name="outcome" type="checkbox" value="Education">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-6"> Education</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-7" name="outcome" type="checkbox" value="Enhancing subregional and regional connectivity">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-7"> Enhancing subregional and regional connectivity</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-8" name="outcome" type="checkbox" value="Health and Wellbeing">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-8"> Health and Wellbeing</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-9" name="outcome" type="checkbox" value="Improving the quality of life of residents">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-9"> Improving the quality of life of residents</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-10" name="outcome" type="checkbox" value="Place">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-10"> Place</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-11" name="outcome" type="checkbox" value="Regeneration">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-11"> Regeneration</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-12" name="outcome" type="checkbox" value="Strengthening the visitor and local service economy">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-12"> Strengthening the visitor and local service economy</label>
+											</div>									  
+									 		<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="outcome-13" name="outcome" type="checkbox" value="Transport">
+												<label class="govuk-label govuk-checkboxes__label" for="outcome-13"> Transport</label>
+											</div>
+										</div>
+									</fieldset>
+								</div>'
+							}
+					  	},
+					  	{
+							heading: { text: "Return period" },
+							content: { 
+								html: 
+								'<div class="govuk-form-group">
+									<fieldset class="govuk-fieldset">
+										<legend class="govuk-fieldset__legend govuk-visually-hidden"><h1 class="govuk-fieldset__heading">Return period</h1></legend>
+										<div id="grant-hint" class="govuk-hint">Select all that apply</div>
+										<div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant" name="grant" type="checkbox" value="High Street Fund">
+												<label class="govuk-label govuk-checkboxes__label" for="grant">High Street Fund</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant-2" name="grant" type="checkbox" value="Pathfinders">
+												<label class="govuk-label govuk-checkboxes__label" for="grant-2">Pathfinders</label>
+											</div>
+											<div class="govuk-checkboxes__item">
+												<input class="govuk-checkboxes__input" id="grant-3" name="grant" type="checkbox" value="Town Deal">
+												<label class="govuk-label govuk-checkboxes__label" for="grant-3">Town Deal</label>
+											</div>											
+										</div>
+									</fieldset>
+								</div>'
+							}
+					  	}
+					]
+				}) }}
+
 				
-				<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-					
-					<div class="govuk-accordion__section">
-						<div class="govuk-accordion__section-header">
-							<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-1">Grant</span></h2>
-						</div>
-						<div id="accordion-default-content-1" class="govuk-accordion__section-content">							
-							{% include "includes/find/funds-filter.html" %}
-						</div>
-				  	</div>
-				  	
-					<div class="govuk-accordion__section">
-						<div class="govuk-accordion__section-header">
-					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-2">Region</span></h2>
-						</div>
-						<div id="accordion-default-content-2" class="govuk-accordion__section-content">
-							
-							
-					    	{% include "includes/find/region-filter.html" %}
-						</div>
-					</div>
-				  	
-					<div class="govuk-accordion__section">
-						<div class="govuk-accordion__section-header">
-					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-3">Organisation</span></h2>
-						</div>
-						<div id="accordion-default-content-3" class="govuk-accordion__section-content">
-					    	{% include "includes/find/organisation-filter.html" %}
-						</div>
-					</div>
-				  	
-					<div class="govuk-accordion__section">
-						<div class="govuk-accordion__section-header">
-							<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-4">Outcome</span></h2>
-						</div>
-						<div id="accordion-default-content-4" class="govuk-accordion__section-content">
-							{% include "includes/find/outcomes-filter.html" %}
-						</div>
-					</div>
-				  
-				  	<div class="govuk-accordion__section">
-					  	<div class="govuk-accordion__section-header">
-					  		<h2 class="govuk-accordion__section-heading"><span class="govuk-accordion__section-button" id="accordion-default-heading-4">Return period</span></h2>
-						</div>
-					    <div id="accordion-default-content-4" class="govuk-accordion__section-content">
-							<p class="govuk-body">Each quarter is inclusive and up to the end of the month.</p>
-							
-							
-							
-							
-							<!-- Each quarter is inclusive and up to the end of the month, for example, April to the end of June for Q1. -->
-							{% include "includes/find/period-filter.html" %}
-						</div>
-					</div>
-				
-				</div>				
 													
 		</div>
 		<div class="govuk-grid-column-two-thirds">
@@ -123,7 +725,7 @@
 		
 		
 		
-		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		
 
 		<div class="govuk-inset-text">
 			<p class="govuk-body">We will:</p>
