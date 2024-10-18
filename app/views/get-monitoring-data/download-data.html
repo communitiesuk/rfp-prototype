@@ -19,8 +19,7 @@
 			  {
 				text: "Select which format you need",
 				href: "#"
-			  }
-			  
+			  }			  
 			]
 		  }) }}
 
@@ -40,9 +39,16 @@
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-full">
 
-		
-		
+
 		<div class="govuk-grid-row">
+		
+
+		{% if data['filterLayout'] == "horizontal" %}
+
+
+		{% else %}
+		
+		
 			<div class="govuk-grid-column-one-third">
 		
 				<!-- {{ govukAccordion({
@@ -785,6 +791,10 @@
 		<div class="govuk-grid-column-two-thirds">
 			
 		</div>
+
+	{% endif %}
+
+
 		</div>
 		
 		
